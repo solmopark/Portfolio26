@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AI를 활용한 자산 관리 솔루션 DalKak 서비스">
+    <meta name="keywords" content="AI 투자, 자산 관리, 포트폴리오 최적화, 금융 기술">
+    <meta property="og:title" content="DalKak" />
+    <meta property="og:description" content="AI를 활용한 자산 관리 솔루션 DalKak 서비스" />
+    <meta property="og:image" content="./image/link_thumb.svg" />
+    <meta property="og:url" content="https://dalkak.com" />
+    <meta name="google-site-verification" content="..." />
+    <title>DalKak</title>
+    
+    <script defer type="text/javascript" src="./script/common.js"></script>
+    <script src="./script/jquery-3.6.0.js"></script>
+    <!-- 241209 사파리 호환성 -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+    <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch"></script>
+    <link rel="icon" sizes="16x16" href="./image/link_icon.svg">
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/stylemin.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.4.0/remixicon.css">
+</head>
+
+
+<body>
+    <!-- header -->
+    <header>
+        <div id="header" class="flex_sb bd_r20">
+            <div class="toplogo">
+                <img src="./image/toplogo.svg" alt="DalKak 로고">
+            </div>
+            <ul class="menu flex">
+                <li><a href="javascript:void(0);" class="">서비스 소개</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void(0);">서비스 1</a></li>
+                        <li><a href="javascript:void(0);">서비스 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);">자산배분</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void(0);">자산배분 1</a></li>
+                        <li><a href="javascript:void(0);">자산배분 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);">AI자동매매</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void(0);">AI자동매매 1</a></li>
+                        <li><a href="javascript:void(0);">AI자동매매 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);">포트폴리오</a></li>
+                <li><a href="javascript:void(0);">마이페이지</a></li>
+                <li><a href="javascript:void(0);">공지사항</a></li>
+            </ul>
+    
+            <div class="flex">
+                <button class="btn btnSt">문의하기</button>
+                <a class="ml10" href="javascript:void(0);"><i class="ri-user-line"></i></a>
+                <button class=" ml10"><i class="ri-search-line"></i></button>
+                <div id="menu-bar" class="mobile_menuBar" onclick="menuOnClick()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- mobile -->
+    <div class="moble_Menu" id="noneMenu">
+        <div class="flex_sb">
+            <h2>로그인 해주세요</h2>
+            <a href="javascript:void(0);">
+                <button class="btn btnSt_2">로그인</button>
+            </a>
+        </div>
+        <ul class="menu">
+            <li><a href="javascript:void(0);">서비스 소개</a>
+                <div>
+                    <a href="javascript:void(0);"><p>서비스1</p></a>
+                    <a href="javascript:void(0);"><p>서비스2</p></a>
+                </div>
+            </li>
+            <li><a href="javascript:void(0);">자산배분</a>
+                <div>
+                    <a href="javascript:void(0);"><p>자산배분1</p></a>
+                    <a href="javascript:void(0);"><p>자산배분2</p></a>
+                </div>
+            </li>
+            <li><a href="javascript:void(0);">AI자동매매</a>
+                <div>
+                    <a href="javascript:void(0);"><p>AI자동매매1</p></a>
+                    <a href="javascript:void(0);"><p>AI자동매매2</p></a>
+                </div>
+            </li>
+            <li><a href="javascript:void(0);">포트폴리오</a></li>
+            <li><a href="javascript:void(0);">마이페이지</a></li>
+            <li><a href="javascript:void(0);">공지사항</a></li>
+        </ul>
+    </div>
+    <!-- visual -->
+    <section id="visual">
+        <div class="inner">
+            <div class="v_logo">
+                <img src="./image/main_visual_logo.png" alt="visaul title">
+            </div>
+            <p>
+                인공지능 기반의 주식 투자와 자산 배분 전략을 이용한 <br class="show768">자산 배분 및 관리 서비스입니다.<br>
+                사용자들은 DalKak을 통해 다양한 자산배분 전략을 적용하고, <br>  
+                인공지능 기반의 주식투자를 통해 수익률을 극대화 할 수 있습니다.
+            </p>
+            <button class="btn btnSt">시작하기</button>
+        </div>
+    </section>
+
+    <!-- content -->
+    <div id="content">
+        <div class="Wrap">
+            <div class="innerFull bgStyle">
+                <!-- sec01 -->
+                <section class="type1">
+                    <div class="secTitle flex_sb">
+                        <!-- <h5>AI와 쉽게 투자해 보세요</h5> -->
+                        <h2><span class="decoText purple">DalKak</span>의 최적 투자 조합</h2>                    
+                        <button class="btngo">
+                            <span>바로가기</span>
+                            <img src="./image/arrow_white.png" alt="보기 화살표">
+                        </button>
+                    </div>
+                    <div class="secBox grid2 gridCol5">
+                        <div class="secDate checkEvent">
+                            <div class="Check">
+                                <input type="checkbox" class="dotCheck">
+                            </div>
+                            <h6>안정적 투자</h6>                           
+                            <img class="mlAuto" src="./image/main_sec01_img01.png" alt="안정적 투자">
+                        </div>
+                        <div class="secDate checkEvent">
+                            <div class="Check">
+                                <input type="checkbox" class="dotCheck">
+                            </div>
+                            <h6>공격형 투자</h6>                           
+                            <img class="mlAuto" src="./image/main_sec01_img02.png" alt="공격형 투자">
+                        </div>
+                        <div class="secDate checkEvent">
+                            <div class="Check">
+                                <input type="checkbox" class="dotCheck">
+                            </div>
+                            <h6>낮은 변동폭 투자</h6>                           
+                            <img class="mlAuto" src="./image/main_sec01_img03.png" alt="낮은 변동폭 투자">
+                        </div>
+                        <div class="secDate checkEvent">
+                            <div class="Check">
+                                <input type="checkbox" class="dotCheck">
+                            </div>
+                            <h6>분산형 투자</h6>                           
+                            <img class="mlAuto" src="./image/main_sec01_img04.png" alt="분산형 투자">
+                        </div>
+                        <div class="secDate checkEvent">
+                            <div class="Check">
+                                <input type="checkbox" class="dotCheck">
+                            </div>
+                            <h6>내가 직접 만들기</h6>                           
+                            <img class="mlAuto" src="./image/main_sec01_img05.png" alt="내가 직접 만들기">
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="inner">                
+                <!-- sec02 -->
+                <section class="type">
+                    <div class="secTitle">
+                        <div class="titleWrap">
+                            <h5>실시간으로 쉽게 투자해 보세요</h5>
+                            <h2 class="d_navy">자산 배분 전략 보기</h2>
+                        </div>
+                        <div class="btnCol">
+                            <button class="btnmore">
+                                <span>자세히 알아보기</span>
+                                <img src="./image/arrow_purple.png" alt="보기 화살표">
+                            </button>
+                            <button class="btngo">
+                                <span>자동매매 바로가기</span>
+                                <img src="./image/arrow_white.png" alt="보기 화살표">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="secBox wd83">
+                        <div class="secDate">
+                            <div class="txt">
+                                <h4 class="navy">듀얼 모멘텀</h4>
+                                <p class="mb40">절대모멘텀과 상대모멘텀을 결합한 모멘텀 전략으로 상대적으로 최근 3~12개월 수익률이 좋았던 시장을 선택하여 투자하는 전략입니다.</p>
+                            </div>
+                            <div class="boxStyle">
+                                <div class="flex_sb">
+                                    <h6 class="title">DalKak 달러</h6>
+                                    <p class="price">13,355<small>원</small></p>
+                                </div>
+                                <div class="flex_sb mt10">
+                                    <canvas id="lineChart" width="40" height="40"></canvas>
+                                    <div class="up">
+                                        165(0.01%)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="secDate">
+                            <div class="txt">
+                                <h4 class="navy">올웨더 포트폴리오</h4>
+                                <p class="mb40">'모든 날씨에 대비한' 포트폴리오는 모든 시장 주기를 통해 견고함을 유지하며, 장기적으로 광범위한 시장 벤치마크보다 우수한 성과를 낼 수 있는 잠재력을 갖추고 있습니다.</p>
+                            </div>
+                            <div class="boxStyle">
+                                <div class="flex_sb">
+                                    <h6 class="title">DalKak 200</h6>
+                                    <p class="price">16,355<small>원</small></p>
+                                </div>
+                                <div class="flex_sb mt10">
+                                    <canvas id="lineChart2" width="40" height="40"></canvas>
+                                    <div class="down">
+                                        265(2.01%)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="secDate">
+                            <div class="txt">
+                                <h4 class="navy">종합 듀얼 모멘텀</h4>
+                                <p class="mb40">게리 안토나치가 제안한 전략으로써 기본적인 원리는 듀얼 모멘텀과 유사합니다. 듀얼 모멘텀은 주식에만 절대 모멘텀과 상대 모멘텀을 적용했다면 종합 듀얼 모멘텀은 포트폴리오를 크게 4가지(주식, 채권, 부동산, 경제위기) 자산으로 나누어 모멘텀을 적용합니다.</p>
+                            </div>
+                            <div class="boxStyle">
+                                <div class="flex_sb">
+                                    <h6 class="title">DalKak 달러</h6>
+                                    <p class="price">13,355<small>원</small></p>
+                                </div>
+                                <div class="flex_sb mt10">
+                                    <canvas id="lineChart3" width="40" height="40"></canvas>
+                                    <div class="up">
+                                        135(0.11%)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="secDate noneStyle" style="align-self: center;">
+                            <img src="./image/main_sec02_img04.png" alt="">
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="innerFull bg_black">
+                <!-- sec03 -->
+                <section class="type1">
+                    <div class="secTitle">
+                        <h5>AI와 쉽게 투자해 보세요</h5>
+                        <h2>투자는 <span class="decoText purple">DalKak</span>에 맡기고, <br class="show768">일상을 즐기세요</h2>
+                    </div>
+                    <div class="secBox grid2 gridCol4">
+                        <div class="secDate">
+                            <div class="imgArea">
+                                <img src="./image/main_sec03_img01.png" alt="모바일에서 간편하게">
+                            </div>
+                            <div class="txt">
+                                <h3>모바일에서 간편하게</h3>
+                                <p>텍스트를 입력해 주세요</p>
+                            </div>
+                        </div>
+                        
+                        <div class="secDate">
+                            <div class="imgArea">
+                                <img src="./image/main_sec03_img02.png" alt="AI가 알아서">
+                            </div>
+                            <div class="txt">
+                                <h3>AI가 알아서</h3>
+                                <p>텍스트를 입력해 주세요</p>
+                            </div>
+                        </div>
+                        <div class="secDate">
+                            <div class="imgArea">
+                                <img src="./image/main_sec03_img03.png" alt="개인 맞춤 포트폴리오">
+                            </div>
+                            <div class="txt">
+                                <h3>개인 맞춤 포트폴리오</h3>
+                                <p>텍스트를 입력해 주세요</p>
+                            </div>
+                        </div>
+                        <div class="secDate">
+                            <div class="imgArea">
+                                <img src="./image/main_sec03_img04.png" alt="생활 속 투자">
+                            </div>
+                            <div class="txt">
+                                <h3>생활 속 투자</h3>
+                                <p>텍스트를 입력해 주세요</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- sec04 -->
+                <section class="type3">
+                    <div class="imgArea">
+                        <img src="./image/main_sec04_img01.png" alt="">
+                    </div>
+                    
+                    <div class="secTitle">
+                        <div class="titleWrap">
+                            <h5>고객님이 안심할 수 있는</h5>
+                            <h2>AI 모델로 미래 자산 예측</h2>
+                        </div>
+                        <button class="btnmore type1">
+                            <span>AI 자산 모델 보기</span>
+                            <img src="./image/arrow_white.png" alt="보기 화살표">
+                        </button>
+                    </div>
+                </section>
+            </div>
+            <div class="inner">            
+                <!-- sec05 -->
+                <section class="type2">
+                    <div class="secTitle">
+                        <div class="titleWrap">
+                            <h5>실시간으로 쉽게 투자해 보세요</h5>
+                            <h2 class="d_navy">AI 모델로 미래 자산 예측</h2>
+                        </div>
+                        <button class="btnmore">
+                            <span>AI 자산 모델 보기</span>
+                            <img src="./image/arrow_purple.png" alt="보기 화살표">
+                        </button>
+                    </div>
+                    <div class="secBox">
+                        <div class="flex">
+                            <div class="secDate">
+                                <div class="txt">
+                                    <div class="decoText01">AI 모델 자산 분배1</div>
+                                    <h4>정량적 모델</h4>
+                                    <p>
+                                        AI 알고리즘을 사용해 데이터 분석을 통해 최적의 자산 배분 비율을 결정합니다.
+                                    </p>
+                                </div>
+                                <div class="imgArea">
+                                    <img class="imgRight" src="./image/main_sec05_img01.png" alt="자산분배1">
+                                </div>
+                            </div>
+                            <div class="secDate bg_pp">
+                                <div class="txt">
+                                    <div class="decoText02">AI 모델 자산 분배3</div>
+                                    <h4>감정 분석</h4>
+                                    <p>
+                                        소셜 미디어나 뉴스 데이터를 분석해 시장 심리를 파악하고, 이를 기반으로 자산 배분 전략을 조정합니다.
+                                    </p>
+                                </div>
+                                <div class="imgArea">
+                                    <img class="imgRight" src="./image/main_sec05_img03.png" alt="자산분배3">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex mt60">
+                            <div class="secDate bg_pp">
+                                <div class="txt">
+                                    <div class="decoText02">AI 모델 자산 분배2</div>
+                                    <h4>머신러닝 기반 예측</h4>
+                                    <p>
+                                        시장의 트렌드를 분석하고, 자산 클래스 간의 관계를 모델링하여 동적으로 자산을 조정합니다.
+                                    </p>
+                                </div>
+                                <div class="imgArea">
+                                    <img class="imgRight" src="./image/main_sec05_img02.png" alt="자산분배2">
+                                </div>
+                            </div>
+                            <div class="secDate">
+                                <div class="txt">
+                                    <div class="decoText01">AI 모델 자산 분배4</div>
+                                    <h4>리스크 관리</h4>
+                                    <p style="letter-spacing: -0.02rem;">
+                                        AI를 통해 포트폴리오의 리스크를 실시간으로 모니터링하고, 특정 위험 수준에 따라 자산 비율을 조정합니다.
+                                    </p>
+                                </div>
+                                <div class="imgArea">
+                                    <img class="imgRight" src="./image/main_sec05_img04.png" alt="자산분배4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="innerFull bg_gray">
+                <section class="type1">
+                    <div class="secTitle center">
+                        <h5>AI와 쉽게 투자해 보세요</h5>
+                        <h2>투자는 <span class="decoText purple">DalKak</span>에 맡기고, <br class="show768">일상을 즐기세요</h2>
+                    </div>
+                    <div class="secBox grid2 gridCol3">
+                        <div class="secDate boxStyle02 St2">
+                            <div class="txt">
+                                <p class="textArea">안정성있는 투자방식도 좋지만 DalKak을 이용하면서
+                                    <b>개인에 맞게 추천</b>해줘서 편리하고 
+                                    서비스를 간편하게 이용할 수 있어서 좋습니다.</p>
+                                <div class="id">abcD***</div>
+                            </div>
+                        </div>
+                        <div class="secDate boxStyle02 St2">
+                            <div class="txt">
+                                <p class="textArea">자동 매매가 있다는 것이 정말 좋은 것 같고 <b>선택의 폭이 넓어져서 편리</b>한것 같습니다.</p>
+                                <div class="id">defD***</div>
+                            </div>
+                        </div>
+                        <div class="secDate boxStyle02 St2">
+                            <div class="txt">
+                                <p class="textArea">직접 하는것 보다는 AI로 하는게 훨씬 더 <b>안정적 인것 
+                                    같다</b>는 생각이 드네요</p>
+                                <div class="id">abcD***</div>
+                            </div>
+                        </div>
+                        <div class="secDate boxStyle02 St2">
+                            <div class="txt">
+                                <p class="textArea">안정성있는 투자방식도 좋지만 DalKak을 이용하면서
+                                    <b>개인에 맞게 추천</b>해줘서 편리하고 
+                                    서비스를 간편하게 이용할 수 있어서 좋습니다.</p>
+                                <div class="id">defD***</div>
+                            </div>
+                        </div>
+                        <div class="secDate boxStyle02 St2">
+                            <div class="txt">
+                                <p class="textArea">자동 매매가 있다는 것이 정말 좋은 것 같고 <b>선택의 폭이 넓어져서 편리</b>한것 같습니다.</p>
+                                <div class="id">abcD***</div>
+                            </div>
+                        </div>
+                        <div class="secDate boxStyle02 St2">
+                            <div class="txt">
+                                <p class="textArea">직접 하는것 보다는 AI로 하는게 훨씬 더 <b>안정적 인것 
+                                    같다</b>는 생각이 드네요</p>
+                                <div class="id">defD***</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <section class="Banner">
+                <p>지금부터 주식투자는</p>
+                <h2>쉽고 믿을 수 있는 <br class="show768"><span class="decoText">Dalkak</span>으로 시작하세요</h2>
+                <button class="btn mbship">구독 서비스 바로가기</button>
+            </section>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer id="footer">
+        <div class="inner">
+            <div class="flex mb30">
+                <a href="javascript:void(0);" class="ftlogo"><img src="./image/footerLogo.svg" alt="DalKak 로고"></a>
+                <a href="javascript:void(0);" class="mr20"><img src="./image/instagram.svg" alt="Instagram 아이콘"></a>
+                <a href="javascript:void(0);"><img src="./image/naver.svg" alt="Naver 아이콘"></a>
+            </div>
+            <ul>
+                <li>경기도 화성시 정남면 내향로 250-35</li>
+                <li class="flex mt10">
+                    <p class="deco"><b>대표이사</b> 홍길동</p>
+                    <p>000-1234-5678</p>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <ul class="inner flex">
+            <li class="mr20">
+                <a href="javascript:void(0);">이용약관</a>
+            </li>
+            <li class="bold">
+                <a href="javascript:void(0);">개인정보처리방침</a>
+            </li>
+            <div class="mlAuto">Copyright ⓒ 2024 SITS All rights reserved. </div>
+        </ul>
+    </footer>
+</body>
+    
+</html>

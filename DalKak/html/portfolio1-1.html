@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AI를 활용한 자산 관리 솔루션 DalKak 서비스">
+    <meta name="keywords" content="AI 투자, 자산 관리, 포트폴리오 최적화, 금융 기술">
+    <meta property="og:title" content="DalKak" />
+    <meta property="og:description" content="AI를 활용한 자산 관리 솔루션 DalKak 서비스" />
+    <meta property="og:image" content="../image/link_thumb.svg" />
+    <meta property="og:url" content="https://dalkak.com" />
+    <meta name="google-site-verification" content="..." />
+    <title>포트폴리오</title>
+    <script defer type="text/javascript" src="../script/chart.js"></script>
+    <script defer type="text/javascript" src="../script/common.js"></script>
+    <script src="../script/jquery-3.6.0.js"></script>
+    <script src="echarts.js"></script>
+    <link rel="icon" sizes="16x16" href="../image/link_icon.svg">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/stylemin.css">
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.4.0/remixicon.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div id="header" class="flex_sb bd_r20">
+            <div class="toplogo">
+                <img src="../image/toplogo.svg" alt="DalKak 로고">
+            </div>
+            <ul class="menu flex">
+                <li><a href="javascript:void(0);" class="">서비스 소개</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void(0);">서비스 1</a></li>
+                        <li><a href="javascript:void(0);">서비스 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);">자산배분</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void(0);">자산배분 1</a></li>
+                        <li><a href="javascript:void(0);">자산배분 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);">AI자동매매</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void(0);">AI자동매매 1</a></li>
+                        <li><a href="javascript:void(0);">AI자동매매 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);" class="on">포트폴리오</a></li>
+                <li><a href="javascript:void(0);">마이페이지</a></li>
+                <li><a href="javascript:void(0);">공지사항</a></li>
+            </ul>
+    
+            <div class="flex">
+                <button class="btn btnSt">문의하기</button>
+                <a class="ml10" href="javascript:void(0);"><i class="ri-user-line"></i></a>
+                <button class=" ml10"><i class="ri-search-line"></i></button>
+                <div id="menu-bar" class="mobile_menuBar" onclick="menuOnClick()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- mobile -->
+    <div class="moble_Menu" id="noneMenu">
+        <div class="flex_sb">
+            <h2>로그인 해주세요</h2>
+            <a href="javascript:void(0);">
+                <button class="btn btnSt_2">로그인</button>
+            </a>
+        </div>
+        <ul class="menu">
+            <li><a href="javascript:void(0);">서비스 소개</a>
+                <div>
+                    <a href="javascript:void(0);"><p>서비스1</p></a>
+                    <a href="javascript:void(0);"><p>서비스2</p></a>
+                </div>
+            </li>
+            <li><a href="javascript:void(0);">자산배분</a>
+                <div>
+                    <a href="javascript:void(0);"><p>자산배분1</p></a>
+                    <a href="javascript:void(0);"><p>자산배분2</p></a>
+                </div>
+            </li>
+            <li><a href="javascript:void(0);">AI자동매매</a>
+                <div>
+                    <a href="javascript:void(0);"><p>AI자동매매1</p></a>
+                    <a href="javascript:void(0);"><p>AI자동매매2</p></a>
+                </div>
+            </li>
+            <li><a href="javascript:void(0);">포트폴리오</a></li>
+            <li><a href="javascript:void(0);">마이페이지</a></li>
+            <li><a href="javascript:void(0);">공지사항</a></li>
+        </ul>
+    </div>
+    <!-- content -->
+    <div id="content" class="portfolio type1">
+        <div class="Wrap">
+            <div class="inner">
+                <!-- subNav -->
+                <ul class="subNav flex pt18">
+                    <li><a href="javascript:void(0);"><i class="ri-home-line"></i></a></li>
+                    <li class="nav"><a href="javascript:void(0);">포트폴리오</a></li>
+                </ul>
+                <!-- sec01 -->
+                <section class="St3">
+                    <div class="pageTitle">
+                        <h2>DalKak 포트폴리오 관리</h2>
+                    </div>
+                    <div class="boxStyle01" style="border-color:var(--line_sky);">
+                        <div class="secWrap">
+                            <h3>나의 포트폴리오</h3>
+
+                            <div class="bd_r10 bg_gsky">
+                                <!-- searchbox -->
+                                <div class="searchBox">
+                                    <form name="searchForm" id="searchForm" method="post" action="#">
+                                        <fieldset>
+                                            <div class="selectBox">
+                                                <select name="search" class="select">
+                                                    <option value="전체(1)">전체(1)</option>
+                                                    <option value="전체">전체</option>
+                                                </select>
+                                            </div>
+                
+                                            <div class="searchInBox">
+                                                <img src="../image/search_icon01.png" alt="">
+                                                <input type="text" name="searchInput" value="검색어를 입력하세요.">
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- buttonwrap -->
+                            <div class="btnWrap mb20">
+                                <div class="txt flex">
+                                    <i class="ri-error-warning-line"></i>
+                                    <p>마지막 접속일로 부터 6개월 이상 미접속 시, <br class="show425"> 포트폴리오가 자동 삭제 됩니다.</p>
+                                </div>
+                                <div class="btnBox mlAuto">
+                                    <button class="btn01 iconBtn St3">삭제</button>
+                                    <button class="btn01 iconBtn St1_1">누적 수익률</button>
+                                </div>                                
+                            </div>
+                            <!-- protfolio -->
+                            <div class="ptfolio">
+                                <div class="ptBox bd_r10">
+                                    <div class="flex">
+                                        <div class="Check mr10">
+                                            <input type="checkbox" class="check_Item">
+                                        </div>
+                                        <dl >
+                                            <div>
+                                                <span class="label">자산배분 만들기</span>
+                                                <span class="label">ETF</sp>
+                                            </div>
+                                            <dt>자산배분 만들기</dt>
+                                            <dd class="txt">
+                                                <span><b>설계 대상자</b> 홍길동</span>
+                                                <span><b>최초 설계일</b> 24.10.25</span>
+                                                <span><b>최종변경일</b> 24.10.25</span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                    <dl>
+                                        <dd class="txt flex">
+                                            <p class="mr10"><b>누적 수익률 (%)</b><br> -</p>
+                                            <p><b>구성 종목 수</b><br> 7</p>
+                                        </dd>
+                                    </dl>
+                                    <div class="flexCol">
+                                        <button class="btn01 btn_2 mb10"><i class="ri-printer-line mr10"></i>보고서 출력</button>
+                                        <button class="btn01 iconBtn St2_1">
+                                            <a href="javascript:void(0);">성과현황 보기</a>
+                                        </button>
+                                    </div>
+                                </div>   
+                                <button class="Newptfolio bd_r10"><i class="ri-add-line"></i> 새 포트폴리오 만들기</button>                             
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer id="footer">
+        <div class="inner">
+            <div class="flex mb30">
+                <a href="javascript:void(0);" class="ftlogo"><img src="../image/footerLogo.svg" alt="DalKak 로고"></a>
+                <a href="javascript:void(0);" class="mr20"><img src="../image/instagram.svg" alt="Instagram 아이콘"></a>
+                <a href="javascript:void(0);"><img src="../image/naver.svg" alt="Naver 아이콘"></a>
+            </div>
+            <ul>
+                <li>경기도 화성시 정남면 내향로 250-35</li>
+                <li class="flex mt20">
+                    <p class="deco">대표이사 홍길동</p>
+                    <p>000-1234-5678</p>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <ul class="inner" class="flex">
+            <li class="mr20">
+                <a href="javascript:void(0);">이용약관</a>
+            </li>
+            <li class="bold">
+                <a href="javascript:void(0);">개인정보처리방침</a>
+            </li>
+            <div class="mlAuto">Copyright ⓒ 2024 SITS All rights reserved. </div>
+        </ul>
+    </footer>
+</body>
+</html>

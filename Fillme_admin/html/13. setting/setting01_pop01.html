@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>쿠폰 등록(팝업)01</title>
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="../../script/jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<body>
+    <button id="open" class="btn btn02">팝업열기</button>
+    <div id="PopWrapper" class="popupOpen">
+        <article id="popWrap" class="boxStyle type01">
+            <div class="popArea">
+                <div class="title">
+                    <h1>쿠폰 등록</h1>
+                    <button id="close" class="closeBtn"><img src="../../image/close.svg" alt=""></button>
+                </div>
+                
+                <div class="Checkflex"style="justify-content:center;">
+                    <div class="Check">
+                        <input type="checkbox" class="dotCheck" checked="">
+                        <span class="conTitle">상품권</span>
+                    </div>
+                    <div class="Check">
+                        <input type="checkbox" class="dotCheck">
+                        <span class="conTitle">기업코드</span>
+                    </div>
+                </div>
+                <!-- Input -->
+                <div class="singInput cpStyle boxStyle03">
+                    <div class="input_box type02">
+                        <p class="wd25 pt15">이름</p>
+                        <div class="cpFlex">
+                            <div class="inandck">
+                                <div class="Check">
+                                    <input type="checkbox">
+                                    <span>자동생성</span>
+                                </div>
+                                <input type="text" placeholder="코드 n개 생성" class="wd30">
+                                <button class="btn btn05_2 s-label">발행</button>
+                            </div>
+                            <div class="inandck">
+                                <div class="Check">
+                                    <input type="checkbox" >
+                                    <span>이미지</span>
+                                </div>
+                                <div class="file-upload">    
+                                    <label for="ex_filename">업로드</label> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>         
+                    <div class="input_box type01">
+                        <p>쿠폰명</p>
+                        <input type="text" placeholder="쿠폰명">
+                    </div>                            
+                    <div class="input_box type01">
+                        <p>쿠폰내용</p>
+                        <input type="text" placeholder="내용">
+                    </div>    
+                    <div class="input_box type01 amountWrap">
+                        <p>금액</p>
+                        <div class="amountArea">
+                            <p>가운데</p>
+                            <input type="text" id="amount" oninput="onlyNumberWithComma(this);" value="원">
+                        </div>    
+                    </div> 
+                    <div class="input_box type01">
+                        <p>계약사</p>
+                        <input type="text" placeholder="회사명">
+                    </div>
+
+                    <div class="input_box type01">
+                        <p class="wd25">코드</p>
+                        <div class="inflex">
+                            <input type="text" placeholder="코드 수량입력" class="wd30">
+                            <div class="Check">
+                                <input type="checkbox" checked="">
+                                <span>자동생성</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input_box type02">
+                        <p class="wd25">유효기간</p>
+                        <div class="cpFlex">
+                            <div class="Check">
+                                <input type="checkbox" checked="">
+                                <span>무제한</span>
+                            </div>
+                            <div class="dayInput flex">
+                                <div class="date_input">
+                                    <input type="date" class="date" title="날짜입력" value="2024-01-01" id='currentDate'>
+                                </div>
+                                <span class="custom-form-space">부터</span>
+                                <div class="date_input">
+                                    <input type="date" class="date" title="날짜입력" value="2024-01-01" id='currentDate'>
+                                </div>
+                                <span class="custom-form-space">까지</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btnFlex style04">
+                    <button class="btn btn05_2">목록</button>
+                    <button class="btn btn01" id="close">등록하기</button>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+<script defer type="text/javascript" src="../../script/popup.js"></script>
+<script defer type="text/javascript"  src="../../script/common.js"></script>
+
+
+</html>

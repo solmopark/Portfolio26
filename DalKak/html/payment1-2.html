@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AI를 활용한 자산 관리 솔루션 DalKak 서비스">
+    <meta name="keywords" content="AI 투자, 자산 관리, 포트폴리오 최적화, 금융 기술">
+    <meta property="og:title" content="DalKak" />
+    <meta property="og:description" content="AI를 활용한 자산 관리 솔루션 DalKak 서비스" />
+    <meta property="og:image" content="../image/link_thumb.svg" />
+    <meta property="og:url" content="https://dalkak.com" />
+    <meta name="google-site-verification" content="..." />
+    <title>결재상세페이지</title>
+    <script defer type="text/javascript" src="../script/common.js"></script>
+    <script src="../script/jquery-3.6.0.js"></script>
+    <link rel="icon" sizes="16x16" href="../image/link_icon.svg">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/stylemin.css">
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.4.0/remixicon.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div id="header" class="flex_sb bd_r20">
+            <div class="toplogo">
+                <img src="../image/toplogo.svg" alt="DalKak 로고">
+            </div>
+            <ul class="menu flex">
+                <li><a href="javascript:void(0);" class="">서비스 소개</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void(0);">서비스 1</a></li>
+                        <li><a href="javascript:void(0);">서비스 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);">자산배분</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void(0);">자산배분 1</a></li>
+                        <li><a href="javascript:void(0);">자산배분 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);">AI자동매매</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void(0);">AI자동매매 1</a></li>
+                        <li><a href="javascript:void(0);">AI자동매매 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);">포트폴리오</a></li>
+                <li><a href="javascript:void(0);">마이페이지</a></li>
+                <li><a href="javascript:void(0);">공지사항</a></li>
+            </ul>
+    
+            <div class="flex">
+                <button class="btn btnSt">문의하기</button>
+                <a class="ml10" href="javascript:void(0);"><i class="ri-user-line"></i></a>
+                <button class=" ml10"><i class="ri-search-line"></i></button>
+                <div id="menu-bar" class="mobile_menuBar" onclick="menuOnClick()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- mobile -->
+    <div class="moble_Menu" id="noneMenu">
+        <div class="flex_sb">
+            <h2>로그인 해주세요</h2>
+            <a href="javascript:void(0);">
+                <button class="btn btnSt_2">로그인</button>
+            </a>
+        </div>
+        <ul class="menu">
+            <li><a href="javascript:void(0);">서비스 소개</a>
+                <div>
+                    <a href="javascript:void(0);"><p>서비스1</p></a>
+                    <a href="javascript:void(0);"><p>서비스2</p></a>
+                </div>
+            </li>
+            <li><a href="javascript:void(0);">자산배분</a>
+                <div>
+                    <a href="javascript:void(0);"><p>자산배분1</p></a>
+                    <a href="javascript:void(0);"><p>자산배분2</p></a>
+                </div>
+            </li>
+            <li><a href="javascript:void(0);">AI자동매매</a>
+                <div>
+                    <a href="javascript:void(0);"><p>AI자동매매1</p></a>
+                    <a href="javascript:void(0);"><p>AI자동매매2</p></a>
+                </div>
+            </li>
+            <li><a href="javascript:void(0);">포트폴리오</a></li>
+            <li><a href="javascript:void(0);">마이페이지</a></li>
+            <li><a href="javascript:void(0);">공지사항</a></li>
+        </ul>
+    </div>
+    <!-- content -->
+    <div id="content" class="payment">
+        <div class="Wrap">
+            <div class="inner">
+                <!-- subNav -->
+                <ul class="subNav flex pt18">
+                    <li><a href="javascript:void(0);"><i class="ri-home-line"></i></a></li>
+                    <li class="nav"><a href="javascript:void(0);">마이페이지</a></li>
+                    <li class="nav"><a href="javascript:void(0);">구독서비스 관리</a></li>
+                    <li class="nav"><a href="javascript:void(0);">결재상세</a></li>
+                </ul>
+                <!-- sec01 -->
+                <section class="St3">
+                    <div class="pageTitle">
+                        <h2>결재상세</h2>
+                    </div>
+                    <div class="secBox grid gridCol2">
+                        <div class="serviceBox">
+                            <div class="payInput brStyle">
+                                <div class="flex_sb mb20">
+                                    <h5 class="bold mrAuto">주문자 정보</h5>
+                                    <div class="Check flex mr20">
+                                        <input type="checkbox" class="dotCheck" checked>
+                                        <p>사용자정보</p>
+                                    </div>
+                                    <div class="Check flex">
+                                        <input type="checkbox" class="dotCheck">
+                                        <p>직접입력</p>
+                                    </div>
+                                </div>
+                                <div class="input_box">
+                                    <p>이름</p>
+                                    <input type="text" placeholder="이름">
+                                </div>
+                                <div class="input_box">
+                                    <p>연락처</p>
+                                    <input type="text" placeholder="연락처">
+                                </div>
+                                <div class="input_box">
+                                    <p>이메일</p>
+                                    <div class="inflex">
+                                        <input type="text">
+                                        <span>@</span>
+                                        <div class="selectBox">
+                                            <select name="select" class="select">
+                                                <option value="직접입력">직접입력</option>
+                                                <option value="gmail.com">gmail.com</option>
+                                                <option value="naver.com">naver.com</option>
+                                                <option value="daum.net">daum.net</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="payInput brStyle">
+                                <div class="input_box type01">
+                                    <h6>쿠폰</h6>
+                                    <div class="selectBox">
+                                        <select name="select" class="select">
+                                            <option value="Dalkak 사전등록 10% 할인 쿠폰">Dalkak 사전등록 10% 할인 쿠폰</option>
+                                            <option value="Happy birthday 쿠폰">Happy birthday 쿠폰</option>
+                                            <option value="웰컴 쿠폰">웰컴 쿠폰</option>
+                                        </select>                        
+                                    </div>                    
+                                </div>
+                            </div>
+                            <div class="payBox">                                
+                                <h5 class="bold">결재 수단</h5>
+                                <div class="secDate checkEvent">
+                                    <div class="Check">
+                                        <input type="checkbox" class="dotCheck" checked="">
+                                    </div>
+                                    <h6>카카오페이</h6>
+                                    <img src="../image/pay_kakao.png" alt="paykakao">
+                                </div>
+                                <div class="secDate checkEvent">
+                                    <div class="Check">
+                                        <input type="checkbox" class="dotCheck">
+                                    </div>
+                                    <h6>네이버페이</h6>
+                                    <img src="../image/pay_naver.png" alt="paynaver">
+                                </div>
+                                <div class="secDate checkEvent">
+                                    <div class="Check">
+                                        <input type="checkbox" class="dotCheck" >
+                                    </div>
+                                    <h6>토스페이</h6>
+                                    <img src="../image/pay_toss.png" alt="paytoss">
+                                </div>
+                                <div class="secDate checkEvent on">
+                                    <div class="Check">
+                                        <input type="checkbox" class="dotCheck" checked>
+                                    </div>
+                                    <h6>신용카드</h6>
+                                </div>
+                                <div class="secDate checkEvent">
+                                    <div class="Check">
+                                        <input type="checkbox" class="dotCheck" >
+                                    </div>
+                                    <h6>무통장입금</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="serviceBox">
+                            <!-- <h2 class="mb30 d_navy">전체 합계</h2> -->
+                            <div class="payTbox">
+                                <p class="textArea2 flex_sb">
+                                    <b>정기결제 금액</b>
+                                    <span>1,200,000</span>
+                                </p>
+                                <p class="textArea2 flex_sb">
+                                    <b>부가서비스 금액</b>
+                                    <span>0</span>
+                                </p>
+                                <p class="textArea2 flex_sb red">
+                                    <span>할인</span>
+                                    <span>-120,000</span>
+                                </p>
+                                <div class="flex_sb">
+                                    <h5 class="bold">부가서비스 금액</h5>
+                                    <h6 class="purple">1,080,000</h6>
+                                </div>
+                                <hr>
+                                <h6 class="flex">정기결제 안내 <span class="qIcon"></span></h6>
+                                <p class="textArea2 flex_sb">
+                                    <b>다음 결제일</b>
+                                    <span>0</span>
+                                </p>
+                                <p class="textArea2 flex_sb">
+                                    <b>결제 주기</b>
+                                    <span>-120,000</span>
+                                </p>
+                                <p class="textArea2 flex_sb">
+                                    <b>결제 금액</b>
+                                    <span>-120,000</span>
+                                </p>
+                                <button class="btn btngo"><span>구매하기</span></button>
+                            </div>
+                            <div class="imgArea">
+                                <img src="../image/payment1-2_img01.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer id="footer">
+        <div class="inner">
+            <div class="flex mb30">
+                <a href="javascript:void(0);" class="ftlogo"><img src="../image/footerLogo.svg" alt="DalKak 로고"></a>
+                <a href="javascript:void(0);" class="mr20"><img src="../image/instagram.svg" alt="Instagram 아이콘"></a>
+                <a href="javascript:void(0);"><img src="../image/naver.svg" alt="Naver 아이콘"></a>
+            </div>
+            <ul>
+                <li>경기도 화성시 정남면 내향로 250-35</li>
+                <li class="flex mt20">
+                    <p class="deco">대표이사 홍길동</p>
+                    <p>000-1234-5678</p>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <ul class="inner" class="flex">
+            <li class="mr20">
+                <a href="javascript:void(0);">이용약관</a>
+            </li>
+            <li class="bold">
+                <a href="javascript:void(0);">개인정보처리방침</a>
+            </li>
+            <div class="mlAuto">Copyright ⓒ 2024 SITS All rights reserved. </div>
+        </ul>
+    </footer>
+</body>
+</html>

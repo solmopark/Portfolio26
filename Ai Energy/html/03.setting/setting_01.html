@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AI 에너지 분석 시스템">
+    <meta name="keywords" content="AI 에너지 분석 시스템">
+    <meta property="og:title" content="AI 에너지 분석 시스템" />
+    <meta property="og:description" content="AI 에너지 분석 시스템" />
+    <title>AI 에너지 분석 시스템_설정01</title>
+
+    <script defer type="text/javascript" src="../../script/common.js"></script>
+    <script src="../../script/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="../../css/stylemin.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.4.0/remixicon.css">
+
+</head>
+
+
+<body>
+    <!-- header_Start -->
+    <header id="header">
+        <ul class="menu">
+            <div class="toplogo">
+                <img src="../../image/logo.png" alt="로고">
+            </div>
+            <li>
+                <a href="../../html/01.dashboard/Dashboard.html">Dashboard</a>
+            </li>
+            <li>
+                <a href="../../html/02.control/control_01.html">최적 제어</a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" class="on">설정</a>
+            </li>
+        </ul>
+        <div class="subwrap">
+            <ul class="submenu">
+                <div>
+                    <h2>로고</h2>
+                </div>
+                <li>
+                    <h2>Dashboard</h2>
+                </li>
+                <li>
+                    <h2>최적 제어</h2>
+                    <ul>
+                        <li><a href="javascript:void(0);">송수펌프 제어 분석</a></li>
+                        <li><a href="../../html/03.setting/setting_01.html">송수펌프 제어 세부현황</a></li>
+                        <li><a href="../../html/03.setting/setting_02.html">AI제어에 따른 배수지 트랜드</a></li>
+                        <li><a href="../../html/03.setting/setting_03.html">송수펌프 제어이력</a></li>
+                        <li><a href="../../html/03.setting/setting_04.html">주요 배수지 수위 현황</a></li>
+                        <li><a href="../../html/03.setting/setting_09.html">제어이력</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h2>설정</h2>
+                    <ul>
+                        <li><a href="../../html/03.setting/setting_07.html">Q-Table</a></li>
+                        <li><a href="../../html/03.setting/setting_08.html">배수지 관리</a></li>
+                        <li><a href="../../html/03.setting/setting_05.html">학습용 데이터셋 관리 기능</a></li>
+                        <li><a href="../../html/03.setting/setting_06.html">시뮬레이션 데이터셋 관리</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- header_End -->
+
+    <main>
+        <div id="Wrap">
+            <div class="inner">
+                <!-- container_Start -->
+                <div class="container">
+                    <h2 class="title start">송수펌프 제어 세부 현황</h2>
+                    <div class="grid setWrap">
+                        <div class="setBox bd_St">
+                            <h2 class="neonLineSt">공동취수장</h2>
+                            <div class="tableArea1">
+                                <colgroup>
+                                    <col width="33.333">
+                                    <col width="33.333">
+                                    <col width="33.333">
+                                </colgroup>
+                                <table class="tg">
+                                    <div class="tgTitle">
+                                        <span>펌프장</span>
+                                        <span>SCADR</span>
+                                        <span>최적운영</span>
+                                    </div>
+                                    <tbody>
+                                        <tr>
+                                            <td>공동취수장 펌프 #1</td>
+                                            <td>OFF</td>
+                                            <td>OFF</td>
+                                        </tr>
+                                        <tr>
+                                            <td>공동취수장 펌프 #2</td>
+                                            <td>OFF</td>
+                                            <td>OFF</td>
+                                        </tr>
+                                        <tr>
+                                            <td>공동취수장 펌프 #3</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>공동취수장 펌프 #4</td>
+                                            <td>ON</td>
+                                            <td>ON</td>
+                                        </tr>
+                                        <tr>
+                                            <td>공동취수장 펌프 #5</td>
+                                            <td>OFF</td>
+                                            <td>OFF</td>
+                                        </tr>
+                                        <tr>
+                                            <td>공동취수장 펌프 #6</td>
+                                            <td>ON</td>
+                                            <td>ON</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="setBox bd_St">
+                            <h2 class="neonLineSt">문형가압장</h2>
+                            <div class="tableArea1">
+                                <table class="tg">
+                                    <div class="tgTitle">
+                                        <span>펌프장</span>
+                                        <span>SCADR</span>
+                                        <span>최적운영</span>
+                                    </div>
+                                    <tbody>
+                                        <tr>
+                                            <td>문형가압장 펌프 #1</td>
+                                            <td>OFF</td>
+                                            <td>OFF</td>
+                                        </tr>
+                                        <tr>
+                                            <td>문형가압장 펌프 #2</td>
+                                            <td>OFF</td>
+                                            <td>OFF</td>
+                                        </tr>
+                                        <tr>
+                                            <td>문형가압장 펌프 #3</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>문형가압장 펌프 #4</td>
+                                            <td>ON</td>
+                                            <td>ON</td>
+                                        </tr>
+                                        <tr>
+                                            <td>문형가압장 펌프 #5</td>
+                                            <td>OFF</td>
+                                            <td>OFF</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="setBox bd_St">
+                            <h2 class="neonLineSt">퇴촌가압장</h2>
+                            <div class="tableArea1">
+                                <table class="tg">
+                                    <div class="tgTitle">
+                                        <span>펌프장</span>
+                                        <span>SCADR</span>
+                                        <span>최적운영</span>
+                                    </div>
+                                    <tbody>
+                                        <tr>
+                                            <td>퇴촌가압장 펌프 #1</td>
+                                            <td>OFF</td>
+                                            <td>OFF</td>
+                                        </tr>
+                                        <tr>
+                                            <td>퇴촌가압장 펌프 #2</td>
+                                            <td>OFF</td>
+                                            <td>OFF</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- container_End -->
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

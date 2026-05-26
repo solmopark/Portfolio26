@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>유의사항등록하기(팝업)01</title>
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="../../script/jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<body>
+    <button id="open" class="btn btn02">팝업열기</button>
+    <div id="PopWrapper" class="popupOpen">
+        <article id="popWrap" class="boxStyle type01">
+            <div class="popArea">
+                <div class="title">
+                    <h1>유의사항 등록</h1>
+                    <button id="close" class="closeBtn"><img src="../../image/close.svg" alt=""></button>
+                </div>
+                <!-- Input -->
+                <div class="singInput cpStyle boxStyle03" >
+                    <div class="input_box type01">
+                        <p>키워드</p>
+                        <input type="text" placeholder="키워드을 입력하세요"></input>
+                    </div>         
+                    <div class="input_box">
+                        <p>내용</p>
+                        <textarea id="myTextarea" maxlength="200" rows="4" cols="50" placeholder="내용을 입력하세요" ></textarea>
+                        <p id="charCount">0/200byte</p>
+                    </div> 
+                </div>
+
+                <div class="btnFlex style04">
+                    <button class="btn btn05_2">취소</button>
+                    <button class="btn btn01" id="close">등록하기</button>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+<script defer type="text/javascript" src="../../script/popup.js"></script>
+<script defer type="text/javascript"  src="../../script/common.js"></script>
+
+<script>
+    //textarea count
+    const textarea = document.getElementById('myTextarea');
+    const charCount = document.getElementById('charCount');
+
+    textarea.addEventListener('input', () => {
+    charCount.textContent = `${textarea.value.length} / 200`;
+    });
+</script>
+
+</html>

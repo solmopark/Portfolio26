@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AI를 활용한 자산 관리 솔루션 DalKak 서비스">
+    <meta name="keywords" content="AI 투자, 자산 관리, 포트폴리오 최적화, 금융 기술">
+    <meta property="og:title" content="DalKak" />
+    <meta property="og:description" content="AI를 활용한 자산 관리 솔루션 DalKak 서비스" />
+    <meta property="og:image" content="../image/link_thumb.svg" />
+    <meta property="og:url" content="https://dalkak.com" />
+    <meta name="google-site-verification" content="..." />
+    <title>Ai자동매매</title>
+    <script defer type="text/javascript" src="../script/common.js"></script>
+    <script src="../script/jquery-3.6.0.js"></script>
+    <link rel="icon" sizes="16x16" href="../image/link_icon.svg">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/stylemin.css">
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.4.0/remixicon.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div id="header" class="flex_sb bd_r20">
+            <div class="toplogo">
+                <img src="../image/toplogo.svg" alt="DalKak 로고">
+            </div>
+            <ul class="menu flex">
+                <li><a href="javascript:void(0);" class="">서비스 소개</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void(0);">서비스 1</a></li>
+                        <li><a href="javascript:void(0);">서비스 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);">자산배분</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void(0);">자산배분 1</a></li>
+                        <li><a href="javascript:void(0);">자산배분 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);" class="on">AI자동매매</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void(0);">AI자동매매 1</a></li>
+                        <li><a href="javascript:void(0);">AI자동매매 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);">포트폴리오</a></li>
+                <li><a href="javascript:void(0);">마이페이지</a></li>
+                <li><a href="javascript:void(0);">공지사항</a></li>
+            </ul>
+    
+            <div class="flex">
+                <button class="btn btnSt">문의하기</button>
+                <a class="ml10" href="javascript:void(0);"><i class="ri-user-line"></i></a>
+                <button class=" ml10"><i class="ri-search-line"></i></button>
+                <div id="menu-bar" class="mobile_menuBar" onclick="menuOnClick()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- mobile -->
+    <div class="moble_Menu" id="noneMenu">
+        <div class="flex_sb">
+            <h2>로그인 해주세요</h2>
+            <a href="javascript:void(0);">
+                <button class="btn btnSt_2">로그인</button>
+            </a>
+        </div>
+        <ul class="menu">
+            <li><a href="javascript:void(0);">서비스 소개</a>
+                <div>
+                    <a href="javascript:void(0);"><p>서비스1</p></a>
+                    <a href="javascript:void(0);"><p>서비스2</p></a>
+                </div>
+            </li>
+            <li><a href="javascript:void(0);">자산배분</a>
+                <div>
+                    <a href="javascript:void(0);"><p>자산배분1</p></a>
+                    <a href="javascript:void(0);"><p>자산배분2</p></a>
+                </div>
+            </li>
+            <li><a href="javascript:void(0);">AI자동매매</a>
+                <div>
+                    <a href="javascript:void(0);"><p>AI자동매매1</p></a>
+                    <a href="javascript:void(0);"><p>AI자동매매2</p></a>
+                </div>
+            </li>
+            <li><a href="javascript:void(0);">포트폴리오</a></li>
+            <li><a href="javascript:void(0);">마이페이지</a></li>
+            <li><a href="javascript:void(0);">공지사항</a></li>
+        </ul>
+    </div>
+    <!-- visual -->
+    <section id="subvisual" class="sub01">
+        <div class="inner">
+            <!-- subNav -->
+            <ul class="subNav flex">
+                <li><a href="javascript:void(0);"><i class="ri-home-line"></i></a></li>
+                <li class="nav"><a href="javascript:void(0);">AI 자동매매</a></li>
+            </ul>
+            <h2>
+                일상이 편해지는 AI 자동매매 <br>DalKak
+            </h2>
+        </div>
+    </section>
+
+    <!-- content -->
+    <div id="content" class="aiAuto">
+        <div class="Wrap">
+            <div class="inner">
+                <!-- sec01 -->
+                <section class="type1">
+                    <div class="secTitle">
+                        <h2><span class="decoText purple">DalKak</span>은 <br class="show768">이렇게 진행돼요</h2>
+                    </div>
+                    <div class="secBox grid2 gridCol3">
+                        <div class="secDate">
+                            <div class="imgArea">
+                                <img src="../image/aiauto_sec01_img01.png" alt="투자 종목·비중 결정">
+                            </div>
+                            <div class="txt">
+                                <p>검증된 금융 데이터로</p>
+                                <h3>투자 종목·비중 결정</h3>
+                            </div>
+                        </div>
+                        <div class="secDate">
+                            <div class="imgArea">
+                                <img src="../image/aiauto_sec01_img02.png" alt="학습하고 실행">
+                            </div>
+                            <div class="txt">
+                                <p>최적의 매매 타이밍을</p>
+                                <h3>학습하고 실행</h3>
+                            </div>
+                        </div>
+                        <div class="secDate">
+                            <div class="imgArea">
+                                <img src="../image/aiauto_sec01_img03.png" alt="학습하고 실행">
+                            </div>
+                            <div class="txt">
+                                <p>실시간 자산 분석 후</p>
+                                <h3>리밸런싱</h3>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="innerFull" style="background: var(--bg_Gsky);">
+                <section class="type1">
+                    <div class="secTitle">
+                        <h2>전세계 많은 사람들이 <br class="show768">AI투자를 이용하고 있어요</h2>
+                    </div>
+                    <div class="tab-container">
+                        <div class="tabs">
+                            <div class="tab active" data-tab="1">
+                                <img src="../image/aiauto_flag01.svg" alt="미국">
+                                <h4>미국</h4>
+                            </div>
+                            <div class="tab" data-tab="2">
+                                <img src="../image/aiauto_flag02.svg" alt="영국">
+                                <h4>영국</h4>
+                            </div>
+                            <div class="tab" data-tab="3">
+                                <img src="../image/aiauto_flag03.svg" alt="한국">
+                                <h4>한국</h4>
+                            </div>
+                            <div class="tab" data-tab="4">
+                                <img src="../image/aiauto_flag04.svg" alt="일본">
+                                <h4>일본</h4>
+                            </div>
+                            <div class="tab" data-tab="5">
+                                <img src="../image/aiauto_flag05.svg" alt="중국">
+                                <h4>중국</h4>
+                            </div>
+                        </div>
+
+                        <div class="tab-content">
+                            <div class="tab-content-slider swiper-container active" data-slider="1">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="flex_sb">
+                                            <div class="text">
+                                                <h4 class="mb20">제목을 입력하세요.</h4>
+                                                <p>내용을 입력해주세요</p>
+                                            </div>
+                                            <div class="imgArea">
+                                                <img src="../image/main_sec02_img04.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-content-slider swiper-container" data-slider="2">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="flex_sb">
+                                            <div class="text">
+                                                <h4 class="mb20">제목을 입력하세요.</h4>
+                                                <p>내용을 입력해주세요</p>
+                                            </div>
+                                            <div class="imgArea">
+                                                <img src="../image/service_sec01.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-content-slider swiper-container" data-slider="3">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="flex_sb">
+                                            <div class="text">
+                                                <h4 class="mb20">제목을 입력하세요.</h4>
+                                                <p>내용을 입력해주세요</p>
+                                            </div>
+                                            <div class="imgArea">
+                                                <img src="../image/main_sec02_img04.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-content-slider swiper-container" data-slider="4">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="flex_sb">
+                                            <div class="text">
+                                                <h4 class="mb20">제목을 입력하세요.</h4>
+                                                <p>내용을 입력해주세요</p>
+                                            </div>
+                                            <div class="imgArea">
+                                                <img src="../image/service_sec01.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-content-slider swiper-container" data-slider="5">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="flex_sb">
+                                            <div class="text">
+                                                <h4 class="mb20">제목을 입력하세요.</h4>
+                                                <p>내용을 입력해주세요</p>
+                                            </div>
+                                            <div class="imgArea">
+                                                <img src="../image/main_sec02_img04.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="inner">
+                <section class="type3 St2">
+                    <div class="imgArea">
+                        <img src="../image/aiauto_sec03_img01.png" alt="">
+                    </div>
+                    <div class="secTitle">
+                        <h2>
+                            나를 대신해 AI 자동매매가 적극적으로 대응해 주면서 <br>
+                            효율적인 의사결정을 도와주는 것이 <span class="d_navy"><span class="decoText">DalKak</span>의 역할</span>입니다.
+                        </h2>
+                    </div>
+                </section>
+            </div>
+            <section class="Banner">
+                <p>지금부터 주식투자는</p>
+                <h2>쉽고 믿을 수 있는 <br class="show768"><span class="decoText">Dalkak</span>으로 시작하세요</h2>
+                <button class="btn mbship">구독 서비스 바로가기</button>
+            </section>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer id="footer">
+        <div class="inner">
+            <div class="flex mb30">
+                <a href="javascript:void(0);" class="ftlogo"><img src="../image/footerLogo.svg" alt="DalKak 로고"></a>
+                <a href="javascript:void(0);" class="mr20"><img src="../image/instagram.svg" alt="Instagram 아이콘"></a>
+                <a href="javascript:void(0);"><img src="../image/naver.svg" alt="Naver 아이콘"></a>
+            </div>
+            <ul>
+                <li>경기도 화성시 정남면 내향로 250-35</li>
+                <li class="flex mt20">
+                    <p class="deco">대표이사 홍길동</p>
+                    <p>000-1234-5678</p>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <ul class="inner" class="flex">
+            <li class="mr20">
+                <a href="javascript:void(0);">이용약관</a>
+            </li>
+            <li class="bold">
+                <a href="javascript:void(0);">개인정보처리방침</a>
+            </li>
+            <div class="mlAuto">Copyright ⓒ 2024 SITS All rights reserved. </div>
+        </ul>
+    </footer>
+</body>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var tabSliders = document.querySelectorAll('.tab-content-slider');
+
+    tabSliders.forEach(function (slider, index) {
+        var sliderId = index + 1;
+        var mySwiper = new Swiper(slider, {
+            observer: true,
+            observeParents: true,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            centeredSlides: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+        });
+    });
+
+    document.querySelectorAll('.tab').forEach(function (tab) {
+        tab.addEventListener('click', function () {
+            // 모든 tab과 slider의 active 상태 제거
+            document.querySelector('.tab.active').classList.remove('active');
+            document.querySelector('.tab-content-slider.active').classList.remove('active');
+            
+            // 클릭된 tab에 active 클래스 추가
+            this.classList.add('active');
+            
+            // 해당하는 tab의 slider에 active 클래스 추가
+            var targetSliderId = this.getAttribute('data-tab');
+            tabSliders.forEach(function (slider) {
+                if (slider.getAttribute('data-slider') === targetSliderId) {
+                    slider.classList.add('active');
+                    slider.style.display = 'block'; // 슬라이더를 표시
+                } else {
+                    slider.classList.remove('active');
+                    slider.style.display = 'none'; // 슬라이더를 숨김
+                }
+                slider.swiper.update(); // 슬라이더 업데이트
+            });
+        });
+    });
+});
+</script>
+</html>

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마이페이지</title>
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="../../script/jquery-3.6.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!-- Wrapper -->
+    <div id="Wrapper">
+        <!-- Header-START -->
+        <header id="header">
+            <div class="head_logo">
+                <a href="" title="home">
+                    <img src="../../image/logo_f.svg" alt="logo" />
+                </a>
+            </div>
+
+            <!-- topManu -->
+            <div class="menuArea">
+                <ul class="menu">
+                    <li>
+                        <a href="javascript:void(0);" class="cate">
+                            <span><img src="../../image/menu_icon01.png" alt="" /></span>
+                            <span>회원관리</span>
+                        </a>
+                        
+                        <ul class="subMenu">
+                            <span class="close-submenu"></span>                            
+                            <li class="sub">
+                                <p  class="title">회원관리</p>
+                                <ul class="subMenu-3">
+                                    <li class="selected">
+                                        <a href="javascript:void(0);" target="_self" class="">회원 정보
+                                            관리(일반)</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" target="_self">회원 정보 관리(약사)</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" target="_self">회원 정보
+                                            관리(개인사업자)</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" target="_self">회원 정보 관리(기업담당자)</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li  class="sub">
+                                <p  class="title">구독 승인(기업 담당자)</p>
+                                <ul class="subMenu-3">
+                                    <li class="selected">
+                                        <a href="javascript:void(0);" target="_self" class="">프로모션 결제 승인</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="cate">
+                            <span><img src="../../image/menu_icon02.png" alt="" /></span>
+                            <span>구독·주문관리</span>
+                        </a>
+                        <ul class="subMenu">
+                            <span class="close-submenu"></span>
+                            <li class="sub">
+                                <p  class="title">구독관리</p>
+                                <ul class="subMenu-3">
+                                    <li>
+                                        <a href="javascript:void(0);" target="_self" class="">구독서비스
+                                            신청 현황</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" target="_self" class="">구독상태
+                                            현황</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p class="title">주문관리</p>
+                                <ul class="subMenu-3">
+                                    <li>
+                                        <a href="javascript:void(0);" target="_self" class="">주문상태
+                                            현황</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="cate">
+                            <span><img src="../../image/menu_icon03.png" alt="" /></span>
+                            <span>상품관리</span>
+                        </a>
+                        <ul class="subMenu">
+                            <span class="close-submenu"></span>
+                            <li class="sub">
+                                <p  class="title">상품관리</p>
+                                <ul class="subMenu-3">
+                                    <li>
+                                        <a href="javascript:void(0);" target="_self"
+                                            class="">건강기능식품 관리</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" target="_self" class="">성분
+                                            관리</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" target="_self" class="">유의사항
+                                            관리</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" target="_self" class="">신규
+                                            건강기능식품 승인</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="cate">
+                            <span><img src="../../image/menu_icon04.png" alt="" /></span>
+                            <span>게시판</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="cate">
+                            <span><img src="../../image/menu_icon05.png" alt="" /></span>
+                            <span>통계</span>
+                        </a>
+                        <ul class="subMenu">
+                            <span class="close-submenu"></span>
+                            <li class="sub">
+                                <p  class="title">통계</p>
+                                <ul class="subMenu-3">
+                                    <li>
+                                        <a href="javascript:void(0);" target="_self"
+                                            class="">회원통계</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" target="_self"
+                                            class="">신청/분석통계</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" target="_self" class="">구독/결재
+                                            통계</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" target="_self"
+                                            class="">기타통계</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="cate">
+                            <span><img src="../../image/menu_icon06.png" alt="" /></span>
+                            <span>결제관리</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="cate">
+                            <span><img src="../../image/menu_icon07.png" alt="" /></span>
+                            <span>고객지원</span>
+                        </a>
+                        <ul class="subMenu">
+                            <span class="close-submenu"></span>
+                            <li class="sub">
+                                <p  class="title">고객지원</p>
+                                <ul class="subMenu-3">
+                                    <li>
+                                        <a href="javascript:void(0);" target="_self" class="">1:1
+                                            상담문의 (0)</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" target="_self" class="">회원 탈퇴
+                                            내역</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sub">
+                                <p class="title">구독관리</p>
+                                <ul class="subMenu-3">
+                                    <li>
+                                        <a href="javascript:void(0);" target="_self" class="">FAQ
+                                            분류</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" target="_self" class="">FAQ
+                                            관리</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sub">
+                                <p  class="title">공지사항 관리</p>
+                                <ul class="subMenu-3">
+                                    <li>
+                                        <a href="javascript:void(0);" target="_self" class="">공지사항
+                                            관리</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="cate">
+                            <span><img src="../../image/menu_icon08.png" alt="" /></span>
+                            <span>디자인관리</span>
+                        </a>
+                        <ul class="subMenu">
+                            <span class="close-submenu"></span>
+                            <li class="sub">
+                                <p class="title">배너관리</p>
+                                <ul class="subMenu-3">
+                                    <li>
+                                        <a href="javascript:void(0);" target="_self" class="">통합
+                                            배너관리(모바일)</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sub">
+                                <p  class="title">기타관리</p>
+                                <ul class="subMenu-3">
+                                    <li>
+                                        <a href="javascript:void(0);" target="_self"
+                                            class="">팝업관리</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="cate">
+                            <span><img src="../../image/menu_icon09.png" alt="" /></span>
+                            <span>환경설정</span>
+                        </a>
+                        <ul class="subMenu">
+                            <span class="close-submenu"></span>
+                            <li class="sub">
+                                <p class="title">기본환경 설정</p>
+                                <ul class="subMenu-3">
+                                    <li>
+                                        <a href="javascript:void(0);" target="_self" class="">관리자 정보 추가/수정</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sub">
+                                <p  class="title">쿠폰 설정</p>
+                                <ul class="subMenu-3">
+                                    <li>
+                                        <a href="javascript:void(0);" target="_self"
+                                            class="">쿠폰 관리</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" target="_self"
+                                            class="">관리</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="logout">
+                <button><img src="../../image/logout.svg" alt=""></button>
+            </div>
+        </header>
+
+        <!-- mainContainer -->
+        <section id="mainContainer" class="sub">
+            <div class="Wrap02">
+                <!-- profile -->
+                <div class="headBox borderStyle02">
+                    <ul class="profile">
+                        <li class="bell"><img src="../../image/profile_bell.svg" alt=""></li>
+                        <li class="user">
+                            <img src="../../image/profile_icon01.svg" alt="">
+                            <div>관리자 <span>님</span></div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <ul class="miniNav">
+                    <li><img src="../../image/home_icon.svg" alt=""></li>
+                    <li>•</li>
+                    <li>회원관리</li>
+                    <li>•</li>
+                    <li>회원 정보관리</li>
+                </ul> -->
+                <!-- subContent -->
+                <div class="Wrap">
+                    <!-- <h1 class="titleArea">회원 정보관리(약사)</h1> -->
+                    <!-- information -->
+                    <div id="changeInfo" class="boxStyle">
+                        <h2 class="subtitle">회원정보</h2>
+                        <div class="cg_profile">
+                            <div class="profileImg" id="profileImage">
+                                <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                                <img id="imagePreview" src="../../image/mypage_img01.png" alt="프로필 이미지" class="show" />
+                                <span id="uploadText" class="none">등록하기</span>
+                            </div>
+                            <div class="profileUser">
+                                <h1 class="titleArea">김약사 <i class="ri-pencil-line"></i></h1>
+                                <span class="conText">* 이미지파일은  *JPG *PNG로 업로드 해주세요.</span>
+                            </div>
+                        </div>
+                        <div class="cg_infobox">
+                            <div class="cgBox borderStyle01">
+                                <div class="cg_set">
+                                    <div class="flex01">
+                                        <p>이메일</p>
+                                        <span>yagsakim@naver.com</span>
+                                    </div>
+                                    <div class="flex01">
+                                        <p>이름</p>
+                                        <span>김약사</span>
+                                    </div>
+                                    <div class="flex01">
+                                        <p>휴대폰번호</p>
+                                        <span>010-1234-5678</span>
+                                    </div>
+                                    <div class="flex01">
+                                        <p>주소</p>
+                                        <span>제주 제주시 남성로 2길 19 2층</span>
+                                    </div>
+                                    <div class="flex01">
+                                        <p>나이</p>
+                                        <span>30</span>
+                                    </div>
+                                    <div class="flex01">
+                                        <p>성별</p>
+                                        <span>여</span>
+                                    </div>
+                                </div>
+                                <div class="cg_set">
+                                    <div class="flex01">
+                                        <p>가입일</p>
+                                        <span>2024년 04월 01일</span>
+                                    </div>
+                                    <div class="flex01">
+                                        <p>마지막 접속일</p>
+                                        <span>2024년 04월 01일</span>
+                                    </div>
+                                    <div class="flex01">
+                                        <p>회원정보</p>
+                                        <span>기업/법인</span>
+                                    </div>
+                                    <div class="flex01">
+                                        <p>사업자등록증</p>
+                                        <span><u class="org">필미.PDF</u></span>
+                                    </div>
+                                    <div class="flex01">
+                                        <p>약사 면허증</p>
+                                        <div class="file-upload">    
+                                            <label for="ex_filename">파일선택</label> 
+                                            <input type="file" id="ex_filename" class="upload-hidden"> 
+                                            <input type="text" class="upload-name" value="김약사_면허증.pdf" disabled="disabled">
+                                        </div>
+                                    </div>
+                                    <div class="flex01">
+                                        <p>소분서비스 교육 이수증</p>
+                                        <div class="file-upload">    
+                                            <label for="ex_filename">파일선택</label> 
+                                            <input type="file" id="ex_filename" class="upload-hidden"> 
+                                            <input type="text" class="upload-name" value="김약사_이수증.pdf" disabled="disabled">
+                                        </div>
+                                    </div>
+                                    <div class="flex01">
+                                        <p>통장사본</p>
+                                        <div class="file-upload">    
+                                            <label for="ex_filename">파일선택</label> 
+                                            <input type="file" id="ex_filename" class="upload-hidden"> 
+                                            <input type="text" class="upload-name" value="통장사본.pdf" disabled="disabled">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cg_set">
+                                    <div class="flex01">
+                                        <p>솔루션 제안 수</p>
+                                        <span>50회</span>
+                                    </div>
+                                    <div class="flex01">
+                                        <p>구독 고객 수</p>
+                                        <span>5건</span>
+                                    </div>
+                                    <div class="flex01">
+                                        <p>평점</p>
+                                        <span>4.9</span>
+                                    </div>
+                                    <div class="flex01">
+                                        <p>작성된 후기 수</p>
+                                        <span>61</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cgBox">
+                                <div class="cg_set">
+                                    <div class="flex01">
+                                        <p>가입 승인 상태</p>
+                                        <div class="mc flex">
+                                            <button class="btn btn01_2">변경</button>
+                                            <span>승인완료</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex01 mt20">
+                                        <p>추천인 코드</p>
+                                        <span class="mc">-</span>
+                                    </div>
+                                    <div class="flex01">
+                                        <p>프로모션 코드</p>
+                                        <span class="mc">-</span>
+                                    </div>
+                                </div>
+                                <div class="cg_set">
+                                    <div class="flex01">
+                                        <p>거절사유</p>
+                                        <div class="searchBox">
+                                            <form name="searchForm" id="searchForm" method="post" action="#">
+                                                <fieldset>
+                                                    <div class="selectBox">
+                                                        <select name="search" class="select">
+                                                            <option value="거절사유">거절 사유 노출</option>
+                                                            <option value="거절사유">거절 사유 노출안함</option>
+                                                        </select>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cg_set">
+                                    <h2 class="subtitle">이벤트 정보 수신</h2>
+                                    <div class="flex01">
+                                        <p>수신 설정</p>
+                                        <div class="flex">
+                                            <div class="Check">
+                                                <input type="checkbox" checked>
+                                                <span>수신거부</span>
+                                            </div>
+                                            <div class="Check">
+                                                <input type="checkbox">
+                                                <span>수신</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex01">
+                                        <p>마케팅 정보</p>
+                                        <div class="flex">
+                                            <div class="Check">
+                                                <input type="checkbox" checked>
+                                                <span>SNS</span>
+                                            </div>
+                                            <div class="Check">
+                                                <input type="checkbox">
+                                                <span>이메일</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex01">
+                                        <p>알람 수신</p>
+                                        <div class="flex">
+                                            <div class="Check">
+                                                <input type="checkbox" checked>
+                                                <span>SNS</span>
+                                            </div>
+                                            <div class="Check">
+                                                <input type="checkbox">
+                                                <span>이메일</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="footflex">
+            <div class="left">
+                <img src="../../image/footer_logo.svg" alt="fillme_footerLogo">
+            </div>
+            <div class="right">
+                <span>개인정보처리방침</span>
+                <span>이용약관</span>
+            </div>
+        </div>
+        <ul class="foot_t">
+            <li>
+                <span>대표이사 : 박영준</span>
+                <span>사업자등록번호 : 000-00-00000</span>
+            </li>
+            <li>주소 : 경기도 성남시 분당구 판교역로</li>
+            <div>Copyright 2024. Fillme.</div>
+        </ul>
+    </footer>
+</body>
+<script src="../../script/common.js"></script>
+
+</html>

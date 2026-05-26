@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AI를 활용한 자산 관리 솔루션 DalKak 서비스">
+    <meta name="keywords" content="AI 투자, 자산 관리, 포트폴리오 최적화, 금융 기술">
+    <meta property="og:title" content="DalKak" />
+    <meta property="og:description" content="AI를 활용한 자산 관리 솔루션 DalKak 서비스" />
+    <meta property="og:image" content="../image/link_thumb.svg" />
+    <meta property="og:url" content="https://dalkak.com" />
+    <meta name="google-site-verification" content="..." />
+    <title>자산배분1-4</title>
+    <!-- <script defer type="text/javascript" src="../script/chart.js"></script> -->
+    <script defer type="text/javascript" src="../script/common.js"></script>
+    <script src="../script/jquery-3.6.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" sizes="16x16" href="../image/link_icon.svg">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/stylemin.css">
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.4.0/remixicon.css">
+    <!-- 241209 사파리 호환성 -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+    <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div id="header" class="flex_sb bd_r20">
+            <div class="toplogo">
+                <img src="../image/toplogo.svg" alt="DalKak 로고">
+            </div>
+            <ul class="menu flex">
+                <li><a href="javascript:void(0);" class="">서비스 소개</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void(0);">서비스 1</a></li>
+                        <li><a href="javascript:void(0);">서비스 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);" class="on">자산배분</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void(0);">자산배분 1</a></li>
+                        <li><a href="javascript:void(0);">자산배분 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);">AI자동매매</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void(0);">AI자동매매 1</a></li>
+                        <li><a href="javascript:void(0);">AI자동매매 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);">포트폴리오</a></li>
+                <li><a href="javascript:void(0);">마이페이지</a></li>
+                <li><a href="javascript:void(0);">공지사항</a></li>
+            </ul>
+    
+            <div class="flex">
+                <button class="btn btnSt">문의하기</button>
+                <a class="ml10" href="javascript:void(0);"><i class="ri-user-line"></i></a>
+                <button class=" ml10"><i class="ri-search-line"></i></button>
+                <div id="menu-bar" class="mobile_menuBar" onclick="menuOnClick()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- mobile -->
+    <div class="moble_Menu" id="noneMenu">
+        <div class="flex_sb">
+            <h2>로그인 해주세요</h2>
+            <a href="javascript:void(0);">
+                <button class="btn btnSt_2">로그인</button>
+            </a>
+        </div>
+        <ul class="menu">
+            <li><a href="javascript:void(0);">서비스 소개</a>
+                <div>
+                    <a href="javascript:void(0);"><p>서비스1</p></a>
+                    <a href="javascript:void(0);"><p>서비스2</p></a>
+                </div>
+            </li>
+            <li><a href="javascript:void(0);">자산배분</a>
+                <div>
+                    <a href="javascript:void(0);"><p>자산배분1</p></a>
+                    <a href="javascript:void(0);"><p>자산배분2</p></a>
+                </div>
+            </li>
+            <li><a href="javascript:void(0);">AI자동매매</a>
+                <div>
+                    <a href="javascript:void(0);"><p>AI자동매매1</p></a>
+                    <a href="javascript:void(0);"><p>AI자동매매2</p></a>
+                </div>
+            </li>
+            <li><a href="javascript:void(0);">포트폴리오</a></li>
+            <li><a href="javascript:void(0);">마이페이지</a></li>
+            <li><a href="javascript:void(0);">공지사항</a></li>
+        </ul>
+    </div>
+    
+    <!-- visual -->
+    <section id="subvisual" class="sub02">
+        <div class="inner">
+            <!-- subNav -->
+            <ul class="subNav flex">
+                <li><a href="javascript:void(0);"><i class="ri-home-line"></i></a></li>
+                <li class="nav"><a href="javascript:void(0);">자산배분</a></li>
+                <li class="nav"><a href="javascript:void(0);">설정</a></li>
+            </ul>
+            <h2>DalKak 자산배분</h2>
+        </div>
+    </section>
+
+    <!-- content -->
+    <div id="content" class="property type4">
+        <div class="Wrap">
+            <div class="inner">
+                <!-- sec01 -->
+                <section>
+                    <div class="pageTitle">
+                        <ul class="pagination">
+                            <li><a href="javascript:void(0);">1</a></li>
+                            <li><a href="javascript:void(0);">2</a></li>
+                            <li><a href="javascript:void(0);">3</a></li>
+                            <li><a href="javascript:void(0);" class="active">4</a></li>
+                        </ul>
+                        <h2>설계결과</h2>
+                        <h5>홍길동님의 <span class="d_navy">자산배분 만들기 결과</span>입니다.</h5>
+                    </div>
+                    <div class="boxStyle01">
+                        <!-- sec01 -->
+                        <div class="secWrap chartWrap">
+                            <div class="secArea wd45">
+                                <div class="flex_sb">
+                                    <h5 class="flex">연평균 수익률 <small>(과거 3년 기준)</small>
+                                        <span class="qIcon"></span>
+                                    </h5>
+                                    <h5 class="red">2.79%</h5>
+                                </div>
+                                <div class="flex_sb boxStyle05">
+                                    <p class="flex">연평균 수익률 <small>(과거 3년 기준)</small><span class="qIcon"></span></p>
+                                    <p class="bold">7.13%</p>
+                                </div>
+                                <div class="exChart">
+                                    <p>연평균 기대 수익률(%)</p>
+                                    <canvas id="myBubbleChart"></canvas>
+                                    <ul class="grid2 gridCol4">
+                                        <li><span class="colorDot St8"></span>제안 포트폴리오</li>
+                                        <li><span class="colorDot"></span>국내주식</li>
+                                        <li><span class="colorDot St2"></span>선진국 주식</li>
+                                        <li><span class="colorDot St3"></span>신흥국주식</li>
+                                        <li><span class="colorDot St4"></span>국내채권</li>
+                                        <li><span class="colorDot St5"></span>선진국채권</li>
+                                        <li><span class="colorDot St6"></span>신흥국채권</li>
+                                        <li><span class="colorDot St7"></span>MMF</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="secArea">
+                                <h5>자산배분 기대 수익 및 비중</h5>
+                                <div class="flex_sb chartArea">
+                                    <div class="chartBox ">
+                                        <h5 class="end">투자 스타일 제안</h5>
+                                        <canvas id="myChart2"></canvas>
+                                    </div>
+                                    <div class="textBox bg_gsky">
+                                        <h5>자산 유형</h5>
+                                        <div>
+                                            <p>국내주식</p>
+                                            <p>선진국주식</p>
+                                            <p>신흥국주식</p>
+                                            <p>국내채권</p>
+                                            <p>선진국채권</p>
+                                            <p>신흥국채권</p>
+                                            <p>MMF</p>
+                                        </div>
+                                    </div>
+                                    <div class="chartBox">
+                                        <h5>나의투자비중</h5>
+                                        <canvas id="myChart1"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="boxStyle01">
+                        <!-- sec02 -->
+                        <div class="secWrap">
+                            <div class="secTitle mb30">
+                                <h3>제안포트폴리오 상세보기</h3>
+                            </div>
+
+                            <!-- tableList -->
+                            <div class="tableArea3">
+                                <table class="tg">
+                                    <thead>
+                                        <tr>
+                                            <th>자산군</th>
+                                            <th>세부유형</th>
+                                            <th>상품명</th>
+                                            <th colspan="2">비중(%)</th>
+                                            <th>수익률(%)</th>
+                                            <th>변동성<br>(3년, %)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span class="colorDot"></span>국내주식</td>
+                                            <td>k200 인덱스</td>
+                                            <td>KODEX 200</td>
+                                            <td>5.0</td>
+                                            <td>5.0</td>
+                                            <td class="red">-2.12</td>
+                                            <td>15.76</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="colorDot St2"></span>선진국주식</td>
+                                            <td>북미주식</td>
+                                            <td>KODEX 200</td>
+                                            <td>5.0</td>
+                                            <td>5.0</td>
+                                            <td class="red">-2.12</td>
+                                            <td>15.76</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="colorDot St3"></span>신흥국주식</td>
+                                            <td>인도주식</td>
+                                            <td>KODEX 200</td>
+                                            <td>5.0</td>
+                                            <td>5.0</td>
+                                            <td class="red">-2.12</td>
+                                            <td>15.76</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="colorDot St4"></span>국내채권</td>
+                                            <td>우량채권</td>
+                                            <td>KODEX 200</td>
+                                            <td>5.0</td>
+                                            <td>5.0</td>
+                                            <td class="red">-2.12</td>
+                                            <td>15.76</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="colorDot St5"></span>선진국채권</td>
+                                            <td>북미채권</td>
+                                            <td>KODEX 200</td>
+                                            <td>5.0</td>
+                                            <td>5.0</td>
+                                            <td class="red">-2.12</td>
+                                            <td>15.76</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="colorDot St6"></span>신흥국채권</td>
+                                            <td>아시아채권(일본제외)</td>
+                                            <td>KODEX 200</td>
+                                            <td>5.0</td>
+                                            <td>5.0</td>
+                                            <td class="red">-2.12</td>
+                                            <td>15.76</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="colorDot St7"></span>MMF</td>
+                                            <td>초단기 채권</td>
+                                            <td>KODEX 200</td>
+                                            <td>5.0</td>
+                                            <td>5.0</td>
+                                            <td class="red">-2.12</td>
+                                            <td>15.76</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <ul class="capBox St01">
+                                    <li>
+                                        <span>·</span>
+                                        <span>각 <span class="purple">자산군에 해당하는 상품만 추가</span>하실 수 있습니다.</span>
+                                    </li>
+                                    <li>
+                                        <span>·</span>
+                                        <span>상품의 투자비중은 자산군의 비중을 초과할 수 없습니다.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="boxStyle01">
+                        <!-- sec02 -->
+                        <div class="secWrap">
+                            <div class="secTitle">
+                                <h3>제안포트폴리오 상세보기</h3>
+                            </div>
+                            <div class="grid2 gridCol2">
+                                <div class="grid2 gridCol4">
+                                    <button class="btn01 normal2">1개월</button>
+                                    <button class="btn01 normal2 on">3개월</button>
+                                    <button class="btn01 normal2">6개월</button>
+                                    <button class="btn01 normal2">1년</button>
+                                </div>
+                                <div class="planDay flex" style="align-items: stretch;">
+                                    <div class="dayinput">
+                                        <input type="date" class="date" title="날짜입력" value="2024-01-01"
+                                            id="currentDate">
+                                    </div>
+                                    <span class="text">-</span>
+                                    <div class="dayinput">
+                                        <input type="date" class="date" title="날짜입력" value="2024-01-01"
+                                            id="currentDate">
+                                    </div>
+                                    <button class="btn01 btn_1 ml10">조회</button>
+                                </div>
+                            </div>
+                            <div class="yearChart">
+                                <ul class="St01">
+                                    <li>제안 포트폴리오</li>
+                                    <li>제안자산배분</li>
+                                </ul>
+                                <canvas id="lineChart_02"></canvas>
+                                <div class="capBox boxStyle05">
+                                    <li>
+                                        <span class="block bold">제안포트폴리오</span>
+                                        <span>: 내가 설정한 상품포트폴리오</span>
+                                    </li>
+                                    <li>
+                                        <span class="block bold">제안자산배분</span>
+                                        <span>: 제안포트폴리오의 벤치마크 (자산 유형별 수익률로 계산)</span>
+                                    </li>
+                                </div>
+                            </div>
+                            <ul class="capBox St01">
+                                <li>
+                                    <span>·</span>
+                                    <span>본 솔루션 결과는 Dalkak의 자산배분 시스템에 의한 것으로 투자참고사항입니다.</span>
+                                </li>
+                                <li>
+                                    <span>·</span>
+                                    <span>본 솔루션 결과는 입력하신 조건에 따라 일반적으로 가장 적절한 상품을 제시하는 것일 뿐, 동일한 솔루션 결과가 나타나더라도 개별 고객의
+                                        연령, 재무상황, 투자경험, 기타 고객의 사정 등에 따라 예상과 다른 투자결과가 발생할 수 있습니다.</span>
+                                </li>
+                                <li>
+                                    <span>·</span>
+                                    <span>Dalkak은 본 솔루션 결과와 관련하여 어떠한 전문적인 판단도 하지 않으며, 그 내용의 정확성 및 완전성을 보장하지 않습니다.</span>
+                                </li>
+                                <li>
+                                    <span>·</span>
+                                    <span>본 솔루션을 활용한 일체의 투자권유행위 및 투자행위에 대한 최종적인 판단은 투자권유인 및 투자자에게 있으며, Dalkak은 그 결과에 대하여
+                                        어떠한 책임도 부담하지 않습니다.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- bottomBtn -->
+                    <div class="bottomBtn">
+                        <button class="btn01">이전</button>
+                        <button class="btn01 next">저장 및 출력</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer id="footer">
+        <div class="inner">
+            <div class="flex mb30">
+                <a href="javascript:void(0);" class="ftlogo"><img src="../image/footerLogo.svg" alt="DalKak 로고"></a>
+                <a href="javascript:void(0);" class="mr20"><img src="../image/instagram.svg" alt="Instagram 아이콘"></a>
+                <a href="javascript:void(0);"><img src="../image/naver.svg" alt="Naver 아이콘"></a>
+            </div>
+            <ul>
+                <li>경기도 화성시 정남면 내향로 250-35</li>
+                <li class="flex mt20">
+                    <p class="deco">대표이사 홍길동</p>
+                    <p>000-1234-5678</p>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <ul class="inner" class="flex">
+            <li class="mr20">
+                <a href="javascript:void(0);">이용약관</a>
+            </li>
+            <li class="bold">
+                <a href="javascript:void(0);">개인정보처리방침</a>
+            </li>
+            <div class="mlAuto">Copyright ⓒ 2024 SITS All rights reserved. </div>
+        </ul>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+</html>

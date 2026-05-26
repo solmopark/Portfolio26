@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AI 에너지 분석 시스템">
+    <meta name="keywords" content="AI 에너지 분석 시스템">
+    <meta property="og:title" content="AI 에너지 분석 시스템" />
+    <meta property="og:description" content="AI 에너지 분석 시스템" />
+    <title>AI 에너지 분석 시스템_설정04</title>
+
+    <script defer type="text/javascript" src="../../script/common.js"></script>
+    <script src="../../script/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="../../css/stylemin.css" />
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.4.0/remixicon.css">
+
+</head>
+
+
+<body>
+    <!-- header_Start -->
+    <header id="header">
+        <ul class="menu">
+            <div class="toplogo">
+                <img src="../../image/logo.png" alt="로고">
+            </div>
+            <li>
+                <a href="../../html/01.dashboard/Dashboard.html">Dashboard</a>
+            </li>
+            <li>
+                <a href="../../html/02.control/control_01.html">최적 제어</a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" class="on">설정</a>
+            </li>
+        </ul>
+        <div class="subwrap">
+            <ul class="submenu">
+                <div>
+                    <h2>로고</h2>
+                </div>
+                <li>
+                    <h2>Dashboard</h2>
+                </li>
+                <li>
+                    <h2>최적 제어</h2>
+                    <ul>
+                        <li><a href="../../html/02.control/control_01.html">송수펌프 제어 분석</a></li>
+                        <li><a href="../../html/03.setting/setting_01.html">송수펌프 제어 세부현황</a></li>
+                        <li><a href="../../html/03.setting/setting_02.html">AI제어에 따른 배수지 트랜드</a></li>
+                        <li><a href="../../html/03.setting/setting_03.html">송수펌프 제어이력</a></li>
+                        <li><a href="../../html/03.setting/setting_04.html">주요 배수지 수위 현황</a></li>
+                        <li><a href="../../html/03.setting/setting_09.html">제어이력</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h2>설정</h2>
+                    <ul>
+                        <li><a href="../../html/03.setting/setting_07.html">Q-Table</a></li>
+                        <li><a href="../../html/03.setting/setting_08.html">배수지 관리</a></li>
+                        <li><a href="../../html/03.setting/setting_05.html">학습용 데이터셋 관리 기능</a></li>
+                        <li><a href="../../html/03.setting/setting_06.html">시뮬레이션 데이터셋 관리</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- header_End -->
+
+    <main>
+        <div id="Wrap">
+            <div class="inner">
+                <section id="tabStyle" class="St1">
+                    <!-- tab-container_Start -->
+                    <div class="tab-container">
+                        <!-- tabMenu_Start -->
+                        <div class="tabs">
+                            <div class="tab active" onclick="openTab(event, 'tab1')">능평가압장 배수지 1지</div>
+                            <div class="tab" onclick="openTab(event, 'tab2')">능평가압장 배수지 2지</div>
+                            <div class="tab" onclick="openTab(event, 'tab3')">도마배수지 1 지</div>                            
+                            <div class="tab" onclick="openTab(event, 'tab4')">도마배수지 2지</div>
+                        </div>
+                        <!-- tabMenu_End -->
+
+                        <!-- tab-content_Start -->
+                        <div id="tab1" class="tab-content active">                            
+                            <div class="tabFlex">
+                                <div class="tabBox w45">
+                                    <h2 class="lineTitle2">배수지 현황황</h2>                                        
+                                </div>
+                                <div class="tabBox">
+                                    <div class="grid2 gridCol2_1">
+                                        <div class="Box ">
+                                            <h2 class="lineTitle2 mb20">스위 트랜드</h2>
+                                            <div class="imgArea">
+                                                <img src="../../image/setting04_chart01.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="Box ">
+                                            <h2 class="lineTitle2 mb20">배수지별 수위 분포</h2>
+                                            <div class="imgArea mt20">
+                                                <img src="../../image/setting04_chart02.png" alt="">
+                                                <div class="dotBox mb20">
+                                                    <div class="colorDot row">
+                                                        <span class=""></span>
+                                                        <p>능평가압장 배수지 1,  2지</p>
+                                                    </div>
+                                                    <div class="colorDot row">
+                                                        <span class="dot3"></span>
+                                                        <p>도마배수지 1,  2지</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="Box">
+                                        <h2 class="lineTitle2 mb20">배수지별 수위 순시</h2>
+                                        <div class="flex">
+                                            <div class="BoxStyle flex_cont4">
+                                                <p class="mb10">#능평가압장 배수지 1</p>
+                                                <h5>3.3  m</h5>
+                                            </div>
+                                            <div class="BoxStyle flex_cont4">
+                                                <p class="mb10">#능평가압장 배수지 1</p>
+                                                <h5>3.3  m</h5>
+                                            </div>
+                                            <div class="BoxStyle flex_cont4">
+                                                <p class="mb10">#도마배수지 1지</p>
+                                                <h5>3.3  m</h5>
+                                            </div>
+                                            <div class="BoxStyle flex_cont4">
+                                                <p class="mb10">#도마배수지  2지</p>
+                                                <h5>3.3  m</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tab2" class="tab-content">
+                            <div class="tabFlex">
+                                <div class="tabBox w45">
+                                    <h2 class="lineTitle2">배수지 현황황</h2>                                        
+                                </div>
+                                <div class="tabBox">
+                                    <div class="grid2 gridCol2_1">
+                                        <div class="Box ">
+                                            <h2 class="lineTitle2 mb20">스위 트랜드</h2>
+                                            <div class="imgArea">
+                                                <img src="../../image/setting04_chart01.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="Box ">
+                                            <h2 class="lineTitle2 mb20">배수지별 수위 분포</h2>
+                                            <div class="imgArea mt20">
+                                                <img src="../../image/setting04_chart02.png" alt="">
+                                                <div class="dotBox mb20">
+                                                    <div class="colorDot row">
+                                                        <span class=""></span>
+                                                        <p>능평가압장 배수지 1,  2지</p>
+                                                    </div>
+                                                    <div class="colorDot row">
+                                                        <span class="dot3"></span>
+                                                        <p>도마배수지 1,  2지</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="Box">
+                                        <h2 class="lineTitle2 mb20">배수지별 수위 순시</h2>
+                                        <div class="flex">
+                                            <div class="BoxStyle flex_cont4">
+                                                <p class="mb10"></p>
+                                                <h5></h5>
+                                            </div>
+                                            <div class="BoxStyle flex_cont4">
+                                                <p class="mb10"></p>
+                                                <h5></h5>
+                                            </div>
+                                            <div class="BoxStyle flex_cont4">
+                                                <p class="mb10"></p>
+                                                <h5></h5>
+                                            </div>
+                                            <div class="BoxStyle flex_cont4">
+                                                <p class="mb10"></p>
+                                                <h5></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="tab3" class="tab-content">
+                            <div class="tabFlex">
+                                <div class="tabBox w45">
+                                    <h2 class="lineTitle2">배수지 현황황</h2>                                        
+                                </div>
+                                <div class="tabBox">
+                                    <div class="grid2 gridCol2_1">
+                                        <div class="Box ">
+                                            <h2 class="lineTitle2 mb20">스위 트랜드</h2>
+                                            <div class="imgArea">
+                                                <img src="../../image/setting04_chart01.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="Box ">
+                                            <h2 class="lineTitle2 mb20">배수지별 수위 분포</h2>
+                                            <div class="imgArea mt20">
+                                                <img src="../../image/setting04_chart02.png" alt="">
+                                                <div class="dotBox mb20">
+                                                    <div class="colorDot row">
+                                                        <span class=""></span>
+                                                        <p>능평가압장 배수지 1,  2지</p>
+                                                    </div>
+                                                    <div class="colorDot row">
+                                                        <span class="dot3"></span>
+                                                        <p>도마배수지 1,  2지</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="Box">
+                                        <h2 class="lineTitle2 mb20">배수지별 수위 순시</h2>
+                                        <div class="flex">
+                                            <div class="BoxStyle flex_cont4">
+                                                <p class="mb10"></p>
+                                                <h5></h5>
+                                            </div>
+                                            <div class="BoxStyle flex_cont4">
+                                                <p class="mb10"></p>
+                                                <h5></h5>
+                                            </div>
+                                            <div class="BoxStyle flex_cont4">
+                                                <p class="mb10"></p>
+                                                <h5></h5>
+                                            </div>
+                                            <div class="BoxStyle flex_cont4">
+                                                <p class="mb10"></p>
+                                                <h5></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab4" class="tab-content">
+                            <div class="tabFlex">
+                                <div class="tabBox w45">
+                                    <h2 class="lineTitle2">배수지 현황황</h2>                                        
+                                </div>
+                                <div class="tabBox">
+                                    <div class="grid2 gridCol2_1">
+                                        <div class="Box ">
+                                            <h2 class="lineTitle2 mb20">스위 트랜드</h2>
+                                            <div class="imgArea">
+                                                <img src="../../image/setting04_chart01.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="Box ">
+                                            <h2 class="lineTitle2 mb20">배수지별 수위 분포</h2>
+                                            <div class="imgArea mt20">
+                                                <img src="../../image/setting04_chart02.png" alt="">
+                                                <div class="dotBox mb20">
+                                                    <div class="colorDot row">
+                                                        <span class=""></span>
+                                                        <p>능평가압장 배수지 1,  2지</p>
+                                                    </div>
+                                                    <div class="colorDot row">
+                                                        <span class="dot3"></span>
+                                                        <p>도마배수지 1,  2지</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="Box">
+                                        <h2 class="lineTitle2 mb20">배수지별 수위 순시</h2>
+                                        <div class="flex">
+                                            <div class="BoxStyle flex_cont4">
+                                                <p class="mb10"></p>
+                                                <h5></h5>
+                                            </div>
+                                            <div class="BoxStyle flex_cont4">
+                                                <p class="mb10"></p>
+                                                <h5></h5>
+                                            </div>
+                                            <div class="BoxStyle flex_cont4">
+                                                <p class="mb10"></p>
+                                                <h5></h5>
+                                            </div>
+                                            <div class="BoxStyle flex_cont4">
+                                                <p class="mb10"></p>
+                                                <h5></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tab-content_End -->
+                    </div>
+                    <!-- tab-container_End -->
+                </section>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

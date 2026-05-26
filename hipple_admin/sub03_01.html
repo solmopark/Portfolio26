@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hipple 상권관리수정</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/sub.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://rawgit.com/enyo/dropzone/master/dist/dropzone.css" />
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <script src="./script/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+    <!-- Header-START -->
+    <header id="top_header">
+        <div class="head_logo">
+            <a href="" title="home">
+                <img src="./image/logo.svg" alt="logo" />
+            </a>
+        </div>
+        <div class="head_box">
+            <ul class="headmenu">
+                <li><a href="">바로가기</a></li>
+                <li><a href="">설문조사</a></li>
+                <li><a href="">학습사이트</a></li>
+                <li><a href="">사용자 사이트</a></li>
+                <li><a href="">TMAP API</a></li>
+            </ul>
+
+            <ul class="headicon">
+                <li class="bell"><img src="./image/icon_head08.svg" alt=""></li>
+                <li class="user">
+                    <button class="flex"><img src="./image/icon_head09.svg" alt=""> <i
+                            class="fa-solid fa-caret-down"></i></button>
+                </li>
+                <div class="user_setting">
+                    <ul class="userbox">
+                        <li>
+                            <a href="" class="user_item">
+                                <img src="./image/icon_topuser01.svg" alt="">
+                                <span>개인정보 수정</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="user_item">
+                                <img src="./image/icon_topuser02.svg" alt="">
+                                <span>메일 수신 설정</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="user_item">
+                                <img src="./image/icon_topuser03.svg" alt="">
+                                <span>비밀번호 변경</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="user_item">
+                                <img src="./image/icon_topuser04.svg" alt="">
+                                <span>로그인 관리</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="user_item">
+                                <img src="./image/icon_topuser05.svg" alt="">
+                                <span>로그아웃</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </ul>
+
+            <div id="menu-bar" class="mobile_menuBar" onclick="menuOnClick()">
+                <div id="bar1" class="bar"></div>
+                <div id="bar2" class="bar"></div>
+                <div id="bar3" class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <section id="section" class="sub03-1">
+        <!-- User & Accordion -->
+        <div class="acco_wrap dp_none">
+            <div class="menu_Area">
+                <!-- user -->
+                <div class="userBox">
+                    <div class="user_img">
+                        <img src="./image/menu_user.png" alt="" />
+                    </div>
+                    <div class="user_txt">
+                        <h2>User</h2>
+                        <p>User님 환영합니다!</p>
+                    </div>
+                </div>
+                <!-- Accordion menu -->
+                <div class="accordion">
+                    <ul class="menu">
+                        <li>
+                            <a href="index.html" class="cate on">
+                                <span><img src="./image/menu_icon01.png" alt="" /></span>
+                                <span>대시보드</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="cate">
+                                <span><img src="./image/menu_icon02.png" alt="" /></span>
+                                <span>회원정보</span>
+                            </a>
+                            <div>
+                                <a href="sub01.html"><p>회원정보</p></a>
+                                <a href="sub01_01.html"><p>회원상세</p></a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="cate">
+                                <span><img src="./image/menu_icon03.png" alt="" /></span>
+                                <span>생성된지도정보</span>
+                            </a>
+                            <div>
+                                <a href="sub02.html"><p>생성된지도 목록</p></a>
+                                <a href="sub02_01.html"><p>생성된지도 상세</p></a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="cate">
+                                <span><img src="./image/menu_icon09.png" alt="" /></span>
+                                <span>상점DB정보</span>
+                            </a>
+                            <div>
+                                <a href="sub03.html"><p>상점DB목록</p></a>
+                                <a href="sub03_01.html"><p>상점DB상세</p></a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="cate">
+                                <span><img src="./image/menu_icon05.png" alt="" /></span>
+                                <span>관광정보</span>
+                            </a>                            
+                            <div>
+                                <a href="sub04.html"><p>관광정보 목록</p></a>
+                                <a href="sub04_01.html"><p>관광정보 등록/수정</p></a>
+                                <a href="sub04_02.html"><p>관광정보 상세</p></a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="cate">
+                                <span><img src="./image/menu_icon06.png" alt="" /></span>
+                                <span>공공 데이터연계</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="cate">
+                                <span><img src="./image/menu_icon07.png" alt="" /></span>
+                                <span>설정관리</span>
+                            </a>
+                            <div>
+                                <p>배너관리</p>
+                                <p>생성횟수관리</p>
+                                <p>인기상점설정</p>
+                                <p>카테고리설정</p>
+                                <p>권한설정</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="cate">
+                                <span><img src="./image/menu_icon08.png" alt="" /></span>
+                                <span>접속자 관리</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- mobile_Accordion menu -->        
+        <div class="acco_wrap acco_wrap_mobile" id="menu-bg">
+            <div class="menu_Area mobile_menu_Area" id="nav">
+                <!-- user -->
+                <div class="userBox">
+                    <ul class="menu bd_B01">
+                        <li><a href="">바로가기</a></li>
+                        <li><a href="">설문조사</a></li>
+                        <li><a href="">학습사이트</a></li>
+                        <li><a href="">사용자 사이트</a></li>
+                        <li><a href="">TMAP API</a></li>
+                    </ul>
+                </div>
+                <!-- Accordion menu -->
+                <div class="accordion">
+                    <ul class="menu">
+                        <li>
+                            <a href="index.html" class="cate on">
+                                <span><img src="./image/menu_icon01.png" alt="" /></span>
+                                <span>대시보드</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="cate">
+                                <span><img src="./image/menu_icon02.png" alt="" /></span>
+                                <span>회원정보</span>
+                            </a>
+                            <div>
+                                <a href="sub01.html">
+                                    <p>회원정보</p>
+                                </a>
+                                <a href="sub01_01.html">
+                                    <p>회원상세</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="cate">
+                                <span><img src="./image/menu_icon03.png" alt="" /></span>
+                                <span>생성된지도정보</span>
+                            </a>
+                            <div>
+                                <a href="sub02.html">
+                                    <p>생성된지도 목록</p>
+                                </a>
+                                <a href="sub02_01.html">
+                                    <p>생성된지도 상세</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="cate">
+                                <span><img src="./image/menu_icon09.png" alt="" /></span>
+                                <span>상점DB정보</span>
+                            </a>
+                            <div>
+                                <a href="sub03.html">
+                                    <p>상점DB정보</p>
+                                </a>
+                                <a href="sub03_01.html">
+                                    <p>상점DB상세</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="cate">
+                                <span><img src="./image/menu_icon05.png" alt="" /></span>
+                                <span>관광정보</span>
+                            </a>                            
+                            <div>
+                                <a href="sub04.html"><p>관광정보 목록</p></a>
+                                <a href="sub04_01.html"><p>관광정보 등록/수정</p></a>
+                                <a href="sub04_02.html"><p>관광정보 상세</p></a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="cate">
+                                <span><img src="./image/menu_icon06.png" alt="" /></span>
+                                <span>공공 데이터연계</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="cate">
+                                <span><img src="./image/menu_icon07.png" alt="" /></span>
+                                <span>설정관리</span>
+                            </a>
+                            <div>
+                                <p>배너관리</p>
+                                <p>생성횟수관리</p>
+                                <p>인기상점설정</p>
+                                <p>카테고리설정</p>
+                                <p>권한설정</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" class="cate">
+                                <span><img src="./image/menu_icon08.png" alt="" /></span>
+                                <span>접속자 관리</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- board -->
+        <div class="dashboard_wrap max_h" id="board_wrap">
+            <div class="detailwrap box_style">
+                <div class="titleArea">상권관리 정보수정</div>
+                <div class="userInput">
+                    <div class="flex flex_start">
+                        <div class="subtitle">제목</div>
+                        <div class="input_box">
+                            <input type="text" id="si_name" name="si_name userInput" value="대전 대흥 스테이오늘" required=""
+                                class="mb10">
+                        </div>
+                    </div>
+
+
+                    <div class="flex flex_start">
+                        <div class="subtitle">주소</div>
+                        <div class="input_box">
+                            <input type="text" id="userInputMain" name="userInput"
+                                value="충청남도 부여군 부여읍 뒷개로 29번길 10-1 무드빌리지" class="mb10">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- table -->
+                <div class="detail_user tableArea02 mb30">
+                    <table class="tg">
+                        <colgroup>
+                            <col width="25%" />
+                            <col width="25%" />
+                            <col width="25%" />
+                            <col width="25%" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td>상권</td>
+                                <td class="userInput_box">
+                                    <form action="">
+                                        <select name="search" class="select">
+                                            <option value="검색어 입력">은행동</option>
+                                            <option value="기관명 입력">대흥동</option>
+                                            <option value="기관명 입력">중앙시장</option>
+                                            <option value="기관명 입력">한약거리</option>
+                                            <option value="기관명 입력">선화동</option>
+                                            <option value="기관명 입력">부사동</option>
+                                            <option value="기관명 입력">문창동</option>
+                                        </select>
+                                    </form>
+                                </td>
+                                <td>성심당 혜택</td>
+                                <td class="">
+                                    <div class="flex_02">
+                                        <input type="checkbox" name="" class="form-1__checkbox-all">
+                                        <span class="ml5"> 성심당 혜택</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>성심당 혜택 내용</td>
+                                <td class="userInput">
+                                    <div class="input_box">
+                                        <input type="text" id="si_name" name="si_name userInput" value="대전 대흥 스테이오늘"
+                                            required="">
+                                    </div>
+                                </td>
+                                <td>현재상태</td>
+                                <td>
+                                    <div class="radio_flex">
+                                        <label class="radio_cus">
+                                            <input type="radio" name="styles" id="accent">
+                                            <div>정상</div>
+                                        </label>
+                                        <label class="radio_cus">
+                                            <input type="radio" name="styles" id="accent">
+                                            <div>탈퇴</div>
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>카테고리 (중복선택가능)</td>
+                                <td colspan="3" class="p15">
+                                    <div class="c_choice">
+                                        <div class="choiceflex">
+                                            <input type="checkbox" name="" class="form-1__checkbox-all">
+                                            <span class="ml5">테스트1</span>
+                                        </div>
+                                        <div class="choiceflex">
+                                            <input type="checkbox" name="" class="form-1__checkbox-all">
+                                            <span class="ml5">테스트2</span>
+                                        </div>
+                                        <div class="choiceflex">
+                                            <input type="checkbox" name="" class="form-1__checkbox-all">
+                                            <span class="ml5">테스트3</span>
+                                        </div>
+                                        <div class="choiceflex">
+                                            <input type="checkbox" name="" class="form-1__checkbox-all">
+                                            <span class="ml5">테스트4</span>
+                                        </div>
+                                        <div class="choiceflex">
+                                            <input type="checkbox" name="" class="form-1__checkbox-all">
+                                            <span class="ml5">테스트5</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>네이버 카테고리</td>
+                                <td>호텔</td>
+                                <td>네이버 태그</td>
+                                <td>
+                                    대전호텔,대전모텔,성심당,대전야구장,대전역
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>내용</td>
+                                <td colspan="3" class="text_editor">
+                                    <div id="editor">
+                                        <p>안녕하세요^^!! 대전 스테이,오늘입니다.</p>
+                                        <p><br></p>
+                                        <p>스테이,오늘은 대전에서 출장업무, 커플데이트에 최적화된 신축 호텔로서, 탁월한 서비스와 편의 시설을 제공합니다.</p>
+                                        <p>저희 호텔은 더욱 편안하고 품격 있는 숙박 경험을 위해 다음과 같은 서비스 상품을 제공합니다.</p>
+                                        <p><br></p>
+                                        <p>-대형 TV와 고사양 PC</p>
+                                        <p>각각의 객실에는 대형 TV와 고사양 PC가 구비되어 있습니다. 최신 기술을 적용한 대형 TV는 고화질 영상 감상이 가능하며, 편안한 시청
+                                            경험을 선사합니다. 또한, 고사양 PC는 비즈니스나 엔터테인먼트 목적으로 사용할 수 있어 고객들의 다양한 요구를 충족시켜줍니다.</p>
+                                        <p><br></p>
+                                        <p>-대형 욕조와 전 객실 정수기</p>
+                                        <p>스테이,오늘 객실에는 편안한 휴식을 위해 대형 욕조가 제공됩니다. 이를 통해 고객들은 지친 일상에서 힐링을 받을 수 있습니다. 게다가,
+                                            각각의 객실에는 전용 정수기가 설치되어 있어 상쾌한 물을 언제든지 마실 수 있습니다.</p>
+                                        <p><br></p>
+                                        <p>-전 객실 공기청정기와 스타일러</p>
+                                        <p>저희 호텔은 고객들의 건강과 편안함을 중요시하여 전 객실에 공기청정기를 설치하였습니다. 실내 공기를 청정하고 미세먼지를 제거하여 쾌적한
+                                            환경을 유지합니다. 또한, 스타일러가 각 객실에 구비되어 있어 의류의 다림질이 필요한 순간에도 편리하게 사용할 수 있습니다.</p>
+                                        <p><br></p>
+                                        <p>-웰컴드링크</p>
+                                        <p>스테이,오늘 프론트에서는 웰컴드링크로 카페 수준의 고급 원두 커피, 바닐라라떼, 핫초코, 청포도 에이드 등을 제공합니다. 도착하자마자
+                                            고객들은 품질 좋은 음료를 즐기며 편안한 분위기를 느낄 수 있습니다.</p>
+                                        <p><br></p>
+                                        <p>스테이,오늘은 대전에서 출장업무, 커플데이트에 최적화된 신축 호텔로서 대형 TV, 대형 욕조, 고사양 PC, 전 객실 정수기, 전 객실
+                                            공기청정기, 스타일러 등 다양한 서비스 상품을 제공합니다. 또한, 프론트에서의 웰컴드링크로 고객들에게 특별한 환영을 줍니다.</p>
+                                        <p>저희 호텔에서 편안하고 품격 있는 숙박을 경험해보세요. 문의나 예약은 언제든지 홈페이지를 방문하시거나 전화로 문의해주세요. 성심껏 안내해
+                                            드리겠습니다. 감사합니다.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>네이버 리뷰</td>
+                                <td colspan="3" class="lh15">
+                                    <textarea name="" id="">#대전숙박 #성심당   #스테이오늘 #여기어때  #트윈침대
+침구나 화장실 등 전체적으로 너무 깔끔해요!
+대부분 호텔에는 생수가 놓여있는데 여기는  정수기가 놓여있어, 뜨거운 물이나 냉수를 부담없이 마음껏 사용하기 좋아요! 냉장고도 예쁘고 작은듯해도 내부가 생각보다 넓어 이것저것 포장한 음식들도 넣어놓았어요.
+방은 그렇게 크지는 않지만 알차게 구성되어있어요.
+욕실은 생각보다 넓고  깔끔하며 변기에 
+비데가 있어 좋아요 😀 
+젊은 부부 사장님이 운영하시는것 같은데 친절하시고 
+한사람에 한잔씩의 음료를 까페처럼 무료로 직접 만들어주셔서 저는 오늘 아메리카노만 먹어봤지만 다른 음료도 맛있어 보였어요
+전체적으로 만족스런 호텔이었네요! 이런 상태로 오랫동안 유지될수있는 호텔이었으면 합니다!
+티몬건 때문에 가기전부터 통화를 몇번했는데 너무친절하셨고 건물도 너무 깨끗하고 맛있는 커피도 무료로 주시고 2박3일동안 숙소가 너무 맘에 들어서 편안한 여행이였어요
+그리고 성심당이랑 가까워서 너무 좋았어요
+다음에 대전방문갈일있음 숙소고민은 하지않을듯 합니다~^^
+좋습니다~~
+정수기, 스타일러, 고데기까지 있고 깨끗해서 좋았습니다.
+깔끔하고 좋아요
+                                    </textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>네이버 검색어</td>
+                                <td class="userInput">
+                                    <div class="input_box">
+                                        <input type="text" id="si_name" name="si_name userInput" value="대전 대흥 스테이오늘"
+                                            required="">
+                                    </div>
+                                </td>
+                                <td>네이버검색화면 새창열기</td>
+                                <td>
+                                    <a href="" target="_blank">
+                                        <button class="btn btn_03">네이버 검색 새창</button>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>조회수</td>
+                                <td>0</td>
+                                <td>목표 좋아요 수</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>저장수</td>
+                                <td>0</td>
+                                <td>언급량</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>URL</td>
+                                <td class="userInput">
+                                    <div class="input_box">
+                                        <input type="text" id="si_name" name="si_name userInput"
+                                            value="http://www.aknara.co.kr/" required="">
+                                    </div>
+                                </td>
+                                <td>연락처</td>
+                                <td class="userInput">
+                                    <div class="input_box">
+                                        <input type="text" id="si_name" name="si_name userInput" value="042-256-2271"
+                                            required="">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>영업시간</td>
+                                <td>
+                                    <div class="flex_02 timewrap">
+                                        <div class="time">
+                                            <span>시간</span>
+                                            <select name="si_open" id="si_open" class="timebox">
+                                                <option value="00:00">00:00</option>
+                                                <option value="00:00">00:30</option>
+                                                <option value="00:00">01:00</option>
+                                                <option value="00:00">01:30</option>
+                                                <option value="00:00">02:00</option>
+                                                <option value="00:00">02:30</option>
+                                                <option value="00:00">03:00</option>
+                                                <option value="00:00">03:30</option>
+                                                <option value="00:00">04:00</option>
+                                                <option value="00:00">04:30</option>
+                                                <option value="00:00">05:00</option>
+                                                <option value="00:00">05:30</option>
+                                                <option value="00:00">06:00</option>
+                                                <option value="00:00">06:30</option>
+                                                <option value="00:00">07:00</option>
+                                                <option value="00:00">07:30</option>
+                                                <option value="00:00">08:00</option>
+                                                <option value="00:00">08:30</option>
+                                                <option value="00:00">09:00</option>
+                                                <option value="00:00">09:30</option>
+                                                <option value="00:00" selected>10:00</option>
+                                                <option value="00:00">10:30</option>
+                                                <option value="00:00">11:00</option>
+                                                <option value="00:00">11:30</option>
+                                                <option value="00:00">12:00</option>
+                                                <option value="00:00">12:30</option>
+                                                <option value="00:00">13:00</option>
+                                                <option value="00:00">13:30</option>
+                                                <option value="00:00">14:00</option>
+                                                <option value="00:00">14:30</option>
+                                                <option value="00:00">15:00</option>
+                                                <option value="00:00">15:30</option>
+                                                <option value="00:00">16:00</option>
+                                                <option value="00:00">16:30</option>
+                                                <option value="00:00">17:00</option>
+                                                <option value="00:00">17:30</option>
+                                                <option value="00:00">18:00</option>
+                                                <option value="00:00">18:30</option>
+                                                <option value="00:00">19:00</option>
+                                                <option value="00:00">19:30</option>
+                                                <option value="00:00">20:00</option>
+                                                <option value="00:00">20:30</option>
+                                                <option value="00:00">21:00</option>
+                                                <option value="00:00">21:30</option>
+                                                <option value="00:00">22:00</option>
+                                                <option value="00:00">22:30</option>
+                                                <option value="00:00">23:00</option>
+                                                <option value="00:00">23:30</option>
+                                            </select>
+                                        </div>
+                                        <div class="time">
+                                            <span>종료</span>
+                                            <select name="si_open" id="si_open" class="timebox">
+                                                <option value="00:00">00:00</option>
+                                                <option value="00:00">00:30</option>
+                                                <option value="00:00">01:00</option>
+                                                <option value="00:00">01:30</option>
+                                                <option value="00:00">02:00</option>
+                                                <option value="00:00">02:30</option>
+                                                <option value="00:00">03:00</option>
+                                                <option value="00:00">03:30</option>
+                                                <option value="00:00">04:00</option>
+                                                <option value="00:00">04:30</option>
+                                                <option value="00:00">05:00</option>
+                                                <option value="00:00">05:30</option>
+                                                <option value="00:00">06:00</option>
+                                                <option value="00:00">06:30</option>
+                                                <option value="00:00">07:00</option>
+                                                <option value="00:00">07:30</option>
+                                                <option value="00:00">08:00</option>
+                                                <option value="00:00">08:30</option>
+                                                <option value="00:00">09:00</option>
+                                                <option value="00:00">09:30</option>
+                                                <option value="00:00">10:00</option>
+                                                <option value="00:00">10:30</option>
+                                                <option value="00:00">11:00</option>
+                                                <option value="00:00">11:30</option>
+                                                <option value="00:00">12:00</option>
+                                                <option value="00:00">12:30</option>
+                                                <option value="00:00">13:00</option>
+                                                <option value="00:00">13:30</option>
+                                                <option value="00:00">14:00</option>
+                                                <option value="00:00">14:30</option>
+                                                <option value="00:00">15:00</option>
+                                                <option value="00:00">15:30</option>
+                                                <option value="00:00">16:00</option>
+                                                <option value="00:00">16:30</option>
+                                                <option value="00:00">17:00</option>
+                                                <option value="00:00">17:30</option>
+                                                <option value="00:00">18:00</option>
+                                                <option value="00:00">18:30</option>
+                                                <option value="00:00">19:00</option>
+                                                <option value="00:00">19:30</option>
+                                                <option value="00:00">20:00</option>
+                                                <option value="00:00">20:30</option>
+                                                <option value="00:00" selected>21:00</option>
+                                                <option value="00:00">21:30</option>
+                                                <option value="00:00">22:00</option>
+                                                <option value="00:00">22:30</option>
+                                                <option value="00:00">23:00</option>
+                                                <option value="00:00">23:30</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>공개여부</td>
+                                <td>
+                                    <div class="radio_flex">
+                                        <label class="radio_cus">
+                                            <input type="radio" name="styles" id="accent">
+                                            <div>공개</div>
+                                        </label>
+                                        <label class="radio_cus">
+                                            <input type="radio" name="styles" id="accent">
+                                            <div>비공개</div>
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>운영시간</td>
+                                <td colspan="3">
+                                    
+                                    <!-- filter -->
+                                    <div class="list_filter">
+                                        <ul class="filterName">
+                                            <li class="on">요일</li>
+                                            <li>오픈</li>
+                                            <li>마감</li>
+                                            <li>브레이크타임시작</li>
+                                            <li>종료</li>
+                                            <li>휴일여부</li>
+                                            <li>비고</li>
+                                        </ul>
+                                    </div>
+                                    <!-- daytable -->
+                                    <div class="tableArea daywrap">
+                                        <table class="tg">
+                                            <colgroup>
+                                                <col width="5%" />
+                                                <col width="20%" />
+                                                <col width="20%" />
+                                                <col width="5%" />
+                                                <col width="10%" />
+                                                <col width="10%" />
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th rowspan="2">요일</th>
+                                                    <th colspan="2">영업시간</th>
+                                                    <th colspan="2">브레이크타임</th>
+                                                    <th rowspan="2">휴무</th>
+                                                    <th rowspan="2">비고</th>
+                                                    <th rowspan="2">일괄적용</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>오픈</th>
+                                                    <th>종료</th>
+                                                    <th>시작</th>
+                                                    <th>종료</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input type="text" name="snot[0][0]"  style="width: 100px;" value="일">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][1]" value="10:00">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][1]" value="21:00">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][3]" style="width: 100px;"   value="">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][3]" style="width: 100px;" value="">
+                                                    </td>
+                                                    <td>
+                                                        <input type="checkbox" name="" class="form-1__checkbox-item">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][3]" value="" style="width: 200px;" >
+                                                    </td>
+                                                    <td>
+                                                        <div class="butArea">
+                                                            <button class="btn btn_04">영업시간</button>
+                                                            <button class="btn btn_04">브레이크타임</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="text" name="snot[0][0]"  style="width: 100px;" value="월">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][1]" value="10:00">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][1]" value="21:00">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][3]" style="width: 100px;"   value="">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][3]" style="width: 100px;" value="">
+                                                    </td>
+                                                    <td>
+                                                        <input type="checkbox" name="" class="form-1__checkbox-item">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][3]" value="" style="width: 200px;" >
+                                                    </td>
+                                                    <td>
+                                                        <div class="butArea">
+                                                            <button class="btn btn_04">영업시간</button>
+                                                            <button class="btn btn_04">브레이크타임</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="text" name="snot[0][0]"  style="width: 100px;" value="화">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][1]" value="10:00">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][1]" value="21:00">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][3]" style="width: 100px;"   value="">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][3]" style="width: 100px;" value="">
+                                                    </td>
+                                                    <td>
+                                                        <input type="checkbox" name="" class="form-1__checkbox-item">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][3]" value="" style="width: 200px;" >
+                                                    </td>
+                                                    <td>
+                                                        <div class="butArea">
+                                                            <button class="btn btn_04">영업시간</button>
+                                                            <button class="btn btn_04">브레이크타임</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="text" name="snot[0][0]"  style="width: 100px;" value="수">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][1]" value="10:00">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][1]" value="21:00">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][3]" style="width: 100px;"   value="">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][3]" style="width: 100px;" value="">
+                                                    </td>
+                                                    <td>
+                                                        <input type="checkbox" name="" class="form-1__checkbox-item">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][3]" value="" style="width: 200px;" >
+                                                    </td>
+                                                    <td>
+                                                        <div class="butArea">
+                                                            <button class="btn btn_04">영업시간</button>
+                                                            <button class="btn btn_04">브레이크타임</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="text" name="snot[0][0]"  style="width: 100px;" value="목">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][1]" value="10:00">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][1]" value="21:00">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][3]" style="width: 100px;"   value="">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][3]" style="width: 100px;" value="">
+                                                    </td>
+                                                    <td>
+                                                        <input type="checkbox" name="" class="form-1__checkbox-item">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][3]" value="" style="width: 200px;" >
+                                                    </td>
+                                                    <td>
+                                                        <div class="butArea">
+                                                            <button class="btn btn_04">영업시간</button>
+                                                            <button class="btn btn_04">브레이크타임</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="text" name="snot[0][0]"  style="width: 100px;" value="금">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][1]" value="10:00">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][1]" value="21:00">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][3]" style="width: 100px;"   value="">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][3]" style="width: 100px;" value="">
+                                                    </td>
+                                                    <td>
+                                                        <input type="checkbox" name="" class="form-1__checkbox-item">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][3]" value="" style="width: 200px;" >
+                                                    </td>
+                                                    <td>
+                                                        <div class="butArea">
+                                                            <button class="btn btn_04">영업시간</button>
+                                                            <button class="btn btn_04">브레이크타임</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="text" name="snot[0][0]"  style="width: 100px;" value="토">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][1]" style="width: 100px;" value="10:00">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][1]" style="width: 100px;" value="21:00">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][3]" style="width: 100px;"   value="">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][3]" style="width: 100px;" value="">
+                                                    </td>
+                                                    <td>
+                                                        <input type="checkbox" name="" class="form-1__checkbox-item">
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="snot[0][3]" value="" style="width: 200px;" >
+                                                    </td>
+                                                    <td>
+                                                        <div class="butArea">
+                                                            <button class="btn btn_04">영업시간</button>
+                                                            <button class="btn btn_04">브레이크타임</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="userInput mb30">
+                    <div class="importext">*이미지를 선택하고 저장하면 삭제할 수 있습니다. 삭제된 이미지는 복구되지 않으니 주의해주세요.</div>
+                    <div class="flex flex_start mb30">
+                        <div class="subtitle">지도 아이콘</div>
+                        <div id="dropzone">
+                            <input type="file" name="mapicon_files[]" multiple="">
+                        </div>
+                    </div>
+                    <div class="flex flex_start mb30">
+                        <div class="subtitle">이미지</div>
+                        <div id="dropzone">
+                            <input type="file" name="mapicon_files[]" multiple="">
+                        </div>
+                    </div>
+                    
+                    <div class="flex">
+                        <div class="subtitle">메뉴</div>
+                        <div class="input_menu">
+                            <div class="input__flex mb10">
+                                <div class="flex_02">
+                                    <input type="checkbox" name="" class="form-1__checkbox-all">
+                                    <span class="ml5"> 대표메뉴</span>
+                                </div>
+                                <div class="input_box02">
+                                    <input type="text" name="userInput" value="스탠다드">
+                                    <input type="text" name="userInput" value="변동" class="ml10">
+                                </div>
+                                <div class="flex_02 mr10">
+                                    <input type="checkbox" name="" class="form-1__checkbox-item" checked>
+                                    <span>수동</span>
+                                </div>
+                                <i class="fa-solid fa-minus cs_p" name="del"></i>
+                            </div>
+                            <div class="input__flex mb10">
+                                <div class="flex_02">
+                                    <input type="checkbox" name="" class="form-1__checkbox-all">
+                                    <span class="ml5"> 대표메뉴</span>
+                                </div>
+                                <div class="input_box02">
+                                    <input type="text" name="userInput" value="비즈니스">
+                                    <input type="text" name="userInput" value="변동" class="ml10">
+                                </div>
+                                <div class="flex_02 mr10">
+                                    <input type="checkbox" name="" class="form-1__checkbox-item">
+                                    <span>수동</span>
+                                </div>
+                                <i class="fa-solid fa-minus cs_p" name="del"></i>
+                            </div>
+                            <div class="butArea flex">
+                                <button class="btn btn__04 b_normal" id="addMenu"><i class="fa-solid fa-plus"></i>메뉴추가</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="butArea flex flex_end">
+                    <div class="butbox">
+                        <button class="btn btn btn_01">저장</button>
+                        <button class="btn btn btn_02">목록보기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="./script/common.js"></script>
+
+<script src="https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"></script>
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+<script>
+    var quill = new Quill('#editor', {
+        theme: 'snow'
+    });
+</script>
+
+</html>

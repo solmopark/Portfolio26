@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AI를 활용한 자산 관리 솔루션 DalKak 서비스">
+    <meta name="keywords" content="AI 투자, 자산 관리, 포트폴리오 최적화, 금융 기술">
+    <meta property="og:title" content="DalKak" />
+    <meta property="og:description" content="AI를 활용한 자산 관리 솔루션 DalKak 서비스" />
+    <meta property="og:image" content="../image/link_thumb.svg" />
+    <meta property="og:url" content="https://dalkak.com" />
+    <meta name="google-site-verification" content="..." />
+    <title>포트폴리오 상세</title>
+    <!-- <script defer type="text/javascript" src="../script/chart.js"></script> -->
+    <script defer type="text/javascript" src="../script/common.js"></script>
+    <script src="../script/jquery-3.6.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" sizes="16x16" href="../image/link_icon.svg">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/stylemin.css">
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.4.0/remixicon.css">
+    <!-- 241209 사파리 호환성 -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+    <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+</head>
+
+<body class="f_blue">
+    <!-- header -->
+    <header>
+        <div id="header" class="flex_sb bd_r20">
+            <div class="toplogo">
+                <img src="../image/toplogo.svg" alt="DalKak 로고">
+            </div>
+            <ul class="menu flex">
+                <li><a href="javascript:void(0);" class="">서비스 소개</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void(0);">서비스 1</a></li>
+                        <li><a href="javascript:void(0);">서비스 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);">자산배분</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void(0);">자산배분 1</a></li>
+                        <li><a href="javascript:void(0);">자산배분 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);">AI자동매매</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void(0);">AI자동매매 1</a></li>
+                        <li><a href="javascript:void(0);">AI자동매매 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);" class="on">포트폴리오</a></li>
+                <li><a href="javascript:void(0);">마이페이지</a></li>
+                <li><a href="javascript:void(0);">공지사항</a></li>
+            </ul>
+
+            <div class="flex">
+                <button class="btn btnSt">문의하기</button>
+                <a class="ml10" href="javascript:void(0);"><i class="ri-user-line"></i></a>
+                <button class=" ml10"><i class="ri-search-line"></i></button>
+                <div id="menu-bar" class="mobile_menuBar" onclick="menuOnClick()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- mobile -->
+    <div class="moble_Menu" id="noneMenu">
+        <div class="flex_sb">
+            <h2>로그인 해주세요</h2>
+            <a href="javascript:void(0);">
+                <button class="btn btnSt_2">로그인</button>
+            </a>
+        </div>
+        <ul class="menu">
+            <li><a href="javascript:void(0);">서비스 소개</a>
+                <div>
+                    <a href="javascript:void(0);">
+                        <p>서비스1</p>
+                    </a>
+                    <a href="javascript:void(0);">
+                        <p>서비스2</p>
+                    </a>
+                </div>
+            </li>
+            <li><a href="javascript:void(0);">자산배분</a>
+                <div>
+                    <a href="javascript:void(0);">
+                        <p>자산배분1</p>
+                    </a>
+                    <a href="javascript:void(0);">
+                        <p>자산배분2</p>
+                    </a>
+                </div>
+            </li>
+            <li><a href="javascript:void(0);">AI자동매매</a>
+                <div>
+                    <a href="javascript:void(0);">
+                        <p>AI자동매매1</p>
+                    </a>
+                    <a href="javascript:void(0);">
+                        <p>AI자동매매2</p>
+                    </a>
+                </div>
+            </li>
+            <li><a href="javascript:void(0);">포트폴리오</a></li>
+            <li><a href="javascript:void(0);">마이페이지</a></li>
+            <li><a href="javascript:void(0);">공지사항</a></li>
+        </ul>
+    </div>
+
+    <!-- content -->
+    <div id="content" class="portfolio">
+        <div class="Wrap">
+            <div class="inner">
+                <!-- subNav -->
+                <ul class="subNav flex pt18">
+                    <li><a href="javascript:void(0);"><i class="ri-home-line"></i></a></li>
+                    <li class="nav"><a href="javascript:void(0);">포트폴리오</a></li>
+                    <li class="nav"><a href="javascript:void(0);">포트폴리오 상세</a></li>
+                </ul>
+                <!-- sec01 -->
+                <section>
+                    <div class="pageTitle">
+                        <h2>DalKak 포트폴리오 관리</h2>
+                    </div>
+                    <div class="boxStyle01">
+                        <div class="secWrap brStyle2">
+                            <div class="proflex mb30">
+                                <h3>투자자님의 총 손익금액은 <br class="show425"><span class="red">+ 2,766,302원</span>입니다.</h3>
+                                <div class="flex">
+                                    <p class="t_gray"><span>가입기간:</span> 2024년 07월 24일 ~ <br class="show350">2024년 10월 24일 (3개월)</p>
+                                    <button class="label2">전월 기준으로 다시 계산</button>
+                                </div>
+                            </div>
+
+                            <!-- tableList -->
+                            <div class="tableArea3">
+                                <table class="tg">
+                                    <thead>
+                                        <tr>
+                                            <th>투자금액</th>
+                                            <th colspan="2">평가금액 / 수익률</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>10,000,000원</td>
+                                            <td>12,766,302원</td>
+                                            <td class="red end">+27.55%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- sec01 -->
+                        <div class="secWrap chartWrap brStyle2">
+                            <div class="secArea wd45">
+                                <div class="flex_sb">
+                                    <h5 class="flex">연평균 수익률 <small>(과거 3년 기준)</small>
+                                        <span class="qIcon"></span>
+                                    </h5>
+                                    <h5 class="red">2.79%</h5>
+                                </div>
+                                <div class="flex_sb boxStyle05">
+                                    <p class="flex">연평균 수익률 <small>(과거 3년 기준)</small><span class="qIcon"></span></p>
+                                    <p class="bold">7.13%</p>
+                                </div>
+                                <div class="exChart">
+                                    <p>연평균 기대 수익률(%)</p>
+                                    <canvas id="myBubbleChart"></canvas>
+                                    <ul class="grid2 gridCol4">
+                                        <li><span class="colorDot St8"></span>제안 포트폴리오</li>
+                                        <li><span class="colorDot"></span>국내주식</li>
+                                        <li><span class="colorDot St2"></span>선진국 주식</li>
+                                        <li><span class="colorDot St3"></span>신흥국주식</li>
+                                        <li><span class="colorDot St4"></span>국내채권</li>
+                                        <li><span class="colorDot St5"></span>선진국채권</li>
+                                        <li><span class="colorDot St6"></span>신흥국채권</li>
+                                        <li><span class="colorDot St7"></span>MMF</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="secArea">
+                                <h5>자산배분 기대 수익 및 비중</h5>
+                                <div class="chartArea">
+                                    <div class="chartBox ">
+                                        <h5 class="end">투자 스타일 제안</h5>
+                                        <canvas id="myChart2"></canvas>
+                                    </div>
+                                    <div class="textBox">
+                                        <h5>자산 유형</h5>
+                                        <div>
+                                            <p>국내주식</p>
+                                            <p>선진국주식</p>
+                                            <p>신흥국주식</p>
+                                            <p>국내채권</p>
+                                            <p>선진국채권</p>
+                                            <p>신흥국채권</p>
+                                            <p>MMF</p>
+                                        </div>
+                                    </div>
+                                    <div class="chartBox">
+                                        <h5>나의투자비중</h5>
+                                        <canvas id="myChart1"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- sec02 -->
+                        <div class="secWrap brStyle2">
+                            <h3 class="mb30">제안포트폴리오 상세보기</h3>
+                            <div class="grid2 gridCol2">
+                                <div class="grid2 gridCol4">
+                                    <button class="btn01 normal2">1개월</button>
+                                    <button class="btn01 normal2 on">3개월</button>
+                                    <button class="btn01 normal2">6개월</button>
+                                    <button class="btn01 normal2">1년</button>
+                                </div>
+                                <div class="planDay flex" style="align-items: stretch;">
+                                    <div class="dayinput">
+                                        <input type="date" class="date" title="날짜입력" value="2024-01-01"
+                                            id="currentDate">
+                                    </div>
+                                    <span class="text">-</span>
+                                    <div class="dayinput">
+                                        <input type="date" class="date" title="날짜입력" value="2024-01-01"
+                                            id="currentDate">
+                                    </div>
+                                    <button class="btn01 btn_1 ml10">조회</button>
+                                </div>
+                            </div>
+                            <div class="yearChart">
+                                <ul class="St01">
+                                    <li>자산배분전략</li>
+                                    <li>AI 자동매매</li>
+                                </ul>
+                                <canvas id="lineChart_02"></canvas>
+                                <div class="capBox boxStyle05">
+                                    <li>
+                                        <span class="block bold">자산배분 전략</span>
+                                        <span>: 내가 설정한 상품포트폴리오</span>
+                                    </li>
+                                    <li>
+                                        <span class="block bold">AI 자동매매</span>
+                                        <span>: 제안포트폴리오의 벤치마크 (자산 유형별 수익률로 계산)</span>
+                                    </li>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- sec03 -->
+                        <div class="secWrap brStyle2">                            
+                            <h3 class="mb30">수익률 비교</h3>
+
+                            <!-- tableList -->
+                            <div class="tableArea3">
+                                <table class="tg">
+                                    <thead>
+                                        <tr>
+                                            <th rowspan="2">상품명</th>
+                                            <th rowspan="2">자산 유형</th>
+                                            <th rowspan="2">소유형</th>
+                                            <th colspan="2" rowspan="2">현재가(원)</th>
+                                            <th colspan="6">수익률(%)</th>
+                                        </tr>
+                                        <tr>
+                                            <th>1개월</th>
+                                            <th>3개월</th>
+                                            <th>6개월</th>
+                                            <th>1년</th>
+                                            <th>3년</th>
+                                            <th>연초후</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>KODEX 200</td>
+                                            <td>국내주식</td>
+                                            <td>k200 인덱스</td>
+                                            <td>34,495</td>
+                                            <td>
+                                                <span class="down end">70(-0.76%)</span>
+                                            </td>
+                                            <td class="sky">-1.56</td>
+                                            <td class="sky">-9.12</td>
+                                            <td class="sky">-5.04</td>
+                                            <td class="red">10.08</td>
+                                            <td class="sky">-6.72</td>
+                                            <td class="sky">-3.42</td>
+                                        </tr>
+                                        <tr>
+                                            <td>KODEX 미국S&P500</td>
+                                            <td>선진국주식</td>
+                                            <td>북미주식</td>
+                                            <td>14,495</td>
+                                            <td>
+                                                <span class="up end">80(0.76%)</span>
+                                            </td>
+                                            <td class="red">4.90</td>
+                                            <td class="red">4.37</td>
+                                            <td class="red">5.04</td>
+                                            <td class="red">40.08</td>
+                                            <td class="red">54.78</td>
+                                            <td class="red">30.17</td>
+                                        </tr>
+                                        <tr>
+                                            <td>KODEX 인도 Nifty50</td>
+                                            <td>신흥국주식</td>
+                                            <td>인도주식</td>
+                                            <td>34,495</td>                                            
+                                            <td>
+                                                <span class="down end">265(-0.76%)</span>
+                                            </td>
+                                            <td class="sky">-1.56</td>
+                                            <td class="sky">-9.12</td>
+                                            <td class="sky">-5.04</td>
+                                            <td class="red">10.08</td>
+                                            <td class="sky">-6.72</td>
+                                            <td class="sky">-3.42</td>
+                                        </tr>                                        
+                                        <tr>
+                                            <td>KODEX 국고채10년액</td>
+                                            <td>국내채권</td>
+                                            <td>우량채권</td>
+                                            <td>134,495</td>
+                                            <td>
+                                                <span class="up end">80(0.76%)</span>
+                                            </td>
+                                            <td class="red">4.90</td>
+                                            <td class="red">4.37</td>
+                                            <td class="red">5.04</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td class="red">30.17</td>
+                                        </tr>
+                                        <tr>
+                                            <td>KODEX 미국S&P500</td>
+                                            <td>선진국주식</td>
+                                            <td>북미주식</td>
+                                            <td>14,495</td>
+                                            <td>
+                                                <span class="up end">80(0.76%)</span>
+                                            </td>
+                                            <td class="red">4.90</td>
+                                            <td class="red">4.37</td>
+                                            <td class="red">5.04</td>
+                                            <td class="red">40.08</td>
+                                            <td class="red">54.78</td>
+                                            <td class="red">30.17</td>
+                                        </tr>
+                                        <tr>
+                                            <td>KODEX 200</td>
+                                            <td>국내주식</td>
+                                            <td>k200 인덱스</td>
+                                            <td>34,495</td>
+                                            <td>
+                                                <span class="down end">70(-0.76%)</span>
+                                            </td>
+                                            <td class="sky">-1.56</td>
+                                            <td class="sky">-9.12</td>
+                                            <td class="sky">-5.04</td>
+                                            <td class="red">10.08</td>
+                                            <td class="sky">-6.72</td>
+                                            <td class="sky">-3.42</td>
+                                        </tr>                                       
+                                        <tr>
+                                            <td>KODEX 국고채10년액</td>
+                                            <td>국내채권</td>
+                                            <td>우량채권</td>
+                                            <td>134,495</td>
+                                            <td>
+                                                <span class="up end">80(0.76%)</span>
+                                            </td>
+                                            <td class="red">4.90</td>
+                                            <td class="red">4.37</td>
+                                            <td class="red">5.04</td>
+                                            <td class="red">10.08</td>
+                                            <td>-</td>
+                                            <td class="red">30.17</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- sec05 -->
+                        <div class="secWrap brStyle2">
+                            <h3 class="mb30">최근 월별 수익률</h3>
+                            <!-- tableList -->
+                            <div class="tableArea3 type2"> 
+                                <table class="tg">
+                                    <thead>
+                                        <tr>
+                                            <th>구분</th>
+                                            <th>24.10</th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span class="colorDot St7"></span>포트폴리오</td>
+                                            <td class="end">-</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- sec06 -->
+                        <div class="secWrap">
+                            <div class="flex_sb mb30">
+                                <h3>기간별 수익률</h3>
+                                <button class="label2 St1">소유형 기간별 수익률 보기</button>
+                            </div>
+
+                            <!-- tableList -->
+                            <div class="tableArea3 mb50">
+                                <table class="tg">
+                                    <thead>
+                                        <tr>
+                                            <th>구분</th>
+                                            <th>1주</th>
+                                            <th>1개월</th>
+                                            <th>3개월</th>
+                                            <th>6개월</th>
+                                            <th>1년</th>
+                                            <th>2년</th>
+                                            <th>3년</th>
+                                            <th>연초후</th>
+                                            <th>변동성(3년)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span class="colorDot St7"></span>KOSPI</td>
+                                            <td class="sky">-0.41</td>
+                                            <td class="sky">-0.09</td>
+                                            <td class="sky">-6.41</td>
+                                            <td class="sky">-0.89</td>
+                                            <td class="red">10.29</td>
+                                            <td class="red">17.49</td>
+                                            <td class="sky">-13.41</td>
+                                            <td class="sky">-2.10</td>
+                                            <td>2.89</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <!-- bottomBtn -->
+                            <div class="bottomBtn">
+                                <button class="btn01">목록</button>
+                                <button class="btn01 next">저장</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer id="footer">
+        <div class="inner">
+            <div class="flex mb30">
+                <a href="javascript:void(0);" class="ftlogo"><img src="../image/footerLogo.svg" alt="DalKak 로고"></a>
+                <a href="javascript:void(0);" class="mr20"><img src="../image/instagram.svg" alt="Instagram 아이콘"></a>
+                <a href="javascript:void(0);"><img src="../image/naver.svg" alt="Naver 아이콘"></a>
+            </div>
+            <ul>
+                <li>경기도 화성시 정남면 내향로 250-35</li>
+                <li class="flex mt20">
+                    <p class="deco">대표이사 홍길동</p>
+                    <p>000-1234-5678</p>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <ul class="inner" class="flex">
+            <li class="mr20">
+                <a href="javascript:void(0);">이용약관</a>
+            </li>
+            <li class="bold">
+                <a href="javascript:void(0);">개인정보처리방침</a>
+            </li>
+            <div class="mlAuto">Copyright ⓒ 2024 SITS All rights reserved. </div>
+        </ul>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+
+</html>

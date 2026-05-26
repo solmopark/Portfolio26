@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AI를 활용한 자산 관리 솔루션 DalKak 서비스">
+    <meta name="keywords" content="AI 투자, 자산 관리, 포트폴리오 최적화, 금융 기술">
+    <meta property="og:title" content="DalKak" />
+    <meta property="og:description" content="AI를 활용한 자산 관리 솔루션 DalKak 서비스" />
+    <meta property="og:image" content="../image/link_thumb.svg" />
+    <meta property="og:url" content="https://dalkak.com" />
+    <meta name="google-site-verification" content="..." />
+    <title>자산배분1-3</title>
+    <!-- <script defer type="text/javascript" src="../script/chart.js"></script> -->
+    <script defer type="text/javascript" src="../script/common.js?v=1.0"></script>
+    <script src="../script/jquery-3.6.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" sizes="16x16" href="../image/link_icon.svg">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/stylemin.css">
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.4.0/remixicon.css">
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div id="header" class="flex_sb bd_r20">
+            <div class="toplogo">
+                <img src="../image/toplogo.svg" alt="DalKak 로고">
+            </div>
+            <ul class="menu flex">
+                <li><a href="javascript:void(0);" class="">서비스 소개</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void(0);">서비스 1</a></li>
+                        <li><a href="javascript:void(0);">서비스 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);" class="on">자산배분</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void(0);">자산배분 1</a></li>
+                        <li><a href="javascript:void(0);">자산배분 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);">AI자동매매</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void(0);">AI자동매매 1</a></li>
+                        <li><a href="javascript:void(0);">AI자동매매 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);">포트폴리오</a></li>
+                <li><a href="javascript:void(0);">마이페이지</a></li>
+                <li><a href="javascript:void(0);">공지사항</a></li>
+            </ul>
+    
+            <div class="flex">
+                <button class="btn btnSt">문의하기</button>
+                <a class="ml10" href="javascript:void(0);"><i class="ri-user-line"></i></a>
+                <button class=" ml10"><i class="ri-search-line"></i></button>
+                <div id="menu-bar" class="mobile_menuBar" onclick="menuOnClick()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- mobile -->
+    <div class="moble_Menu" id="noneMenu">
+        <div class="flex_sb">
+            <h2>로그인 해주세요</h2>
+            <a href="javascript:void(0);">
+                <button class="btn btnSt_2">로그인</button>
+            </a>
+        </div>
+        <ul class="menu">
+            <li><a href="javascript:void(0);">서비스 소개</a>
+                <div>
+                    <a href="javascript:void(0);"><p>서비스1</p></a>
+                    <a href="javascript:void(0);"><p>서비스2</p></a>
+                </div>
+            </li>
+            <li><a href="javascript:void(0);">자산배분</a>
+                <div>
+                    <a href="javascript:void(0);"><p>자산배분1</p></a>
+                    <a href="javascript:void(0);"><p>자산배분2</p></a>
+                </div>
+            </li>
+            <li><a href="javascript:void(0);">AI자동매매</a>
+                <div>
+                    <a href="javascript:void(0);"><p>AI자동매매1</p></a>
+                    <a href="javascript:void(0);"><p>AI자동매매2</p></a>
+                </div>
+            </li>
+            <li><a href="javascript:void(0);">포트폴리오</a></li>
+            <li><a href="javascript:void(0);">마이페이지</a></li>
+            <li><a href="javascript:void(0);">공지사항</a></li>
+        </ul>
+    </div>
+    <!-- visual -->
+    <section id="subvisual" class="sub02">
+        <div class="inner">
+            <!-- subNav -->
+            <ul class="subNav flex">
+                <li><a href="javascript:void(0);"><i class="ri-home-line"></i></a></li>
+                <li class="nav"><a href="javascript:void(0);">자산배분</a></li>
+                <li class="nav"><a href="javascript:void(0);">설정</a></li>
+            </ul>
+            <h2>DalKak 자산배분</h2>
+        </div>
+    </section>
+
+    <!-- content -->
+    <div id="content" class="property type3">
+        <div class="Wrap">
+            <div class="inner">
+                <!-- sec01 -->
+                <section>
+                    <div class="pageTitle">
+                        <ul class="pagination">
+                            <li><a href="javascript:void(0);">1</a></li>
+                            <li><a href="javascript:void(0);">2</a></li>
+                            <li><a href="javascript:void(0);" class="active">3</a></li>
+                            <li><a href="javascript:void(0);">4</a></li>
+                        </ul>
+                        <h2>AI 자동 매매 설정</h2>
+                        <h5>선택한 AI의 성능 데이터를 확인하고 <br class="show425">비교할 수 있습니다.</h5>
+                    </div>
+                    <div class="boxStyle01">
+                        <!-- sec01 -->
+                        <div class="secWrap">
+                            <div class="secArea">
+                                <h5>AI 모델 선택</h5>
+                                <div class="secBox grid gridCol3">
+                                    <div class="secDate checkEvent">
+                                        <div class="Check flex_sb">
+                                            <div class="text">
+                                                <span>추천 1순위</span>
+                                                <div>가격 모멘텀에 기반하는</div>
+                                                <h5>모멘텀 기반 AI모델</h5>
+                                            </div>
+                                            <input type="checkbox" class="dotCheck">
+                                        </div>
+                                        <p class="t_gray">일정 기간 동안의 주가 상승 또는 하락 추세를 분석해 강한 상승 추세를 보이는 강한 상승 추세를 보이는 자산을
+                                            매수하고, 하락 추세에 있는 자산을 매도해요.</p>
+                                        <img src="../image/property1-3_img01.png" alt="">
+                                    </div>
+                                    <div class="secDate checkEvent">
+                                        <div class="Check flex_sb">
+                                            <div class="text">
+                                                <span>추천 2순위</span>
+                                                <div>저평가된 자산을 찾아내는</div>
+                                                <h5>가치 기반 AI 모델</h5>
+                                            </div>
+                                            <input type="checkbox" class="dotCheck">
+                                        </div>
+                                        <p class="t_gray">기업의 재무상태를 분석해 저평가된 주식을 자동으로 선택해 매수하고 고평가된 자산을 매도해요.</p>
+                                        <img src="../image/property1-3_img02.png" alt="">
+                                    </div>
+                                    <div class="secDate checkEvent on">
+                                        <div class="Check flex_sb">
+                                            <div class="text">
+                                                <span>추천 3순위</span>
+                                                <div>데이터를 학습해 변동성을 예측하는</div>
+                                                <h5>머신러닝 기반 AI 모델</h5>
+                                            </div>
+                                            <input type="checkbox" class="dotCheck" checked>
+                                        </div>
+                                        <p class="t_gray">과거 데이터를 학습하여 시장 변동성을 예측하고, 시장의 특성에 맞춰 적응하며 매매 결정을 내려요.</p>
+                                        <img src="../image/property1-3_img03.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="boxStyle01">
+                        <!-- sec02 -->
+                        <div class="secWrap">
+                            <div class="secTitle">
+                                <h3 class="d_navy">10년간 수익률 비교</h3>
+                            </div>
+                            <div class="yearChart">
+                                <ul>
+                                    <li>모멘텀 기반 AI모델</li>
+                                    <li>가치 기반 AI모델</li>
+                                    <li>머신러닝 기반 AI모델</li>
+                                </ul>
+                                <canvas id="lineChart_01" class="chart"></canvas>
+                            </div>
+                            <ul class="ChartList mt20">
+                                <li class="list flex_sb">
+                                    <h5>상세보기</h5>
+                                    <div class="arrowDown">
+                                        <img src="../image/arrow_down02.png" alt="arrowDown">
+                                    </div>
+                                </li>
+                                <div class="list_acco">
+                                    <p>
+                                        텍스트를 입력해주세요. 텍스트를 입력해주세요. <br>
+                                        텍스트를 입력해주세요. 텍스트를 입력해주세요. 
+                                    </p>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- bottomBtn -->
+                    <div class="bottomBtn">
+                        <button class="btn01">이전</button>
+                        <button class="btn01 next">다음</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer id="footer">
+        <div class="inner">
+            <div class="flex mb30">
+                <a href="javascript:void(0);" class="ftlogo"><img src="../image/footerLogo.svg" alt="DalKak 로고"></a>
+                <a href="javascript:void(0);" class="mr20"><img src="../image/instagram.svg" alt="Instagram 아이콘"></a>
+                <a href="javascript:void(0);"><img src="../image/naver.svg" alt="Naver 아이콘"></a>
+            </div>
+            <ul>
+                <li>경기도 화성시 정남면 내향로 250-35</li>
+                <li class="flex mt20">
+                    <p class="deco">대표이사 홍길동</p>
+                    <p>000-1234-5678</p>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <ul class="inner" class="flex">
+            <li class="mr20">
+                <a href="javascript:void(0);">이용약관</a>
+            </li>
+            <li class="bold">
+                <a href="javascript:void(0);">개인정보처리방침</a>
+            </li>
+            <div class="mlAuto">Copyright ⓒ 2024 SITS All rights reserved. </div>
+        </ul>
+    </footer>
+</body>
+
+</html>

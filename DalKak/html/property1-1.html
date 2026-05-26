@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AI를 활용한 자산 관리 솔루션 DalKak 서비스">
+    <meta name="keywords" content="AI 투자, 자산 관리, 포트폴리오 최적화, 금융 기술">
+    <meta property="og:title" content="DalKak" />
+    <meta property="og:description" content="AI를 활용한 자산 관리 솔루션 DalKak 서비스" />
+    <meta property="og:image" content="../image/link_thumb.svg" />
+    <meta property="og:url" content="https://dalkak.com" />
+    <meta name="google-site-verification" content="..." />
+    <title>자산배분1-1</title>
+    <script defer type="text/javascript" src="../script/common.js"></script>
+    <script src="../script/jquery-3.6.0.js"></script>
+    <link rel="icon" sizes="16x16" href="../image/link_icon.svg">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/stylemin.css">
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.4.0/remixicon.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div id="header" class="flex_sb bd_r20">
+            <div class="toplogo">
+                <img src="../image/toplogo.svg" alt="DalKak 로고">
+            </div>
+            <ul class="menu flex">
+                <li><a href="javascript:void(0);" class="">서비스 소개</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void(0);">서비스 1</a></li>
+                        <li><a href="javascript:void(0);">서비스 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);" class="on">자산배분</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void(0);">자산배분 1</a></li>
+                        <li><a href="javascript:void(0);">자산배분 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);">AI자동매매</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void(0);">AI자동매매 1</a></li>
+                        <li><a href="javascript:void(0);">AI자동매매 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);">포트폴리오</a></li>
+                <li><a href="javascript:void(0);">마이페이지</a></li>
+                <li><a href="javascript:void(0);">공지사항</a></li>
+            </ul>
+    
+            <div class="flex">
+                <button class="btn btnSt">문의하기</button>
+                <a class="ml10" href="javascript:void(0);"><i class="ri-user-line"></i></a>
+                <button class=" ml10"><i class="ri-search-line"></i></button>
+                <div id="menu-bar" class="mobile_menuBar" onclick="menuOnClick()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- mobile -->
+    <div class="moble_Menu" id="noneMenu">
+        <div class="flex_sb">
+            <h2>로그인 해주세요</h2>
+            <a href="javascript:void(0);">
+                <button class="btn btnSt_2">로그인</button>
+            </a>
+        </div>
+        <ul class="menu">
+            <li><a href="javascript:void(0);">서비스 소개</a>
+                <div>
+                    <a href="javascript:void(0);"><p>서비스1</p></a>
+                    <a href="javascript:void(0);"><p>서비스2</p></a>
+                </div>
+            </li>
+            <li><a href="javascript:void(0);">자산배분</a>
+                <div>
+                    <a href="javascript:void(0);"><p>자산배분1</p></a>
+                    <a href="javascript:void(0);"><p>자산배분2</p></a>
+                </div>
+            </li>
+            <li><a href="javascript:void(0);">AI자동매매</a>
+                <div>
+                    <a href="javascript:void(0);"><p>AI자동매매1</p></a>
+                    <a href="javascript:void(0);"><p>AI자동매매2</p></a>
+                </div>
+            </li>
+            <li><a href="javascript:void(0);">포트폴리오</a></li>
+            <li><a href="javascript:void(0);">마이페이지</a></li>
+            <li><a href="javascript:void(0);">공지사항</a></li>
+        </ul>
+    </div>
+    <!-- visual -->
+    <section id="subvisual" class="sub02">
+        <div class="inner">
+            <!-- subNav -->
+            <ul class="subNav flex">
+                <li><a href="javascript:void(0);"><i class="ri-home-line"></i></a></li>
+                <li class="nav"><a href="javascript:void(0);">자산배분</a></li>
+                <li class="nav"><a href="javascript:void(0);">설정</a></li>
+            </ul>
+            <h2>DalKak 자산배분</h2>
+        </div>
+    </section>
+
+    <!-- content -->
+    <div id="content" class="property">
+        <div class="Wrap">
+            <div class="inner">
+                <!-- sec01 -->
+                <section>
+                    <!-- pagination -->
+                    <div class="pageTitle">
+                        <ul class="pagination">
+                            <li><a href="javascript:void(0);" class="active">1</a></li>
+                            <li><a href="javascript:void(0);">2</a></li>
+                            <li><a href="javascript:void(0);">3</a></li>
+                            <li><a href="javascript:void(0);">4</a></li>
+                        </ul>
+                        <h2>자산배분 기본설정</h2>
+                        <!-- <h5>선택한 AI의 성능 데이터를 확인하고 비교할 수 있습니다.</h5> -->
+                    </div>
+                    <div class="boxStyle01">
+                        <!-- sec01 -->
+                        <div class="secWrap">
+                            <div class="secTitle">
+                                <h3 class="d_navy">DalKak의 최적 투자 조합</h3>
+                            </div>
+                            <div class="secArea">
+                                <h5>AI와 쉽게 투자해 보세요</h5>
+                                <div class="secBox grid2 gridCol5">
+                                    <div class="secDate checkEvent">
+                                        <div class="Check">
+                                            <input type="checkbox" class="dotCheck">
+                                        </div>
+                                        <h6>안정적 투자</h6>
+                                        <img class="mlAuto" src="../image/main_sec01_img01.png" alt="안정적 투자">
+                                    </div>
+                                    <div class="secDate checkEvent">
+                                        <div class="Check">
+                                            <input type="checkbox" class="dotCheck">
+                                        </div>
+                                        <h6>공격형 투자</h6>
+                                        <img class="mlAuto" src="../image/main_sec01_img02.png" alt="공격형 투자">
+                                    </div>
+                                    <div class="secDate checkEvent on">
+                                        <div class="Check">
+                                            <input type="checkbox" class="dotCheck" checked>
+                                        </div>
+                                        <h6>낮은 변동폭 투자</h6>
+                                        <img class="mlAuto" src="../image/main_sec01_img03.png" alt="낮은 변동폭 투자">
+                                    </div>
+                                    <div class="secDate checkEvent">
+                                        <div class="Check">
+                                            <input type="checkbox" class="dotCheck">
+                                        </div>
+                                        <h6>분산형 투자</h6>
+                                        <img class="mlAuto" src="../image/main_sec01_img04.png" alt="분산형 투자">
+                                    </div>
+                                    <div class="secDate checkEvent">
+                                        <div class="Check">
+                                            <input type="checkbox" class="dotCheck">
+                                        </div>
+                                        <h6>내가 직접 만들기</h6>
+                                        <img class="mlAuto" src="../image/main_sec01_img05.png" alt="내가 직접 만들기">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- sec02 -->
+                        <div class="secWrap">
+                            <div class="secTitle">
+                                <h3 class="d_navy">01. 자산배분 이름 및 전략 선택</h3>
+                            </div>
+                            <div class="secArea">
+                                <div class="tableArea1">
+                                    <table class="tg">
+                                        <thead>
+                                            <tr>
+                                                <th colspan="3">
+                                                    <div>선택된 전략</div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="name">
+                                                <td> </td>
+                                                <td>
+                                                    <div>전략 이름</div>
+                                                </td>
+                                                <td>
+                                                    <div>자산배분 전략</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div>1</div>
+                                                </td>
+                                                <td>
+                                                    <div>올웨더 한국 시장</div>
+                                                </td>
+                                                <td>
+                                                    <div>all weater</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div>2</div>
+                                                </td>
+                                                <td>
+                                                    <div>올웨더 한국 시장</div>
+                                                </td>
+                                                <td>
+                                                    <div>all weater</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div>3</div>
+                                                </td>
+                                                <td>
+                                                    <div>듀얼 모멘텀 한국</div>
+                                                </td>
+                                                <td>
+                                                    <div>DUAL MOMENTUM</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div>4</div>
+                                                </td>
+                                                <td>
+                                                    <div>듀얼 모멘텀 한국</div>
+                                                </td>
+                                                <td>
+                                                    <div>composite DM</div>
+                                                </td>
+                                            </tr>
+                                            <tr class="plus">
+                                                <th colspan="3">
+                                                    <button> <i class="ri-add-line"></i>전략 추가하기</button>
+                                                </th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- sec03 -->
+                        <div class="secWrap flex_sb">
+                            <!-- left -->
+                            <div class="left">
+                                <div class="secTitle">
+                                    <h3 class="d_navy">02. 기본 설정</h3>
+                                </div>
+                                <div class="secArea brStyle">
+                                    <h5>투자 기간</h5>
+                                    <div class="planDay flex">
+                                        <div class="dayinput">
+                                            <p>투자 기간</p>
+                                            <input type="date" class="date" title="날짜입력" value="2024-01-01"
+                                                id='currentDate'>
+                                        </div>
+                                        <span class="text">-</span>
+                                        <div class="dayinput">
+                                            <p>투자 기간</p>
+                                            <input type="date" class="date" title="날짜입력" value="2024-01-01"
+                                                id='currentDate'>
+                                        </div>
+                                    </div>
+                                    <div class="btnWrap grid2 gridCol4">
+                                        <button class="btn01 normal2">1개월</button>
+                                        <button class="btn01 normal2 on">3개월</button>
+                                        <button class="btn01 normal2">6개월</button>
+                                        <button class="btn01 normal2">1년</button>
+                                    </div>
+                                    <ul class="capBox St01">
+                                        <li>
+                                            <span>&#183;</span>
+                                            <span>오늘 이전 날짜만 선택 가능하며, 기간 선택 버튼을 선택하시면 전일 기준의 수익률을 확인 할 수 있습니다.</span>
+                                        </li>
+                                        <li>
+                                            <span>&#183;</span>
+                                            <span>선택한 기간 이후에 상장한 상품의 경우에는 결과에 제외됩니다.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="secArea brStyle">
+                                    <h5>투자 기간</h5>
+                                    <div class="amountWrap flex mb20">
+                                        <div class="amountArea St01">
+                                            <input type="text" id="amount" oninput="onlyNumberWithComma(this);"
+                                                value="10,000,000">
+                                            <p>원</p>
+                                        </div>
+                                        <button class="btn01 iconBtn St1">다시입력</button>
+                                    </div>
+                                    <div class="btnWrap grid2 gridCol5">
+                                        <button class="btn01 normal2">+50만원</button>
+                                        <button class="btn01 normal2">+100만원</button>
+                                        <button class="btn01 normal2">+500만원</button>
+                                        <button class="btn01 normal2">+1000만원</button>
+                                        <button class="btn01 normal2">+5000만원</button>
+                                    </div>
+                                    <ul class="capBox St01">
+                                        <li>
+                                            <span>&#183;</span>
+                                            <span>직접 숫자를 입력하시거나, 하단의 투자금액을 선택하시기 바랍니다. <br> 직접 입력하시는 경우 10만원~100억원 미만
+                                                사이의 숫자를 입력해주시기 바랍니다.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- right -->
+                            <div class="right">
+                                <div class="secArea brStyle">
+                                    <h5>리밸런싱</h5>
+                                    <p class="mb10">주기</p>
+                                    <div class="inputFlex flex_sb mb30">
+                                        <input type="text" class="end" placeholder="3">
+                                        <div class="selectBox">
+                                            <select name="select" class="select">
+                                                <option value="월">월</option>
+                                                <option value="주">주</option>
+                                                <option value="년도">년도</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <ul class="capBox St01">
+                                        <li><span>&#183;</span><span>텍스트를 입력해 주세요</span></li>
+                                        <li><span>&#183;</span><span>텍스트를 입력해 주세요 텍스트를 입력해 주세요</span></li>
+                                    </ul>
+                                </div>
+
+                                <!-- tableList -->
+                                <div class="secArea mb20">
+                                    <div class="flex_sb mb20">
+                                        <h5>AI 자동 매매 비율 설정</h5>
+                                        <button class="btn01 next"><a href="javascript:void(0);"><i
+                                                    class="ri-add-line"></i> 추가</a></button>
+                                    </div>
+                                    <div class="tableArea2">
+                                        <table class="tg">
+                                            <colgroup>
+                                                <col width="40%">
+                                                <col width="30%">
+                                                <col width="30%">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th class="nowrap">인공지능 자동매매 <br>파라미터</th>
+                                                    <th>파라미터 이름</th>
+                                                    <th>파라미터 설명</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td><input type="text" name="" placeholder="roboAdvisorBalance">
+                                                    </td>
+                                                    <td><input type="text" name="" placeholder="금액입력"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td><input type="text" name=""
+                                                            placeholder="selectedRoboAdvisorModel"></td>
+                                                    <td><input type="text" name="" placeholder="모델선택"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- priceSlider -->
+                                <div class="secArea brStyle">
+                                    <div class="flex_sb">
+                                        <h5>자동매매 비율</h5>
+                                        <p class="purple end">0~100</p>
+                                    </div>
+                                    <div class="priceSlider">
+                                        <div class="track">
+                                            <div class="ps_progress"></div>
+                                        </div>
+                                        <label>
+                                            <span class="handle min">
+                                                <span class="handle-value min-value"></span>
+                                            </span>
+                                            <input type="range" class="min-range range-input">
+                                        </label>
+                                        <label>
+                                            <span class="handle max">
+                                                <span class="handle-value max-value"></span>
+                                            </span>
+                                            <input type="range" class="max-range range-input">
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="secArea brStyle">
+                                    <h5>리밸런싱</h5>
+                                    <div class="amountWrap flex_sb  mb20">
+                                        <div class="flexCol">
+                                            <p>배당금</p>
+                                            <div class="amountArea">
+                                                <input type="text" class="start" id="amount"
+                                                    oninput="onlyNumberWithComma(this);" value="10">
+                                                <p class="bold purple">종목</p>
+                                            </div>
+                                        </div>
+                                        <div class="flexCol">
+                                            <p>배당금</p>
+                                            <div class="selectBox">
+                                                <select name="select" class="select">
+                                                    <option value="고려">고려</option>
+                                                    <option value="비고려">비고려</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- bottomBtn -->
+                        <div class="bottomBtn">
+                            <button class="btn01">초기화</button>
+                            <button class="btn01 next">다음</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer id="footer">
+        <div class="inner">
+            <div class="flex mb30">
+                <a href="javascript:void(0);" class="ftlogo"><img src="../image/footerLogo.svg" alt="DalKak 로고"></a>
+                <a href="javascript:void(0);" class="mr20"><img src="../image/instagram.svg" alt="Instagram 아이콘"></a>
+                <a href="javascript:void(0);"><img src="../image/naver.svg" alt="Naver 아이콘"></a>
+            </div>
+            <ul>
+                <li>경기도 화성시 정남면 내향로 250-35</li>
+                <li class="flex mt20">
+                    <p class="deco">대표이사 홍길동</p>
+                    <p>000-1234-5678</p>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <ul class="inner" class="flex">
+            <li class="mr20">
+                <a href="javascript:void(0);">이용약관</a>
+            </li>
+            <li class="bold">
+                <a href="javascript:void(0);">개인정보처리방침</a>
+            </li>
+            <div class="mlAuto">Copyright ⓒ 2024 SITS All rights reserved. </div>
+        </ul>
+    </footer>
+</body>
+
+<script>
+// priceSlider
+class RangeSlider {
+    constructor() {
+        this.constants = {
+            MAX_VALUE: this.getGlobalCssValue('--max-value'),  // 최대값 100
+            MIN_VALUE: this.getGlobalCssValue('--min-value'),  // 최소값 0
+            RANGE_STEP: this.getGlobalCssValue('--range-step'),
+            HANDLE_SIZE: this.getGlobalCssValue('--handle-size'),
+            get RANGE() {
+                return this.MAX_VALUE - this.MIN_VALUE;
+            }
+        };
+
+        this.elements = {
+            psProgress: document.querySelector('.ps_progress'),  
+            minRange: document.querySelector('.min-range'),
+            maxRange: document.querySelector('.max-range'),
+            handles: document.querySelectorAll('.handle'),  
+            minValueDisplay: document.querySelector('.min-value'),
+            maxValueDisplay: document.querySelector('.max-value')
+        };
+
+        this.elements.minRange.addEventListener("input", (e) => {
+            this.setStartValue(+e.target.value);
+        });
+
+        this.elements.maxRange.addEventListener("input", (e) => {
+            this.setEndValue(+e.target.value);
+        });
+    }
+
+    getGlobalCssValue(key) {
+        const property = getComputedStyle(document.documentElement).getPropertyValue(key);
+        return property ? parseFloat(property) : 0;
+    }
+
+    init({ min, max }) {
+        const { MIN_VALUE, MAX_VALUE, RANGE_STEP } = this.constants;
+        const { minRange, maxRange } = this.elements;
+
+        minRange.min = maxRange.min = MIN_VALUE;
+        minRange.max = maxRange.max = MAX_VALUE;
+        minRange.step = maxRange.step = RANGE_STEP;
+
+        // Initialize values
+        minRange.value = min;
+        maxRange.value = max;
+
+        this.setStartValue(min);
+        this.setEndValue(max);
+    }
+
+    setHandlePos(range, handle) {
+        const { MIN_VALUE, RANGE, HANDLE_SIZE } = this.constants;
+        const percentage = (range.value - MIN_VALUE) / RANGE;
+        const offset = HANDLE_SIZE / 2 - HANDLE_SIZE * percentage;
+        const left = `calc(${percentage * 100}% + ${offset}px)`;
+        handle.style.left = left;
+    }
+
+    setStartValue(v) {
+        const { minRange, maxRange, psProgress, handles, minValueDisplay } = this.elements;
+        if (v >= +maxRange.value) {
+            v = +maxRange.value - this.constants.RANGE_STEP;
+            minRange.value = v;
+        }
+        const value = this.getCurrStep(v) * this.constants.RANGE_STEP;
+        psProgress.style.left = `${(value / this.constants.RANGE) * 100}%`;
+        this.setHandlePos(minRange, handles[0]);
+        minValueDisplay.textContent = v;  // 핸들 위에 값 표시
+    }
+
+    setEndValue(v) {
+        const { minRange, maxRange, psProgress, handles, maxValueDisplay } = this.elements;
+        if (v <= +minRange.value) {
+            v = +minRange.value + this.constants.RANGE_STEP;
+            maxRange.value = v;
+        }
+        const value = this.getCurrStep(v) * this.constants.RANGE_STEP;
+        psProgress.style.right = `${100 - (value / this.constants.RANGE) * 100}%`;
+        this.setHandlePos(maxRange, handles[1]);
+        maxValueDisplay.textContent = v;  // 핸들 위에 값 표시
+    }
+
+    getCurrStep(v) {
+        return (v - this.constants.MIN_VALUE) / this.constants.RANGE_STEP;
+    }
+}
+
+const slider = new RangeSlider();
+slider.init({ min: 0, max: 100 });
+</script>
+</html>

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AI를 활용한 자산 관리 솔루션 DalKak 서비스">
+    <meta name="keywords" content="AI 투자, 자산 관리, 포트폴리오 최적화, 금융 기술">
+    <meta property="og:title" content="DalKak" />
+    <meta property="og:description" content="AI를 활용한 자산 관리 솔루션 DalKak 서비스" />
+    <meta property="og:image" content="../../image/link_thumb.svg" />
+    <meta property="og:url" content="https://dalkak.com" />
+    <meta name="google-site-verification" content="..." />
+    <title>자산배분1-2_상품추가(팝업)</title>
+    <script defer type="text/javascript" src="../../script/common.js"></script>
+    <script src="../../script/jquery-3.6.0.js"></script>
+    <link rel="icon" sizes="16x16" href="../../image/link_icon.svg">
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/stylemin.css">
+    <link rel="stylesheet" href="../../css/common.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.4.0/remixicon.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div id="header" class="flex_sb bd_r20">
+            <div class="toplogo">
+                <img src="../../image/toplogo.svg" alt="DalKak 로고">
+            </div>
+            <ul class="menu flex">
+                <li><a href="javascript:void(0);" class="">서비스 소개</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void(0);">서비스 1</a></li>
+                        <li><a href="javascript:void(0);">서비스 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);" class="on">자산배분</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void(0);">자산배분 1</a></li>
+                        <li><a href="javascript:void(0);">자산배분 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);">AI자동매매</a>
+                    <ul class="submenu">
+                        <li><a href="javascript:void(0);">AI자동매매 1</a></li>
+                        <li><a href="javascript:void(0);">AI자동매매 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);">포트폴리오</a></li>
+                <li><a href="javascript:void(0);">마이페이지</a></li>
+                <li><a href="javascript:void(0);">공지사항</a></li>
+            </ul>
+
+            <div class="flex">
+                <button class="btn btnSt">문의하기</button>
+                <a class="ml10" href="javascript:void(0);"><i class="ri-user-line"></i></a>
+                <button class=" ml10"><i class="ri-search-line"></i></button>
+                <div id="menu-bar" class="mobile_menuBar" onclick="menuOnClick()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- mobile -->
+    <div class="moble_Menu" id="noneMenu">
+        <div class="flex_sb">
+            <h2>로그인 해주세요</h2>
+            <a href="javascript:void(0);">
+                <button class="btn btnSt_2">로그인</button>
+            </a>
+        </div>
+        <ul class="menu">
+            <li><a href="javascript:void(0);">서비스 소개</a>
+                <div>
+                    <a href="javascript:void(0);">
+                        <p>서비스1</p>
+                    </a>
+                    <a href="javascript:void(0);">
+                        <p>서비스2</p>
+                    </a>
+                </div>
+            </li>
+            <li><a href="javascript:void(0);">자산배분</a>
+                <div>
+                    <a href="javascript:void(0);">
+                        <p>자산배분1</p>
+                    </a>
+                    <a href="javascript:void(0);">
+                        <p>자산배분2</p>
+                    </a>
+                </div>
+            </li>
+            <li><a href="javascript:void(0);">AI자동매매</a>
+                <div>
+                    <a href="javascript:void(0);">
+                        <p>AI자동매매1</p>
+                    </a>
+                    <a href="javascript:void(0);">
+                        <p>AI자동매매2</p>
+                    </a>
+                </div>
+            </li>
+            <li><a href="javascript:void(0);">포트폴리오</a></li>
+            <li><a href="javascript:void(0);">마이페이지</a></li>
+            <li><a href="javascript:void(0);">공지사항</a></li>
+        </ul>
+    </div>
+    <!-- visual -->
+    <section id="subvisual" class="sub02">
+        <div class="inner">
+            <!-- subNav -->
+            <ul class="subNav flex">
+                <li><a href="javascript:void(0);"><i class="ri-home-line"></i></a></li>
+                <li class="nav"><a href="javascript:void(0);">자산배분</a></li>
+                <li class="nav"><a href="javascript:void(0);">설정</a></li>
+            </ul>
+            <h2>DalKak 자산배분</h2>
+        </div>
+    </section>
+
+    <!-- content -->
+    <div id="content" class="property type2">
+        <div class="Wrap">
+            <div class="inner">
+                <!-- sec01 -->
+                <section>
+                    <div class="pageTitle">
+                        <ul class="pagination">
+                            <li><a href="javascript:void(0);">1</a></li>
+                            <li><a href="javascript:void(0);" class="active">2</a></li>
+                            <li><a href="javascript:void(0);">3</a></li>
+                            <li><a href="javascript:void(0);">4</a></li>
+                        </ul>
+                        <h2>자산배분 세부 설정</h2>
+                        <h5>자산배분 전략에 포함할 자산군을 <br class="show768">선택 및 가중치를 설정하세요</h5>
+                    </div>
+                    <div class="boxStyle01">
+                        <!-- sec01 -->
+                        <div class="secWrap">
+                            <div class="secTitle flex mb30">
+                                <div class="selectBox mr20">
+                                    <select name="select" class="select">
+                                        <option value="OO자산 상품">OO자산 상품</option>
+                                        <option value="전체">전체</option>
+                                    </select>
+                                </div>
+                                <h3>을 <span class="d_navy">선택</span>해주세요.</h3>
+                            </div>
+                            <div class="btnWrap mb30">
+                                <div class="btnBox">
+                                    <button class="btn01 round02">ETF</button>
+                                    <button class="btn01 round">펀드</button>
+                                </div>
+                                <div class="btnBox mlAuto">
+                                    <button class="btn01 iconBtn St1">설정 초기화</button>
+                                    <button class="btn01 iconBtn St3">상품 삭제</button>
+                                    <button class="btn01 next" id="popupButton"><a href="javascript:void(0);"><i
+                                                class="ri-add-line"></i>
+                                            상품 추가</a></button>
+                                </div>
+                            </div>
+
+                            <!-- tableList -->
+                            <div class="tableArea3">
+                                <table class="tg">
+                                    <thead>
+                                        <tr>
+                                            <th rowspan="2">선택</th>
+                                            <th rowspan="2">자산군</th>
+                                            <th rowspan="2">세부유형</th>
+                                            <th rowspan="2">상품명</th>
+                                            <th rowspan="2">비중(%)</th>
+                                            <th rowspan="2">투자비중(%)</th>
+                                            <th colspan="4">수익률(%)</th>
+                                            <th rowspan="2">변동성<br>(3년, %)</th>
+                                        </tr>
+                                        <tr>
+                                            <th>수익률(%)</th>
+                                            <th>수익률(%)</th>
+                                            <th>수익률(%)</th>
+                                            <th>수익률(%)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="Check">
+                                                <input type="checkbox" class="check_Item">
+                                            </td>
+                                            <td><span class="colorDot"></span>국내주식</td>
+                                            <td>k200 인덱스</td>
+                                            <td>KODEX</td>
+                                            <td>0.5</td>
+                                            <td>
+                                                <input type="text" placeholder="0.5">
+                                            </td>
+                                            <td class="sky">-5.04</td>
+                                            <td class="red">10.08</td>
+                                            <td class="sky">-6.72</td>
+                                            <td class="red">38.02</td>
+                                            <td class="red">0.16</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="Check">
+                                                <input type="checkbox" class="check_Item">
+                                            </td>
+                                            <td><span class="colorDot St2"></span>선진국주식</td>
+                                            <td>북미주식</td>
+                                            <td>KODEX</td>
+                                            <td>0.5</td>
+                                            <td>
+                                                <input type="text" placeholder="0.5">
+                                            </td>
+                                            <td class="sky">-5.04</td>
+                                            <td class="red">10.08</td>
+                                            <td class="sky">-6.72</td>
+                                            <td class="red">38.02</td>
+                                            <td class="red">0.16</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="Check">
+                                                <input type="checkbox" class="check_Item">
+                                            </td>
+                                            <td><span class="colorDot St3"></span>신흥국주식</td>
+                                            <td>인도주식</td>
+                                            <td>KODEX</td>
+                                            <td>0.5</td>
+                                            <td>
+                                                <input type="text" placeholder="0.5">
+                                            </td>
+                                            <td class="sky">-5.04</td>
+                                            <td class="red">10.08</td>
+                                            <td class="sky">-6.72</td>
+                                            <td class="red">38.02</td>
+                                            <td class="red">0.16</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="Check">
+                                                <input type="checkbox" class="check_Item">
+                                            </td>
+                                            <td><span class="colorDot St4"></span>국내채권</td>
+                                            <td>우량채권</td>
+                                            <td>KODEX</td>
+                                            <td>0.5</td>
+                                            <td>
+                                                <input type="text" placeholder="0.5">
+                                            </td>
+                                            <td class="sky">-5.04</td>
+                                            <td class="red">10.08</td>
+                                            <td class="sky">-6.72</td>
+                                            <td class="red">38.02</td>
+                                            <td class="red">0.16</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="Check">
+                                                <input type="checkbox" class="check_Item">
+                                            </td>
+                                            <td><span class="colorDot St5"></span>선진국채권</td>
+                                            <td>북미채권</td>
+                                            <td>KODEX</td>
+                                            <td>0.5</td>
+                                            <td>
+                                                <input type="text" placeholder="0.5">
+                                            </td>
+                                            <td class="sky">-5.04</td>
+                                            <td class="red">10.08</td>
+                                            <td class="sky">-6.72</td>
+                                            <td class="red">38.02</td>
+                                            <td class="red">0.16</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="Check">
+                                                <input type="checkbox" class="check_Item">
+                                            </td>
+                                            <td><span class="colorDot St6"></span>신흥국채권</td>
+                                            <td>아시아채권(일본제외)</td>
+                                            <td>KODEX</td>
+                                            <td>0.5</td>
+                                            <td>
+                                                <input type="text" placeholder="0.5">
+                                            </td>
+                                            <td class="sky">-5.04</td>
+                                            <td class="red">10.08</td>
+                                            <td class="sky">-6.72</td>
+                                            <td class="red">38.02</td>
+                                            <td class="red">0.16</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="Check">
+                                                <input type="checkbox" class="check_Item">
+                                            </td>
+                                            <td><span class="colorDot St7"></span>MMF</td>
+                                            <td>초단기 채권</td>
+                                            <td>KODEX</td>
+                                            <td>0.5</td>
+                                            <td>
+                                                <input type="text" placeholder="0.5">
+                                            </td>
+                                            <td class="sky">-5.04</td>
+                                            <td class="red">10.08</td>
+                                            <td class="sky">-6.72</td>
+                                            <td class="red">38.02</td>
+                                            <td class="red">0.16</td>
+                                        </tr>
+                                        <tr class="tableFooter">
+                                            <td colspan="4">합계</td>
+                                            <td>100</td>
+                                            <td>100</td>
+                                            <td colspan="5">투자 비중의 합은 100%를 넘을 수 없습니다.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- sec02 -->
+                        <div class="secWrap">
+                            <div class="secTitle flex_sb mb30">
+                                <h3>전략별 <span class="d_navy">파라미터</span></h3>
+                                <button class="btn01 next"><a href="javascript:void(0);"><i class="ri-add-line"></i>
+                                        추가</a></button>
+                            </div>
+
+                            <!-- tableList -->
+                            <div class="tableArea2">
+                                <table class="tg">
+                                    <thead>
+                                        <tr>
+                                            <th>피라미터명</th>
+                                            <th>피라미터값</th>
+                                            <th colspan="2">모멘텀 점수 비율 설정</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>보유 자산수</td>
+                                            <td>-</td>
+                                            <td>파라미터 1값</td>
+                                            <td>파라미터 1값</td>
+                                        </tr>
+                                        <tr>
+                                            <td>절대 자산</td>
+                                            <td>-</td>
+                                            <td>파라미터 1값</td>
+                                            <td>파라미터 1값</td>
+                                        </tr>
+                                        <tr>
+                                            <td>위험 방지 자산</td>
+                                            <td>파라미터 2 값</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- bottomBtn -->
+                        <div class="bottomBtn">
+                            <button class="btn01">이전</button>
+                            <button class="btn01 next">설계 결과 보기</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer id="footer">
+        <div class="inner">
+            <div class="flex mb30">
+                <a href="javascript:void(0);" class="ftlogo"><img src="../../image/footerLogo.svg" alt="DalKak 로고"></a>
+                <a href="javascript:void(0);" class="mr20"><img src="../../image/instagram.svg" alt="Instagram 아이콘"></a>
+                <a href="javascript:void(0);"><img src="../../image/naver.svg" alt="Naver 아이콘"></a>
+            </div>
+            <ul>
+                <li>경기도 화성시 정남면 내향로 250-35</li>
+                <li class="flex mt20">
+                    <p class="deco">대표이사 홍길동</p>
+                    <p>000-1234-5678</p>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <ul class="inner" class="flex">
+            <li class="mr20">
+                <a href="javascript:void(0);">이용약관</a>
+            </li>
+            <li class="bold">
+                <a href="javascript:void(0);">개인정보처리방침</a>
+            </li>
+            <div class="mlAuto">Copyright ⓒ 2024 SITS All rights reserved. </div>
+        </ul>
+    </footer>
+
+    <!-- popupWrap -->
+    <div class="popupWrap">
+        <article>
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                    <div class="pop-head">
+                        <span>Dalkak</span>
+                        <span class="close-btn" id="closeButton">&times;</span>
+                    </div>
+                    <div class="title">
+                        <h3 class="navy">상품 추가</h3>
+                        <p>포트폴리오 상품 추가 방법을 선택해 주세요.</p>
+                    </div>
+                    <div class="popup-wrap flex_sb">
+                        <div class="popBox on">
+                            <div class="item">
+                                <img src="../../image/addition_icon01.svg" alt="">
+                                <p>상품조회</p>
+                            </div>
+                            <div class="imgArea">
+                                <img src="../../image/addition_arrow.png" alt="">
+                            </div>
+                        </div>
+                        <div class="popBox">
+                            <div class="item">
+                                <img src="../../image/addition_icon02.svg" alt="">
+                                <p>관심 상품 추가가</p>
+                            </div>
+                            <div class="imgArea">
+                                <img src="../../image/addition_arrow.png" alt="">
+                            </div>
+                        </div>
+                        <div class="popBox">
+                            <div class="item">
+                                <img src="../../image/addition_icon03.svg" alt="">
+                                <p>예금성 자산 추가가</p>
+                            </div>
+                            <div class="imgArea">
+                                <img src="../../image/addition_arrow.png" alt="">
+                            </div>
+                        </div>
+                        <div class="popBox">
+                            <div class="item">
+                                <img src="../../image/addition_icon04.svg" alt="">
+                                <p>비교 상품 추가가</p>
+                            </div>
+                            <div class="imgArea">
+                                <img src="../../image/addition_arrow.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="Pop_close" id="closeButton">닫기</button>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+
+<script>
+    // 팝업 열기 버튼
+    const popupButton = document.getElementById('popupButton');
+    // 팝업창
+    const popup = document.getElementById('popup');
+    // 닫기 버튼
+    const closeButton = document.getElementById('closeButton');
+
+    // 팝업 열기
+    popupButton.addEventListener('click', () => {
+        popup.style.display = 'flex';
+    });
+
+    // 팝업 닫기
+    closeButton.addEventListener('click', () => {
+        popup.style.display = 'none';
+    });
+
+    // 팝업 바깥 부분 클릭 시 닫기
+    window.addEventListener('click', (event) => {
+        if (event.target === popup) {
+            popup.style.display = 'none';
+        }
+    });
+</script>
+
+</html>
