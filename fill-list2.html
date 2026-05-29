@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웹 작업 리스트</title>
+    <style>
+      @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+      body {
+        font-family: "Pretendard", sans-serif;
+        width: 100%;
+        max-width: 1440px;
+        margin: 80px auto;
+        color: #222;
+        overflow-y: auto; 
+        padding-right: 20px;
+      }
+      h2 img {
+        margin-right: 8px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        text-align: center;
+        font-size: 14px;
+      }
+      thead {
+        position: sticky;
+        top: 0;
+        background-color: #f5f5f5; /* 배경색 추가 (필수) */
+        z-index: 100;
+      }
+
+      th {
+        padding: 16px 10px;
+        border: 1px solid #ddd;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      td {
+        border: 1px solid #ddd;
+        padding: 10px;
+      }
+      th {
+        background-color: #f5f5f5;
+      }
+      .tx-lf {
+        text-align: left;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .mb-2 {margin-bottom: 2rem;}
+      .sec {max-width: 1200px; margin: 10px; }
+      .sec h3 {padding-left:0.5rem; margin-bottom: 0.5rem; position:relative;}
+      .sec h3::before {position:absolute; content: ''; width:2px; height: 60%; background: #D4000B; left:2px; top:20%;}
+      .sec h3.name-2::before {background:#0DD3CD;}
+      .sec h3.name-3::before {background:#FB3C4C;}
+      .grid {
+            gap: 1.5rem;
+    -webkit-grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    display: -webkit-grid;
+    display: grid;
+    
+      }
+      .grid .item {position: relative; max-width:400px;}
+      .grid a.item img {width:100%;}
+      .grid .g-text {margin:0 10px; font-size: 1rem;}
+      /* .grid .g-text::after{content: ''; color:#fff; font-size: 1rem; position:absolute; left: 0%; bottom:0; padding:10px;} */
+    </style>
+  </head>
+  <body>
+    <h2>
+      <img src="../assets/img/gob-logo.svg" alt="" />퍼블리싱 작업
+      리스트
+    </h2>
+    <!-- <div style="display: flex">
+      <div style="color: #3f51b5"><b>[ CNS ]</b> 작업표시</div>
+      <div style="margin-left: 1rem; color: #058c7a">
+        <b>[ 이노디 ]</b> 수정요청
+      </div>
+    </div> -->
+    <div>
+      <div class="sec">
+        <h3>굽네치킨</h3>
+        <div class="grid mb-2">
+          <a href="./goobne_Web/html/UI-MNU-01.html" class="item">
+            <span><img src="./img/thumbnail_gn.jpg" alt=""></span>
+            <p class="g-text">메뉴리스트</p>
+          </a>
+          <a href="./goobne_Web/html/UI-MNU-01-01.html" class="item">
+            <span><img src="./img/thumbnail_gn.jpg" alt=""> </span>           
+            <p class="g-text">메뉴리스트</p>
+          </a>
+          <!-- <a href="./goobne_Web/html/UI-MNU-01-01.html" class="item">
+            <span><img src="./img/thumbnail_gn.jpg" alt=""></span>
+            <p class="g-text">메뉴리스트</p>
+          </a> -->
+        </div>
+
+        <h3 class="name-2">Fillme</h3>
+        <div class="grid mb-2">
+          <a href="" class="item">
+            <span><img src="./img/thumbnail_f.jpg" alt=""></span>
+            <p class="g-text">메뉴리스트</p>
+          </a>
+          <a href="" class="item">
+            <span><img src="./img/thumbnail_f.jpg" alt=""> </span>           
+            <p class="g-text">메뉴리스트</p>
+          </a>
+          <a href="" class="item">
+            <span><img src="./img/thumbnail_f.jpg" alt=""></span>
+            <p class="g-text">메뉴리스트</p>
+          </a>
+        </div>
+
+        <h3 class="name-3">Hipple</h3>
+        <div class="grid mb-2">
+          <a href="" class="item">
+            <span><img src="./img/thumbnail_h.jpg" alt=""></span>
+            <p class="g-text">메뉴리스트</p>
+          </a>
+          <a href="" class="item">
+            <span><img src="./img/thumbnail_h.jpg" alt=""> </span>           
+            <p class="g-text">메뉴리스트</p>
+          </a>
+          <a href="" class="item">
+            <span><img src="./img/thumbnail_h.jpg" alt=""></span>
+            <p class="g-text">메뉴리스트</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
