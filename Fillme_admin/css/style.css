@@ -49,8 +49,8 @@
 
 
 /*---- subPage__public_Start ----*/
-#mainContainer.sub .Wrap {width:100%; border-radius: 2rem;}
-#mainContainer.sub .Wrap02 {width:-webkit-fill-available;}
+#mainContainer.sub .Wrap {width:auto; border-radius: 2rem;}
+#mainContainer.sub .Wrap02 {width:auto;}
 #mainContainer.sub .Wrap #searchBar, #mainContainer.sub .Wrap .listWrap {border:1px solid var(--line_gray);}
 
 #contentBox {display:grid; grid-template-columns: 2fr 1fr; gap:2rem;}
@@ -165,7 +165,7 @@ body.no-scroll {  overflow: hidden; /* 스크롤 비활성화 */}
 #popWrap.small #popSection .tabMenu.style01 #tabBtn {width:100%; font-weight: 300;}
 #popWrap.small #popSection .tabMenu.style01 #tabBtn.on {color:var(--main_color); font-weight: 700;}
 /* middle */
-#popWrap.middle {width:98rem;}
+#popWrap.middle {width:100%; max-width: 980px; min-width: 900px;}
 
 #popWrap {position: relative; width:75rem; height: 80%; margin:auto; background: var(--white);}
 #popWrap .popArea {overflow-y: auto; width:100%; height:100%; overflow-x: hidden;}
@@ -444,8 +444,13 @@ textarea:focus {border:1px solid var(--line_blue);}
 #popWrap .file-upload.upload02 #imagePreview {width:60px; height: 60px; object-fit: cover; border:1px solid var(--line_blue); border-radius: 99px; margin-right:2rem;}
 
 /* Accodion */
-#accordion {max-height: 0; overflow: hidden; /*transition: all 10s linear;*/}
-#accordion.accordion-open {max-height: -webkit-fill-available; border:1px solid var(--bg_gray); border-radius: 0.5rem; padding:2rem; margin-bottom:2rem;}
+#accordion {max-height: 0; overflow: hidden; transform: translateY(-8px); transition:
+        max-height 0.4s ease,
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        padding 0.3s ease,
+        margin 0.3s ease;}
+#accordion.accordion-open {max-height: -webkit-fill-available; border:1px solid var(--bg_gray); transform: translateY(0); border-radius: 0.5rem; padding:2rem; opacity: 1;margin-bottom:2rem;}
 #accordion.accordion-open.style01 {border:0; padding:0;}
 #accordion #popSection.type01 {align-items: flex-start;}
 /* chemistWrap */
