@@ -1,0 +1,194 @@
+@charset "utf-8";
+
+
+
+
+/* color */
+
+:root {
+ --red: #ED1B23;
+ --gray: #999;
+ --bl: #333;
+ --pink: #FF3366;
+ --line-gray:#ddd;
+}
+
+/* color */
+  .red {color: var(--red);}
+  .bl {color:var(--bl) !important;}
+  .gy {color:var(--gray);}
+
+/* 공통 */
+.st {
+    border-radius: 2px;
+    border: 1px solid #999;
+    width: 43px;
+    padding: 2px;
+    font-size: 1rem;
+    text-align: center;
+    white-space: nowrap;
+}
+.st.wh {color: #999; border-color: #ddd;}
+.st.bl {color: #57AEFF!important; border-color: #57AEFF;}
+.st.gr {color: #28C564; border-color: #28C564;}
+.st.or {color: #FF9B37; border-color: #FF9B37;}
+.st.pu {color: #AD6DFF; border-color: #AD6DFF;}
+.st.bk {background:var(--bl); border-color:var(--bl); color:#fff;}
+
+
+
+/* 폰트 */
+.fs10 {font-size: 1.0rem;}
+.fs11 {font-size: 1.1rem;}
+.fs12 {font-size: 1.2rem;}
+.fs13 {font-size: 1.3rem;}
+.fs14 {font-size: 1.4rem;}
+.fs16 {font-size: 1.6rem;}
+.fs20 {font-size: 2rem;}
+
+
+/* font-weight */
+b {font-weight: bold;}
+.center {text-align: center;}
+
+/* margin */
+.mlAuto {margin-left: auto;}
+.ml5 {margin-left: .5rem;}
+
+.mb10 {margin-bottom: 1rem;}
+.mb20 {margin-bottom: 2rem;}
+.mb30 {margin-bottom: 3rem;}
+.mb40 {margin-bottom: 4rem;}
+.mb60 {margin-bottom: 6rem;}
+/* padding */
+.py30 {padding:3rem 0;}
+.py40 {padding:4rem 0;}
+.p40 {padding:4rem 2rem;}
+.px20 {padding:0 2rem;}
+
+/* grid */
+.grid {display: grid; align-items: self-start; justify-content: center; text-align: center;}
+.grid.col5 {grid-template-columns: repeat(5, 1fr);}
+.grid.col6 {grid-template-columns: repeat(6, 1fr);}
+
+/* flex */
+.flex {display: flex; align-items: center;}  
+.flex.col {flex-flow: column;}
+.js-start {justify-content: flex-start;}
+.js-between {justify-content: space-between;}
+.align-start {align-items: flex-start;}
+
+/* grp */  
+.gap4 {gap:.4rem;}
+.gap10 {gap:1rem;}
+.gap15 {gap:1.5rem;}
+.gap20 {gap:2rem;}
+
+/* img */
+.imgArea >* {margin:0 auto;}
+
+/* line_style */
+.lineBot {border-bottom: 1.5px solid var(--line-gray);}
+
+/* position */
+.rel {position: relative;}
+.ab {position: absolute;}
+
+/* 체크박스 */
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+.checkbox__input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.checkbox__box {
+  width: 16px; height: 16px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  transition: border-color .2s, background .2s;
+}
+.checkbox--checked .checkbox__box {
+  border-color: #e60012;
+  background: #e60012;
+}
+.checkbox__box::after {
+  content: '';
+  position: absolute;
+  top: 3px; left: 3px;
+  width: 6px; height: 6px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity .2s;
+}
+.checkbox--checked .checkbox__box::after {
+  opacity: 1;
+}
+
+/* 체크박스 html */
+/* 
+<label class="checkbox{% if checked %} checkbox--checked{% endif %}">
+  <input type="checkbox" class="checkbox__input" {% if checked %}checked{% endif %}/>
+  <span class="checkbox__box"></span>
+</label>
+ */
+
+
+
+
+ /* 라디오 */
+ .radio { display: inline-flex; align-items: center; cursor: pointer; }
+.radio__input { position: absolute; opacity: 0; pointer-events: none; }
+.radio__outer {
+  width: 16px; height: 16px;
+  border: 2px solid #999;
+  border-radius: 50%;
+  position: relative;
+  transition: border-color .2s;
+}
+.radio--checked .radio__outer {
+  border-color: #e60012;
+}
+.radio__inner {
+  content: '';
+  position: absolute;
+  top: 4px; left: 4px;
+  width: 6px; height: 6px;
+  background: #e60012;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity .2s;
+}
+.radio--checked .radio__inner {
+  opacity: 1;
+}
+
+/* 라디오 html */
+/*
+<label class="radio{% if checked %} radio--checked{% endif %}">
+  <input type="radio" name="choice" class="radio__input" {% if checked %}checked{% endif %}/>
+  <span class="radio__outer"><span class="radio__inner"></span></span>
+</label>
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+body {width: 100%;  display: flex; flex-direction: column; align-items: center;}
+.wrap {max-width: 390px; width: 100%;}
+
+
