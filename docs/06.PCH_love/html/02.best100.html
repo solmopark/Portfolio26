@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>베스트100</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/hs.css">
+    <script src="../script/jquery-3.6.0.js"></script>
+    <!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+  </head>
+
+
+<body>
+  <div class="wrap">
+
+     <!-- 상단바 -->
+    <div class="topBar">
+      <div class="topBar_main">
+        <a href="../html/index.html" class="mainLink"><img src="../img/main_logo.png" alt="" class="mainLogo"></a>
+        <a href="../html/12.basket.html" class="basketLink"><img src="../img/icon_basket.svg" alt="" class="mainBasket"></a>
+        <a href="#" class="menuLink"><img src="../img/icon_menu.svg" alt="" class="mainMenu"></a>
+      </div>
+      <div class="topBar_search">
+        <input type="search" placeholder="검색어를 입력해주세요" autocomplete="off" required>
+        <button type="submit" class="search-btn" aria-label="검색"><img src="../img/icon_search.svg" alt=""></button>
+      </div>
+      <div class="topBar_nav">
+        <ul>
+          <li class=""><a href="../html/index.html">홈</a></li>
+          <li class="se active"><a href="../html/02.best100.html">베스트100</a></li>
+          <li class=""><a href="../html/03.Delivery case.html">납품사례</a></li>
+          <li class=""><a href="../html/04.purpose.html">기획전</a></li>
+          <li class=""><a href="../html/05.special price.html">초특가</a></li>
+          <li class=""><a href="../html/06.review.html">상품평</a></li>
+        </ul>
+
+        <button type="button" class="nav-toggle" aria-expanded="false">
+          <img src="../img/icon_arrow-down.svg" alt="메뉴 펼치기/접기">
+        </button>
+
+        <ul class="nav-line nav-line--secondary">
+          <li><a href="#">긴급제작</a></li>
+          <li><a href="#">신상품</a></li>
+          <li><a href="#">아이디어</a></li>
+          <li><a href="#">우수사안</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- 메뉴 사이드바 -->
+      <!-- <div class="menuSideBarWrap">
+        <div class="menuSideBar">
+          <div class="sidebar-title">
+            <div class="sidebar-title01">
+              <h2>전체메뉴</h2>
+              <a href="../html/index.html"><img src="../img/bottomBar03.svg" alt=""></a>
+              <img src="../img/icon_X.svg" alt="" class="close">
+            </div>
+            <div class="sidebar-title02">
+              <button class="log"><a href="../html/index_login.html">로그인</a></button>
+              <button class="in"><a href="../html/index_login.html">회원가입</a></button>
+            </div>
+            <div class="sidebar-title03"></div>
+          </div>
+          <nav class="sidebar-menu">
+            <ul>
+              <li class="sidemenu-item has-submenu">
+                <button class="menu-link">견적·시안 <span class="arrow"></span></button>
+                <ul class="submenu">
+                  <li class="submenu-item"><a href="#">견적확인</a></li>
+                  <li class="submenu-item"><a href="#">시안확인</a></li>
+                </ul>
+              </li>
+              <li class="sidemenu-item has-submenu">
+                <button class="menu-link">상품메뉴 <span class="arrow"></span></button>
+                <ul class="submenu">
+                  <li class="submenu-item"><a href="#">상품1</a></li>
+                  <li class="submenu-item"><a href="#">상품2</a></li>
+                </ul>
+              </li>
+              <li class="sidemenu-item has-submenu">
+                <button class="menu-link">이벤트 <span class="arrow"></span></button>
+                <ul class="submenu">
+                  <li class="submenu-item"><a href="#">이벤트1</a></li>
+                  <li class="submenu-item"><a href="#">이벤트2</a></li>
+                </ul>
+              </li>
+              <li class="sidemenu-item has-submenu">
+                <button class="menu-link">회원서비스 메뉴 <span class="arrow"></span></button>
+                <ul class="submenu">
+                  <li class="submenu-item"><a href="#">회원서비스 메뉴1</a></li>
+                  <li class="submenu-item"><a href="#">회원서비스 메뉴2</a></li>
+                </ul>
+              </li>
+              <li class="sidemenu-item has-submenu">
+                <button class="menu-link">회원메뉴 <span class="arrow"></span></button>
+                <ul class="submenu">
+                  <li class="submenu-item"><a href="#">회원메뉴1</a></li>
+                  <li class="submenu-item"><a href="#">회원메뉴2</a></li>
+                  <li class="submenu-item"><a href="#">회원메뉴3</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div> -->
+    <!-- 메뉴 사이드바 끝 -->
+
+    
+    <!-- 내용 -->
+    <div class="imgArea">
+      <img src="../img/best_banner.png" alt="">
+    </div>
+
+    <!-- 카테고리_버튼 -->
+    <div class="cateBtnWrap py30 lineBot">
+      <div class="grid col5 gap10">
+        <div class="cateBtn">
+          <img src="../img/category_all.png" alt="">
+          <div class="text">전체</div>
+        </div>
+        <div class="cateBtn">
+          <img src="../img/category_life.png" alt="">
+          <div class="text">가정생활</div>
+        </div>
+        <div class="cateBtn">
+          <img src="../img/category_digital.png" alt="">
+          <div class="text">디지털·가전</div>
+        </div>
+        <div class="cateBtn">
+          <img src="../img/category_office.png" alt="">
+          <div class="text">사무·문구</div>
+        </div>
+        <div class="cateBtn">
+          <img src="../img/category_tumbler.png" alt="">
+          <div class="text">주방용품·<br>텀블러</div>
+        </div>
+        <div class="cateBtn">
+          <img src="../img/category_health.png" alt="">
+          <div class="text">레저·건강·<br>차량용품</div>
+        </div>
+        <div class="cateBtn">
+          <img src="../img/category_golf.png" alt="">
+          <div class="text">골프용품</div>
+        </div>
+        <div class="cateBtn">
+          <img src="../img/category_beauty.png" alt="">
+          <div class="text">화장품·미용</div>
+        </div>
+        <div class="cateBtn">
+          <img src="../img/category_event.png" alt="">
+          <div class="text">상패·휘장·<br>행사용품</div>
+        </div>
+        <div class="cateBtn">
+          <img src="../img/category_info.png" alt="">
+          <div class="text">안내판·<br>사인물</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 베스트 제품 -->
+    <div class="productWrap py30">
+      <!-- 베스트 태그버튼 -->
+      <div class="tagBtnWrap tagSwiper">
+        <div class="tagBtnContainer swiper-wrapper">
+          <button class="swiper-slide tagBtn">칼라인쇄</button>
+          <button class="swiper-slide tagBtn">소량구매</button>
+          <button class="swiper-slide tagBtn">국내제작</button>
+          <button class="swiper-slide tagBtn">주문제작</button>
+          <button class="swiper-slide tagBtn">무료배송</button>
+          <button class="swiper-slide tagBtn">인쇄무료</button>
+        </div>
+      </div>
+      <!-- 베스트 상품 -->
+      <div class="productContainer">
+        <div class="flex js-between">
+          <div class="pd_title fs16">전체 <b class="red">100</b>개</div>
+          <button id="toggleBtn">
+            <img src="../img/product_icon_plur.svg" alt="아이콘">
+          </button>
+        </div>
+
+        <!-- 상품 리스트 -->
+        <div class="product-contens ">
+          <div class="product">
+            <div class="rank">
+              <span><img src="../img/product_icon_best.svg" alt=""></span>
+              <span class="">BEST 1</span>
+            </div>
+            <div class="imgArea rel">
+              <img src="../img/product_img01.png" alt="">
+            </div>
+            <div class="flex gap4">
+              <span class="st wh">무료배송</span>
+              <span class="st bl">인쇄무료</span>
+            </div>
+            <div class="textBox">
+              <span class="p-code flex gap4">
+                상품코드 : 24460002
+                <span class="st bk copy-btn">코드복사</span>
+              </span>
+              <p>A4 가죽 서류가방 서류 파일 파우치 1P</p>
+            </div>
+            <h5 class="red">2,450 <span>원</span></h5>
+          </div>
+
+          <div class="product">
+            <div class="rank">
+              <span><img src="../img/product_icon_best.svg" alt=""></span>
+              <span class="">BEST 2</span>
+            </div>
+            <div class="imgArea rel">
+              <img src="../img/product_img02.png" alt="">
+            </div>
+            <div class="flex gap4">
+              <span class="st wh">무료배송</span>
+              <span class="st bl">인쇄무료</span>
+            </div>
+            <div class="textBox">
+              <span class="p-code flex gap4">
+                상품코드 : 24460002
+                <span class="st bk copy-btn">코드복사</span>
+              </span>
+              <p>[트윙고] 앨리스 보틀 2P <br></p>
+            </div>
+            <h5 class="red">가격문의</h5>
+          </div>
+
+          <div class="product">
+            <div class="rank">
+              <span><img src="../img/product_icon_best.svg" alt=""></span>
+              <span class="">BEST 3</span>
+            </div>
+            <div class="imgArea rel">
+              <img src="../img/product_img03.png" alt="">
+            </div>
+            <div class="flex gap4">
+              <span class="st wh">무료배송</span>
+              <span class="st bl">인쇄무료</span>
+            </div>
+            <div class="textBox">
+              <span class="p-code flex gap4">
+                상품코드 : 24460002
+                <span class="st bk copy-btn">코드복사</span>
+              </span>
+              <p>냉감 반팔 시원한 쿨 아이스 여름 반팔티 1P</p>
+            </div>
+            <h5 class="red">3,840<span>원</span></h5>
+          </div>
+          <div class="product">
+            <div class="rank">
+              <p class="ranking">4</p>
+            </div>
+            <div class="imgArea rel">
+              <img src="../img/product_img04.png" alt="">
+            </div>
+            <div class="flex gap4">
+              <span class="st wh">무료배송</span>
+              <span class="st bl">인쇄무료</span>
+            </div>
+            <div class="textBox">
+              <span class="p-code flex gap4">
+                상품코드 : 24460002
+                <span class="st bk copy-btn">코드복사</span>
+              </span>
+              <p>홍보용 물티슈 백색 100매</p>
+            </div>
+            <h5 class="red">103  <span>원</span></h5>
+          </div>
+
+          <div class="product">
+            <div class="rank">
+              <p class="ranking">5</p>
+            </div>
+            <div class="imgArea rel">
+              <img src="../img/product_img05.png" alt="">
+            </div>
+            <div class="flex gap4">
+              <span class="st wh">무료배송</span>
+              <span class="st bl">인쇄무료</span>
+            </div>
+            <div class="textBox">
+              <span class="p-code flex gap4">
+                상품코드 : 24460002
+                <span class="st bk copy-btn">코드복사</span>
+              </span>
+              <p>[씨피엠] CPM 2in1 10W 도킹형 미니 보조배터리 5000mAh 1P</p>
+            </div>
+            <h5 class="red">3,950<span>원</span></h5>
+          </div>
+
+          <div class="product">
+            <div class="rank">
+              <p class="ranking">6</p>
+            </div>
+            <div class="imgArea rel">
+              <img src="../img/product_img06.png" alt="">
+            </div>
+            <div class="flex gap4">
+              <span class="st wh">무료배송</span>
+              <span class="st bl">인쇄무료</span>
+            </div>
+            <div class="textBox">
+              <span class="p-code flex gap4">
+                상품코드 : 24460002
+                <span class="st bk copy-btn">코드복사</span>
+              </span>
+              <p>[주문제작] 칼라인쇄 종이쇼핑백 종이가방 종이백</p>
+            </div>
+            <h5 class="red">1<span>원</span></h5>
+          </div>
+          
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 하단바 -->
+    <!-- 하단바 -->
+    <div class="bottomBar">
+      <a href="../html/08.Category.html"><img src="../img/bottomBar01.svg" alt=""><img src="../img/bottomBar011.svg" alt=""></a>
+      <a href=""><img src="../img/bottomBar02.svg" alt=""><img src="../img/bottomBar022.svg" alt=""></a>
+      <a href="../html/index.html"><img src="../img/bottomBar03.svg" alt=""><img src="../img/bottomBar033.svg" alt=""></a>
+      <a href="#"><img src="../img/bottomBar04.svg" alt=""><img src="../img/bottomBar044.svg" alt=""></a>
+      <a href="../html/index_mypage.html"><img src="../img/bottomBar05.svg" alt=""><img src="../img/bottomBar055.svg" alt=""></a>
+    </div>
+
+    <!-- 푸터 -->
+    <footer>
+      <img src="../img/footer_logo.png" alt="">
+      <div class="footerLink">
+        <a href="#">이용약관</a> · <a href="#">개인정보취급방침</a> · <a href="#">사업자정보확인</a>
+      </div>
+      <div class="footerInfo">
+        <p>인천광역시 남동구 호구포로 50(고잔동) 엘아이지식산업센터 202호~207호</p>
+        <p>대표자 : 심선기 ㅣ 대표번호 : 1688-8744</p>
+        <p>개인정보관리책임자 : 이종후</p>
+        <p>이메일 : gift@87sarang.com</p>
+        <p>일반전화 : 032-261-2900, 032-466-0344</p>
+        <p>사업자등록번호 : 131-86-22224</p>
+        <p>통신판매업신고 : 제2010-인천남동구-0334호</p>
+      </div>
+    </footer>
+  </div>
+</body>
+<script src="../script/style.js"></script>
+<script src="../script/common.js"></script>
+<script src="../script/sidebarToggle.js"></script>
+</html>
